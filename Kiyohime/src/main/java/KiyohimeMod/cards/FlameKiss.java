@@ -1,0 +1,71 @@
+package KiyohimeMod.cards;
+
+import java.util.ArrayList;
+
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.CardStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+
+import KiyohimeMod.actions.ApplyStackablePowerAction;
+import KiyohimeMod.patches.AbstractCardEnum;
+import KiyohimeMod.powers.BusterUPPower;
+import basemod.abstracts.CustomCard;
+
+public class FlameKiss extends CustomCard {
+
+    public static final String ID = "KiyohimeMod:FlameKiss";
+    public static final String IMG_PATH = "Kiyohime/images/cards/FlameKiss.png";
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String NAME = cardStrings.NAME;
+    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+    public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
+    private static final int COST = 2;
+    private static final int UPGRADE_COST = 1;
+    private static final int BASE_MAGIC = 20;
+    private static final int UPGRADE_PLUS_MAGIC = 10;
+
+    public FlameKiss() {
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL, AbstractCardEnum.Kiyohime_Color,
+                AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.SELF);
+        this.baseMagicNumber = this.magicNumber = BASE_MAGIC;
+    }
+
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(new ApplyStackablePowerAction(p, p,
+                new BusterUPPower(p, this.magicNumber, 1), this.magicNumber, 1, true));
+        if (this.upgraded) {
+            if (!p.powers.isEmpty()) {
+                ArrayList<AbstractPower> pows = new ArrayList<>();
+                for (AbstractPower pow : p.powers) {
+                    if (pow.type == AbstractPower.PowerType.DEBUFF) {
+                        pows.add(pow);
+                    }
+                }
+                if (!pows.isEmpty()) {
+                    AbstractPower po = pows.get(AbstractDungeon.miscRng.random(0, pows.size() - 1));
+                    AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, po));
+                }
+            }
+        }
+    }
+
+    public AbstractCard makeCopy() {
+        return new FlameKiss();
+    }
+
+    public void upgrade() {
+        if (!this.upgraded) {
+            upgradeName();
+            this.rawDescription = UPGRADE_DESCRIPTION;
+            upgradeBaseCost(UPGRADE_COST);
+            upgradeMagicNumber(UPGRADE_PLUS_MAGIC);
+            initializeDescription();
+        }
+    }
+}

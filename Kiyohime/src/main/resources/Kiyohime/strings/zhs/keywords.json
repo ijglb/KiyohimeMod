@@ -1,0 +1,32 @@
+{
+    "Buster": {
+      "NAMES": [
+        "buster"
+      ],
+      "DESCRIPTION": "每回合作为首张攻击卡牌打出时，本回合获得伤害加成。 NL 连续打出3次Buster时追加一次攻击。"
+    },
+    "Arts": {
+      "NAMES": [
+        "arts"
+      ],
+      "DESCRIPTION": "每回合作为首张攻击卡牌打出时，本回合NP获得量增加。 NL 连续打出3次Arts额外获得NP。"
+    },
+    "Quick": {
+      "NAMES": [
+        "quick"
+      ],
+      "DESCRIPTION": "每回合作为首张攻击卡牌打出时，本回合暴击星掉落增加。 NL 连续打出3次Quick额外获得暴击星。"
+    },
+    "EX": {
+      "NAMES": [
+        "宝具"
+      ],
+      "DESCRIPTION": "特殊攻击卡牌，在NP超出100时加入手牌。使用后消耗所有NP。"
+    },
+    "HeroCreation": {
+      "NAMES": [
+        "挂逼作成"
+      ],
+      "DESCRIPTION": "手上每有一张Buster卡，能量消耗减少1。"
+    }
+  }

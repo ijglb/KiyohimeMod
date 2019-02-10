@@ -1,0 +1,110 @@
+{
+    "KiyohimeMod:ChaldeaPower": {
+      "NAME": "来自迦勒底的庇佑",
+      "DESCRIPTIONS": [
+          "为攻击卡牌赋予 #rBuster 、 #bArts 、 #gQuick 特性之一。",
+          " NL 当前回合已打出 #b",
+          " 张 #y带有特性的攻击卡"
+      ]
+    },
+    "KiyohimeMod:NPPower": {
+      "NAME": "NP",
+      "DESCRIPTIONS": [
+          "NP超过 #b100 时可使用 #y宝具 。",
+          " NL 当前NP： #b"
+      ]
+    },
+    "KiyohimeMod:CritStarPower": {
+      "NAME": "暴击星",
+      "DESCRIPTIONS": [
+          "暴击星超过 #g50 时下一次攻击可打出 #y暴击 。",
+          " NL 当前暴击星： #g"
+      ]
+    },
+    "KiyohimeMod:BusterFirstPower": {
+      "NAME": "首红卡",
+      "DESCRIPTIONS": [
+          "造成的伤害提高 #r30%"
+      ]
+    },
+    "KiyohimeMod:ArtsFirstPower": {
+      "NAME": "首蓝卡",
+      "DESCRIPTIONS": [
+          "攻击时NP获得提高 #b100%"
+      ]
+    },
+    "KiyohimeMod:QuickFirstPower": {
+      "NAME": "首绿卡",
+      "DESCRIPTIONS": [
+          "攻击时暴击星获得提高 #g100%"
+      ]
+    },
+    "KiyohimeMod:BusterUPPower": {
+      "NAME": "Buster卡性能提升",
+      "DESCRIPTIONS": [
+          "Buster卡性能提升 #r",
+          "% (总)",
+          " NL #r+",
+          "% ( #b",
+          " 回合)"
+      ]
+    },
+    "KiyohimeMod:ArtsUPPower": {
+      "NAME": "Arts卡性能提升",
+      "DESCRIPTIONS": [
+          "Arts卡性能提升 #b",
+          "% (总)",
+          " NL #b+",
+          "% ( #b",
+          " 回合)"
+      ]
+    },
+    "KiyohimeMod:QuickUPPower": {
+      "NAME": "Quick卡性能提升",
+      "DESCRIPTIONS": [
+          "Quick卡性能提升 #g",
+          "% (总)",
+          " NL #g+",
+          "% ( #b",
+          " 回合)"
+      ]
+    },
+    "KiyohimeMod:RoundTimerPower": {
+      "NAME": "定时器",
+      "DESCRIPTIONS": [
+          "在 #r",
+          " 个回合后， #r"
+      ]
+    },
+    "KiyohimeMod:CritUPPower": {
+      "NAME": "暴击威力提升",
+      "DESCRIPTIONS": [
+        "暴击威力提升 #y",
+        "% (总)",
+        " NL #y+",
+        "% ( #b",
+        " 回合)"
+      ]
+    },
+    "KiyohimeMod:GetCritStarPower": {
+      "NAME": "每回合获得暴击星",
+      "DESCRIPTIONS": [
+        "在每回合开始时，获得 #y",
+        " 个暴击星"
+      ]
+    },
+    "KiyohimeMod:GetNPPower": {
+      "NAME": "每回合获得NP",
+      "DESCRIPTIONS": [
+        "在每回合开始时，获得 #y",
+        " NP"
+      ]
+    },
+    "KiyohimeMod:InvinciblePower": {
+      "NAME": "无敌",
+      "DESCRIPTIONS": [
+        "赋予无敌状态 #y",
+        " 回合"
+      ]
+    }
+  }
