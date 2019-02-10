@@ -44,25 +44,27 @@ public class NPPower extends AbstractPower {
 
     @Override
     public void stackPower(int stackAmount) {
+        if (this.amount < 0)
+            this.amount = 0;
         super.stackPower(stackAmount);
         if (this.amount > 500) {
             this.amount = 500;
         }
         if (this.amount >= 100) {
-            if (!AbstractDungeon.player.hand.getCardNames().contains(TenshinKashoZanmaii.ID)) {
-                AbstractDungeon.actionManager
-                        .addToBottom(new MakeTempCardInHandAction(new TenshinKashoZanmaii(), 1, false));
-            }
+            DrawExCard();
         }
     }
 
+    private void DrawExCard() {
+        if (!AbstractDungeon.player.hand.getCardNames().contains(TenshinKashoZanmaii.ID)) {
+            AbstractDungeon.actionManager.addToTop(new MakeTempCardInHandAction(new TenshinKashoZanmaii(), 1, false));
+        }
+    }
+    
     @Override
     public void atStartOfTurnPostDraw() {
         if (this.amount >= 100) {
-            if (!AbstractDungeon.player.hand.getCardNames().contains(TenshinKashoZanmaii.ID)) {
-                AbstractDungeon.actionManager
-                        .addToBottom(new MakeTempCardInHandAction(new TenshinKashoZanmaii(), 1, false));
-            }
+            DrawExCard();
         }
     }
 

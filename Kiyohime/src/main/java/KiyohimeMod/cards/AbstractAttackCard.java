@@ -139,6 +139,11 @@ public abstract class AbstractAttackCard extends CustomCard {
     }
 
     @Override
+    public void triggerWhenDrawn() {
+        setRandomTag();
+    }
+
+    @Override
     public void applyPowers() {
         setRandomTag();
         this.damage = this.baseDamage;

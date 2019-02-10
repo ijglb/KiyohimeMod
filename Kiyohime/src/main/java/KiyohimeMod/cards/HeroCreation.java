@@ -75,8 +75,7 @@ public class HeroCreation extends CustomCard {
         if (nowCost < 0)
             nowCost = 0;
         if (nowCost != this.cost) {
-            this.costForTurn = nowCost;
-            this.isCostModifiedForTurn = true;
+            setCostForTurn(nowCost);
         }
     }
 

@@ -41,6 +41,13 @@ public class CritStarPower extends AbstractPower {
     }
 
     @Override
+    public void stackPower(int stackAmount) {
+        if (this.amount < 0)
+            this.amount = 0;
+        super.stackPower(stackAmount);
+    }
+
+    @Override
     public void onAfterUseCard(AbstractCard usedCard, UseCardAction action) {
         if (usedCard.type == AbstractCard.CardType.ATTACK) {
             if (this.amount >= 50)
