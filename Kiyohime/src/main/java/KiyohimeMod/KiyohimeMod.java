@@ -4,6 +4,7 @@ import static KiyohimeMod.patches.AbstractCardEnum.Kiyohime_Color;
 
 import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
+import java.util.HashMap;
 import java.util.Map;
 
 import com.badlogic.gdx.Gdx;
@@ -11,6 +12,8 @@ import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.megacrit.cardcrawl.audio.Sfx;
+import com.megacrit.cardcrawl.audio.SoundMaster;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.CardHelper;
@@ -21,15 +24,22 @@ import KiyohimeMod.patches.KiyohimeEnum;
 import KiyohimeMod.relics.*;
 import KiyohimeMod.cards.*;
 import basemod.BaseMod;
+import basemod.ReflectionHacks;
 import basemod.interfaces.EditCardsSubscriber;
 import basemod.interfaces.EditCharactersSubscriber;
 import basemod.interfaces.EditKeywordsSubscriber;
 import basemod.interfaces.EditRelicsSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
+import basemod.interfaces.PostInitializeSubscriber;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 @SpireInitializer
-public class KiyohimeMod implements EditCharactersSubscriber,EditStringsSubscriber,EditKeywordsSubscriber,EditRelicsSubscriber,EditCardsSubscriber {
+public class KiyohimeMod implements EditCharactersSubscriber, EditStringsSubscriber, EditKeywordsSubscriber,
+        EditRelicsSubscriber, EditCardsSubscriber,PostInitializeSubscriber {
 
+    public static final Logger Logger = LogManager.getLogger(KiyohimeMod.class.getName());
     private static final Color buster = CardHelper.getColor(254.0f, 32.0f, 22.0f);
     private static final String attackCard = "Kiyohime/images/512/bg_attack.png";
     private static final String skillCard = "Kiyohime/images/512/bg_skill.png";
@@ -163,6 +173,14 @@ public class KiyohimeMod implements EditCharactersSubscriber,EditStringsSubscrib
         BaseMod.addCard(new PrismaCosmos());
         BaseMod.addCard(new FragmentsOf2030());
         BaseMod.addCard(new AVerseOfBurningLoveStory());
+    }
+
+    @Override
+    public void receivePostInitialize() {
+        //add sounds
+        HashMap<String, Sfx> reflectedMap = (HashMap<String, Sfx>) ReflectionHacks.getPrivate(CardCrawlGame.sound,
+                SoundMaster.class, "map");
+        reflectedMap.put("KiyohimeMod:SELECT", new Sfx("Kiyohime/sounds/Kiyohime_SELECT.ogg"));
     }
 
 }

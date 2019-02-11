@@ -7,16 +7,12 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import basemod.abstracts.CustomRelic;
 
 public class Necromancy extends CustomRelic implements BetterOnLoseHpRelic {
     public static final String ID = "KiyohimeMod:Necromancy";
     public static final Texture IMG = new Texture("Kiyohime/images/relics/Necromancy.png");
     public static final Texture OUTLINE = new Texture("Kiyohime/images/relics/Necromancy_P.png");
-    public static final Logger logger = LogManager.getLogger(Necromancy.class.getName());
 
     public Necromancy() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);

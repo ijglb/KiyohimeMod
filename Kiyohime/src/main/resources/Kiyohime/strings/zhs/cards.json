@@ -127,15 +127,15 @@
     },
     "KiyohimeMod:HeroCreation": {
       "NAME": "英雄作成",
-      "DESCRIPTION": "buster 性能提升 !D! % 3回合 NL 最大HP提升 !B! 点 3回合 NL 暴击威力提升 !M! % 1回合 NL 挂逼作成 。",
+      "DESCRIPTION": "buster 性能提升 !D! % 3回合。暴击威力提升 !M! % 1回合。获得 !B! 临时HP。 NL 挂逼作成 。",
       "EXTENDED_DESCRIPTION":[
-        "最大HP降低",
-        "点"
+        "降低",
+        "临时HP"
       ]
     },
     "KiyohimeMod:Barrier": {
       "NAME": "结界",
-      "DESCRIPTION": "使用 !D! NP，获得无敌状态 !M! 回合。",
+      "DESCRIPTION": "使用 !D! NP，获得无敌状态 !M! 回合。 NL 消耗",
       "EXTENDED_DESCRIPTION":[
         "NP不足，无法使用。"
       ]

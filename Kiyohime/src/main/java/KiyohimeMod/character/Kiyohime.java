@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardColor;
@@ -53,7 +54,7 @@ public class Kiyohime extends CustomPlayer {
 
     @Override
     public void doCharSelectScreenSelectEffect() {
-
+        CardCrawlGame.sound.playA("KiyohimeMod:SELECT", MathUtils.random(-0.1F, 0.1F));
     }
 
     @Override
@@ -78,7 +79,7 @@ public class Kiyohime extends CustomPlayer {
 
     @Override
     public String getCustomModeCharacterButtonSoundKey() {
-        return null;
+        return "KiyohimeMod:SELECT";
     }
 
     @Override

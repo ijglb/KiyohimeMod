@@ -1,21 +1,18 @@
 package KiyohimeMod.cards;
 
 import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower.PowerType;
 
 import KiyohimeMod.actions.ApplyStackablePowerAction;
 import KiyohimeMod.patches.AbstractCardEnum;
 import KiyohimeMod.patches.KiyohimeTags;
 import KiyohimeMod.powers.BusterUPPower;
 import KiyohimeMod.powers.CritUPPower;
-import KiyohimeMod.powers.RoundTimerPower;
 import basemod.abstracts.CustomCard;
 
 public class HeroCreation extends CustomCard {
@@ -32,10 +29,12 @@ public class HeroCreation extends CustomCard {
     private static final int BASE_DAMAGE = 30;//power
     private static final int UPGRADE_PLUS_DAMAGE = 20;
     private static final int BASE_BLOCK = 10;//temp hp
-    private static final int UPGRADE_PLUS_BLOCK = 10;
+    private static final int UPGRADE_PLUS_BLOCK = 5;
     private static final int BASE_TURN = 3;
     private static final int BASE_MAGIC = 50;//crit up
     private static final int UPGRADE_PLUS_MAGIC = 50;
+    private int lastCost = -1;
+    private int otherSetTurnCost = -1;
 
     public HeroCreation() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL, AbstractCardEnum.Kiyohime_Color,
@@ -52,9 +51,9 @@ public class HeroCreation extends CustomCard {
         //add temp HP
         AbstractDungeon.actionManager.addToBottom(new AddTemporaryHPAction(p, p, this.block));
         //lost temp HP
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new RoundTimerPower(p, BASE_TURN, EXTENDED_DESCRIPTION[0] + this.block + EXTENDED_DESCRIPTION[1],
-                        PowerType.BUFF, new AddTemporaryHPAction(p, p, -this.block))));
+        // AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+        //         new RoundTimerPower(p, BASE_TURN, EXTENDED_DESCRIPTION[0] + this.block + EXTENDED_DESCRIPTION[1],
+        //                 PowerType.BUFF, new AddTemporaryHPAction(p, p, -this.block))));
         //crit up 1 turn
         AbstractDungeon.actionManager.addToBottom(new ApplyStackablePowerAction(p, p,
                 new CritUPPower(p, this.magicNumber, 1), this.magicNumber, 1, true));
@@ -74,9 +73,22 @@ public class HeroCreation extends CustomCard {
         int nowCost = this.cost - busterCard;
         if (nowCost < 0)
             nowCost = 0;
-        if (nowCost != this.cost) {
+        if (nowCost != this.costForTurn) {
+            if (this.isCostModifiedForTurn && this.lastCost != -1 && this.costForTurn != this.lastCost) {
+                this.otherSetTurnCost = this.costForTurn;
+            }
+            if (this.otherSetTurnCost != -1 && nowCost > this.otherSetTurnCost) {
+                nowCost = this.otherSetTurnCost;
+            }
+
+            this.lastCost = nowCost;
             setCostForTurn(nowCost);
         }
+    }
+    
+    @Override
+    public void atTurnStart() {
+        this.otherSetTurnCost = -1;
     }
 
     @Override

@@ -39,8 +39,36 @@ public abstract class AbstractAttackCard extends CustomCard {
 
     public AbstractAttackCard(String id, String name, String img, String rawDescription,int hits, AbstractCard.CardRarity rarity,
             AbstractCard.CardTarget target) {
+
         super(id, name, img, 0, rawDescription, CardType.ATTACK, AbstractCardEnum.Kiyohime_Color, rarity, target);
         this.Hits = hits;
+        this.cost = GetBaseCost();
+        this.costForTurn = this.cost;
+    }
+
+    @Override
+    public void upgrade() {
+        if (!this.upgraded) {
+            int base = GetBaseCost();
+            if (base > 0) {
+                upgradeBaseCost(base - 1);
+            }
+        }
+    }
+    
+    private int GetBaseCost() {
+        switch (rarity) {
+        case BASIC:
+        case COMMON:
+        case SPECIAL:
+            return 0;
+        case UNCOMMON:
+            return 1;
+        case RARE:
+            return 2;
+        default:
+            return 0;
+        }
     }
 
     @Override

@@ -31,6 +31,7 @@ public class Barrier extends CustomCard {
                 AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
         this.baseMagicNumber = this.magicNumber = BASE_MAGIC;
         this.baseDamage = this.damage = BASE_DMG;
+        this.exhaust = true;
     }
 
     @Override

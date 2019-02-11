@@ -41,7 +41,7 @@ public class ChaldeaPower extends AbstractPower {
     public void updateDescription() {
         String str = DESCRIPTIONS[0] + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
         if (!CardList.isEmpty()) {
-            str += " NL 本回合已打出:";
+            str += DESCRIPTIONS[3];
             for (String var : CardList) {
                 str += var;
             }

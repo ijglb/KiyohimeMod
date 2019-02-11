@@ -39,6 +39,7 @@ public class Fragarach extends AbstractAttackCard {
 
     @Override
     public void upgrade() {
+        super.upgrade();
         if (!this.upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);

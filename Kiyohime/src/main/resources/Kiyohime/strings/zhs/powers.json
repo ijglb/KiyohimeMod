@@ -4,7 +4,8 @@
       "DESCRIPTIONS": [
           "为攻击卡牌赋予 #rBuster 、 #bArts 、 #gQuick 特性之一。",
           " NL 当前回合已打出 #b",
-          " 张 #y带有特性的攻击卡"
+          " 张 #y带有特性的攻击卡",
+          " NL 本回合已打出:"
       ]
     },
     "KiyohimeMod:NPPower": {
