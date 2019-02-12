@@ -124,6 +124,7 @@ public class KiyohimeMod implements EditCharactersSubscriber, EditStringsSubscri
         BaseMod.addCard(new Defend());
         BaseMod.addCard(new Track());
         BaseMod.addCard(new FlameKiss());
+        BaseMod.addCard(new Shapeshift());
 
         //Attack
         //COMMON
@@ -136,11 +137,16 @@ public class KiyohimeMod implements EditCharactersSubscriber, EditStringsSubscri
         BaseMod.addCard(new BeastOfBillows());
         BaseMod.addCard(new HydraDagger());
         BaseMod.addCard(new RealityMarble());
+        BaseMod.addCard(new CommandCard_Buster());
+        BaseMod.addCard(new CommandCard_Quick());
+        BaseMod.addCard(new CommandCard_Arts());
         //RARE
         BaseMod.addCard(new Destruction());
         BaseMod.addCard(new JeweledSword());
         //SPECIAL
         BaseMod.addCard(new TenshinKashoZanmaii());
+        BaseMod.addCard(new ExtraAttack(0,0));
+        BaseMod.addCard(new DoujyoujikaneHyakuhachishikikaryuunagi());
 
         //Skill
         //COMMON
@@ -178,9 +184,14 @@ public class KiyohimeMod implements EditCharactersSubscriber, EditStringsSubscri
     @Override
     public void receivePostInitialize() {
         //add sounds
-        HashMap<String, Sfx> reflectedMap = (HashMap<String, Sfx>) ReflectionHacks.getPrivate(CardCrawlGame.sound,
-                SoundMaster.class, "map");
+        HashMap<String, Sfx> reflectedMap = getSoundsMap();
         reflectedMap.put("KiyohimeMod:SELECT", new Sfx("Kiyohime/sounds/Kiyohime_SELECT.ogg"));
+    }
+    
+    @SuppressWarnings("unchecked")
+    private HashMap<String, Sfx> getSoundsMap(){
+        return (HashMap<String, Sfx>) ReflectionHacks.getPrivate(CardCrawlGame.sound,
+        SoundMaster.class, "map");
     }
 
 }

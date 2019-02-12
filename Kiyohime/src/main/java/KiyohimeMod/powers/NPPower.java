@@ -13,7 +13,8 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import KiyohimeMod.cards.AbstractAttackCard;
-import KiyohimeMod.cards.TenshinKashoZanmaii;
+import KiyohimeMod.character.AbstractServant;
+import KiyohimeMod.character.Kiyohime;
 import KiyohimeMod.patches.KiyohimeTags;
 
 public class NPPower extends AbstractPower {
@@ -22,8 +23,8 @@ public class NPPower extends AbstractPower {
     public static final String NAME = cardStrings.NAME;
     public static final String[] DESCRIPTIONS = cardStrings.DESCRIPTIONS;
 
-    public static final float NP_Suffer = 3f;
-    public static final float NP_Rate = 2.03f;
+    //public static final float NP_Suffer = 3f;
+    //public static final float NP_Rate = 2.03f;
     public static final float[] NP_Arts = { 3f, 4.5f, 6f };
     public static final float[] NP_Quick = { 1f, 1.5f, 2f };
 
@@ -51,20 +52,24 @@ public class NPPower extends AbstractPower {
             this.amount = 500;
         }
         if (this.amount >= 100) {
-            DrawExCard();
+            drawExCard();
         }
     }
 
-    private void DrawExCard() {
-        if (!AbstractDungeon.player.hand.getCardNames().contains(TenshinKashoZanmaii.ID)) {
-            AbstractDungeon.actionManager.addToTop(new MakeTempCardInHandAction(new TenshinKashoZanmaii(), 1, false));
+    private void drawExCard() {
+        if(AbstractDungeon.player instanceof Kiyohime){
+            AbstractServant servant = ((Kiyohime)AbstractDungeon.player).Servant;
+            AbstractCard ex = servant.npCard;
+            if (!AbstractDungeon.player.hand.getCardNames().contains(ex.cardID)) {
+                AbstractDungeon.actionManager.addToTop(new MakeTempCardInHandAction(ex, 1, false));
+            }
         }
     }
     
     @Override
     public void atStartOfTurnPostDraw() {
         if (this.amount >= 100) {
-            DrawExCard();
+            drawExCard();
         }
     }
 
@@ -72,6 +77,11 @@ public class NPPower extends AbstractPower {
     public void onAfterUseCard(AbstractCard usedCard, UseCardAction action) {
         if (usedCard.type == AbstractCard.CardType.ATTACK && usedCard instanceof AbstractAttackCard) {
             //NP率 * (指令卡补正 * (1 ± 指令卡性能BUFF ∓ 指令卡耐性) + 首位加成) * 敌补正 * (1 ± NP获得量BUFF) * 暴击补正 * Overkill补正
+            float npRate = 0;
+            if(AbstractDungeon.player instanceof Kiyohime){
+                AbstractServant servant = ((Kiyohime)AbstractDungeon.player).Servant;
+                npRate = servant.npRate;
+            }
             float first = 0f;//首位加成
             if (owner.hasPower(ArtsFirstPower.POWER_ID))
                 first = 1f;
@@ -86,7 +96,7 @@ public class NPPower extends AbstractPower {
                 card = NP_Quick[position];
             }
             int hits = ((AbstractAttackCard) usedCard).Hits;
-            float getNP = hits * (NP_Rate * (card * (1 + cardbuff) + first));
+            float getNP = hits * (npRate * (card * (1 + cardbuff) + first));
             if((int) getNP > 0)
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, this, (int) getNP, true));
         }
@@ -95,7 +105,12 @@ public class NPPower extends AbstractPower {
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
         //受击NP率 * 敌补正 * (1 ± NP获得量BUFF ± 受击NP获得量BUFF) * Overkill补正
-        float getNP = NP_Suffer;
+        float npSuffer = 0;
+        if(AbstractDungeon.player instanceof Kiyohime){
+            AbstractServant servant = ((Kiyohime)AbstractDungeon.player).Servant;
+            npSuffer = servant.npSuffer;
+        }
+        float getNP = npSuffer;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, this, (int) getNP, true));
         return damageAmount;
     }

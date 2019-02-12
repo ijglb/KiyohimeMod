@@ -20,6 +20,7 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 import KiyohimeMod.cards.Defend;
 import KiyohimeMod.cards.FlameKiss;
+import KiyohimeMod.cards.Shapeshift;
 import KiyohimeMod.cards.Strike;
 import KiyohimeMod.cards.Track;
 import KiyohimeMod.patches.AbstractCardEnum;
@@ -40,16 +41,33 @@ public class Kiyohime extends CustomPlayer {
         "images/orbs/plasma.png"
     };
 
+    public AbstractServant Servant;
+
     public Kiyohime(String name) {
         super(name, KiyohimeEnum.Kiyohime, orbTextures,"images/orbs/plasma.png", new SpriterAnimation("Kiyohime/images/char/idle/Kiyohime.scml"));
         this.dialogX = (this.drawX + 0.0F * Settings.scale); // set location for text bubbles
         this.dialogY = (this.drawY + 220.0F * Settings.scale); // you can just copy these values
+        this.Servant = new BerserkerKiyohime();
 
         initializeClass(null,
                 MY_CHARACTER_SHOULDER_2,
                 MY_CHARACTER_SHOULDER_1,
                 MY_CHARACTER_CORPSE,
                 getLoadout(), 20.0F, -10.0F, 220.0F, 290.0F, new EnergyManager(ENERGY_PER_TURN));
+    }
+
+    @Override
+    public void preBattlePrep() {
+        if (!(this.Servant instanceof BerserkerKiyohime)) {
+            this.Servant = new BerserkerKiyohime();
+            this.animation = this.Servant.animation;
+        }
+        super.preBattlePrep();
+    }
+
+    public void changeAbstractServant(AbstractServant servant) {
+        this.Servant = servant;
+        this.animation = this.Servant.animation;
     }
 
     @Override
@@ -138,6 +156,7 @@ public class Kiyohime extends CustomPlayer {
         retVal.add(Defend.ID);
         retVal.add(Track.ID);
         retVal.add(FlameKiss.ID);
+        retVal.add(Shapeshift.ID);
         return retVal;
     }
 

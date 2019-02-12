@@ -1,175 +1,207 @@
 {
-    "KiyohimeMod:Strike": {
-      "NAME": "打击",
-      "DESCRIPTION": "造成 !D! 点伤害。"
-    },
-    "KiyohimeMod:Defend": {
-      "NAME": "防御",
-      "DESCRIPTION": "获得 !B! 点格挡。"
-    },
-    "KiyohimeMod:Track": {
-      "NAME": "跟踪",
-      "DESCRIPTION": "给与目标 3 层 易伤，提高目标 1 点力量 !M! 回合",
-      "EXTENDED_DESCRIPTION":[
-        "恋之追踪者",
-        "降低1点力量"
-      ]
-    },
-    "KiyohimeMod:FlameKiss": {
-      "NAME": "焰色接吻",
-      "DESCRIPTION": "buster 性能提升 !M! % 一回合",
-      "UPGRADE_DESCRIPTION":"buster 性能提升 !M! % 一回合，移除你身上的一个负面状态。"
-    },
-    "KiyohimeMod:WaterTurn": {
-      "NAME": "水浴转身",
-      "DESCRIPTION": "buster 性能提升 !D! % !M! 回合"
-    },
-    "KiyohimeMod:Berserker": {
-      "NAME": "狂化",
-      "DESCRIPTION": "buster 性能提升 !M! %"
-    },
-    "KiyohimeMod:Preemptive": {
-      "NAME": "先制",
-      "DESCRIPTION": "造成 !D! 点伤害 !M! 次。"
-    },
-    "KiyohimeMod:EatSoul": {
-      "NAME": "噬魂",
-      "DESCRIPTION": "给予99层 虚弱 。 NL 消耗 。"
-    },
-    "KiyohimeMod:Fragarach": {
-      "NAME": "佛拉格拉克",
-      "DESCRIPTION": "造成 !D! 点伤害，并在本轮回合结束后再次造成 !B! 点伤害",
-      "EXTENDED_DESCRIPTION":[
-        "受到",
-        "点伤害"
-      ]
-    },
-    "KiyohimeMod:RedBlackKey": {
-      "NAME": "赤之黑键",
-      "DESCRIPTION": "造成 !D! 点伤害，buster 性能提升 !M! % 一回合"
-    },
-    "KiyohimeMod:BlueBlackKey": {
-      "NAME": "青之黑键",
-      "DESCRIPTION": "造成 !D! 点伤害，arts 性能提升 !M! % 一回合"
-    },
-    "KiyohimeMod:GreenBlackKey": {
-      "NAME": "绿之黑键",
-      "DESCRIPTION": "造成 !D! 点伤害，quick 性能提升 !M! % 一回合"
-    },
-    "KiyohimeMod:Tenacious": {
-      "NAME": "顽强",
-      "DESCRIPTION": "获得 !M! 层多层护甲。"
-    },
-    "KiyohimeMod:DragonVein": {
-      "NAME": "龙脉",
-      "DESCRIPTION": "获得 !M! NP NL 消耗 。"
-    },
-    "KiyohimeMod:ImaginaryNumberMagecraft": {
-      "NAME": "虚数魔术",
-      "DESCRIPTION": "获得 !M! NP NL 消耗 。"
-    },
-    "KiyohimeMod:SteelTraining": {
-      "NAME": "钢之锻炼",
-      "DESCRIPTION": "获得 !B! 点格挡。"
-    },
-    "KiyohimeMod:AgainstMagic": {
-      "NAME": "对魔力",
-      "DESCRIPTION": "获得 !M! 层人工制品。 NL 消耗 。"
-    },
-    "KiyohimeMod:ExSpicyMapoTofu": {
-      "NAME": "特辣麻婆豆腐",
-      "DESCRIPTION": "恢复 !M! 点生命。 NL  消耗 。"
-    },
-    "KiyohimeMod:TenshinKashoZanmaii": {
-      "NAME": "转身火生三昧",
-      "DESCRIPTION": "对所有敌人造成 !D! 点伤害 !M! 次，概率晕眩敌人。 NL NP越高伤害和晕眩概率越高 NL 宝具 , 消耗 , 虚无 。",
-      "EXTENDED_DESCRIPTION":[
-        "NP不足，无法使用宝具。"
-      ]
-    },
-    "KiyohimeMod:PrismaCosmos": {
-      "NAME": "宇宙棱镜",
-      "DESCRIPTION": "每回合获得 !M! NP。"
-    },
-    "KiyohimeMod:FragmentsOf2030": {
-      "NAME": "2030年的碎片",
-      "DESCRIPTION": "每回合获得 !M! 个暴击星。"
-    },
-    "KiyohimeMod:Grimoire": {
-      "NAME": "魔导书",
-      "DESCRIPTION": "丢弃所有手牌。 NL 然后抽 !M! 张牌。 NL 消耗 。",
-      "UPGRADE_DESCRIPTION": "丢弃所有手牌。 NL 然后抽 !M! 张牌。"
-    },
-    "KiyohimeMod:DivineConstruct": {
-      "NAME": "神造兵器",
-      "DESCRIPTION": "获得 !M! （大量）暴击星。"
-    },
-    "KiyohimeMod:LimitedZeroOver": {
-      "NAME": "限制/零毁",
-      "DESCRIPTION": "buster 性能提升 !M! %"
-    },
-    "KiyohimeMod:ImaginaryAround": {
-      "NAME": "虚数环",
-      "DESCRIPTION": "quick 性能提升 !M! %"
-    },
-    "KiyohimeMod:FormalCraft": {
-      "NAME": "元素转换",
-      "DESCRIPTION": "arts 性能提升 !M! %"
-    },
-    "KiyohimeMod:HotSpringOfTheMoon": {
-      "NAME": "月之疗养温泉",
-      "DESCRIPTION": "暴击威力提升 !D! % NL 每回合获得 !M! 个暴击星。"
-    },
-    "KiyohimeMod:AVerseOfBurningLoveStory": {
-      "NAME": "恋谈火焰行",
-      "DESCRIPTION": "buster 、 arts 、 quick 性能提升 !D! % NL 暴击威力提升 !D! % NL 每回合获得 !B! NP，每回合获得 !M! 暴击星。",
-      "UPGRADE_DESCRIPTION": "固有 。 buster 、 arts 、 quick 性能提升 !D! % NL 暴击威力提升 !D! % NL 每回合获得 !B! NP，每回合获得 !M! 暴击星。"
-    },
-    "KiyohimeMod:HeroCreation": {
-      "NAME": "英雄作成",
-      "DESCRIPTION": "buster 性能提升 !D! % 3回合。暴击威力提升 !M! % 1回合。获得 !B! 临时HP。 NL 挂逼作成 。",
-      "EXTENDED_DESCRIPTION":[
-        "降低",
-        "临时HP"
-      ]
-    },
-    "KiyohimeMod:Barrier": {
-      "NAME": "结界",
-      "DESCRIPTION": "使用 !D! NP，获得无敌状态 !M! 回合。 NL 消耗",
-      "EXTENDED_DESCRIPTION":[
-        "NP不足，无法使用。"
-      ]
-    },
-    "KiyohimeMod:Projection": {
-      "NAME": "投影魔术",
-      "DESCRIPTION": "使用 !D! NP，获得 !M! 点 力量 。 NL 消耗",
-      "UPGRADE_DESCRIPTION":"使用 !D! NP，获得 !M! 点 力量 。",
-      "EXTENDED_DESCRIPTION":[
-        "NP不足，无法使用。"
-      ]
-    },
-    "KiyohimeMod:BeastOfBillows": {
-      "NAME": "波涛之兽",
-      "DESCRIPTION": "随机造成 !D! 点伤害 !M! 次。"
-    },
-    "KiyohimeMod:JeweledSword": {
-      "NAME": "宝石剑",
-      "DESCRIPTION": "造成 !D! 点伤害。 NL 每有10点NP，伤害提高 !M!"
-    },
-    "KiyohimeMod:CelestialInvertedMoon": {
-      "NAME": "天之逆月",
-      "DESCRIPTION": "获得 !B! 点格挡。 NL 每有1个暴击星，获得 !M! 点 格挡 。"
-    },
-    "KiyohimeMod:HydraDagger": {
-      "NAME": "许德拉匕首",
-      "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 。"
-    },
-    "KiyohimeMod:RealityMarble": {
-      "NAME": "固有结界",
-      "DESCRIPTION": "造成 !D! 点伤害。 NL 目标身上每有1点 力量 ，伤害增加 !M! 。"
-    },
-    "KiyohimeMod:Destruction": {
-      "NAME": "破坏",
-      "DESCRIPTION": "造成 !D! 点伤害。 NL 目标身上有 格挡 时伤害翻倍。"
-    }
+  "KiyohimeMod:NPCard": {
+    "NAME": "NPCard",
+    "DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": [
+      "NP不足，无法使用宝具。"
+    ]
+  },
+  "KiyohimeMod:ExtraAttack": {
+    "NAME": "Extra攻击",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。根据人物状态不同伤害数据不同，卡色为本回合打出的首张卡卡色。自动使用，无法获得。"
+  },
+  "KiyohimeMod:Strike": {
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "KiyohimeMod:Defend": {
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点格挡。"
+  },
+  "KiyohimeMod:Track": {
+    "NAME": "跟踪",
+    "DESCRIPTION": "给与目标 3 层 易伤，提高目标 1 点力量 !M! 回合",
+    "EXTENDED_DESCRIPTION": [
+      "恋之追踪者",
+      "降低1点力量"
+    ]
+  },
+  "KiyohimeMod:FlameKiss": {
+    "NAME": "焰色接吻",
+    "DESCRIPTION": "buster 性能提升 !M! % 一回合",
+    "UPGRADE_DESCRIPTION": "buster 性能提升 !M! % 一回合，移除你身上的一个负面状态。"
+  },
+  "KiyohimeMod:WaterTurn": {
+    "NAME": "水浴转身",
+    "DESCRIPTION": "buster 性能提升 !D! % !M! 回合"
+  },
+  "KiyohimeMod:Berserker": {
+    "NAME": "狂化",
+    "DESCRIPTION": "buster 性能提升 !M! %"
+  },
+  "KiyohimeMod:Preemptive": {
+    "NAME": "先制",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。"
+  },
+  "KiyohimeMod:EatSoul": {
+    "NAME": "噬魂",
+    "DESCRIPTION": "给予99层 虚弱 。 NL 消耗 。"
+  },
+  "KiyohimeMod:Fragarach": {
+    "NAME": "佛拉格拉克",
+    "DESCRIPTION": "造成 !D! 点伤害，并在本轮回合结束后再次造成 !B! 点伤害",
+    "EXTENDED_DESCRIPTION": [
+      "受到",
+      "点伤害"
+    ]
+  },
+  "KiyohimeMod:RedBlackKey": {
+    "NAME": "赤之黑键",
+    "DESCRIPTION": "造成 !D! 点伤害，buster 性能提升 !M! % 一回合"
+  },
+  "KiyohimeMod:BlueBlackKey": {
+    "NAME": "青之黑键",
+    "DESCRIPTION": "造成 !D! 点伤害，arts 性能提升 !M! % 一回合"
+  },
+  "KiyohimeMod:GreenBlackKey": {
+    "NAME": "绿之黑键",
+    "DESCRIPTION": "造成 !D! 点伤害，quick 性能提升 !M! % 一回合"
+  },
+  "KiyohimeMod:Tenacious": {
+    "NAME": "顽强",
+    "DESCRIPTION": "获得 !M! 层多层护甲。"
+  },
+  "KiyohimeMod:DragonVein": {
+    "NAME": "龙脉",
+    "DESCRIPTION": "获得 !M! NP NL 消耗 。"
+  },
+  "KiyohimeMod:ImaginaryNumberMagecraft": {
+    "NAME": "虚数魔术",
+    "DESCRIPTION": "获得 !M! NP NL 消耗 。"
+  },
+  "KiyohimeMod:SteelTraining": {
+    "NAME": "钢之锻炼",
+    "DESCRIPTION": "获得 !B! 点格挡。"
+  },
+  "KiyohimeMod:AgainstMagic": {
+    "NAME": "对魔力",
+    "DESCRIPTION": "获得 !M! 层人工制品。 NL 消耗 。"
+  },
+  "KiyohimeMod:ExSpicyMapoTofu": {
+    "NAME": "特辣麻婆豆腐",
+    "DESCRIPTION": "恢复 !M! 点生命。 NL  消耗 。"
+  },
+  "KiyohimeMod:TenshinKashoZanmaii": {
+    "NAME": "转身火生三昧",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害 !M! 次，概率晕眩敌人。 NL NP越高伤害和晕眩概率越高。 NL 宝具 , 消耗 , 虚无 。",
+    "EXTENDED_DESCRIPTION": [
+      "NP不足，无法使用宝具。"
+    ]
+  },
+  "KiyohimeMod:PrismaCosmos": {
+    "NAME": "宇宙棱镜",
+    "DESCRIPTION": "每回合获得 !M! NP。"
+  },
+  "KiyohimeMod:FragmentsOf2030": {
+    "NAME": "2030年的碎片",
+    "DESCRIPTION": "每回合获得 !M! 个暴击星。"
+  },
+  "KiyohimeMod:Grimoire": {
+    "NAME": "魔导书",
+    "DESCRIPTION": "丢弃所有手牌。 NL 然后抽 !M! 张牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "丢弃所有手牌。 NL 然后抽 !M! 张牌。"
+  },
+  "KiyohimeMod:DivineConstruct": {
+    "NAME": "神造兵器",
+    "DESCRIPTION": "获得 !M! （大量）暴击星。"
+  },
+  "KiyohimeMod:LimitedZeroOver": {
+    "NAME": "限制/零毁",
+    "DESCRIPTION": "buster 性能提升 !M! %"
+  },
+  "KiyohimeMod:ImaginaryAround": {
+    "NAME": "虚数环",
+    "DESCRIPTION": "quick 性能提升 !M! %"
+  },
+  "KiyohimeMod:FormalCraft": {
+    "NAME": "元素转换",
+    "DESCRIPTION": "arts 性能提升 !M! %"
+  },
+  "KiyohimeMod:HotSpringOfTheMoon": {
+    "NAME": "月之疗养温泉",
+    "DESCRIPTION": "暴击威力提升 !D! % NL 每回合获得 !M! 个暴击星。"
+  },
+  "KiyohimeMod:AVerseOfBurningLoveStory": {
+    "NAME": "恋谈火焰行",
+    "DESCRIPTION": "buster 、 arts 、 quick 性能提升 !D! % NL 暴击威力提升 !D! % NL 每回合获得 !B! NP，每回合获得 !M! 暴击星。",
+    "UPGRADE_DESCRIPTION": "固有 。 buster 、 arts 、 quick 性能提升 !D! % NL 暴击威力提升 !D! % NL 每回合获得 !B! NP，每回合获得 !M! 暴击星。"
+  },
+  "KiyohimeMod:HeroCreation": {
+    "NAME": "英雄作成",
+    "DESCRIPTION": "buster 性能提升 !D! % 3回合。暴击威力提升 !M! % 1回合。获得 !B! 临时HP。 NL 挂逼作成 。",
+    "EXTENDED_DESCRIPTION": [
+      "降低",
+      "临时HP"
+    ]
+  },
+  "KiyohimeMod:Barrier": {
+    "NAME": "结界",
+    "DESCRIPTION": "使用 !D! NP，获得无敌状态 !M! 回合。 NL 消耗",
+    "EXTENDED_DESCRIPTION": [
+      "NP不足，无法使用。"
+    ]
+  },
+  "KiyohimeMod:Projection": {
+    "NAME": "投影魔术",
+    "DESCRIPTION": "使用 !D! NP，获得 !M! 点 力量 。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "使用 !D! NP，获得 !M! 点 力量 。",
+    "EXTENDED_DESCRIPTION": [
+      "NP不足，无法使用。"
+    ]
+  },
+  "KiyohimeMod:BeastOfBillows": {
+    "NAME": "波涛之兽",
+    "DESCRIPTION": "随机造成 !D! 点伤害 !M! 次。"
+  },
+  "KiyohimeMod:JeweledSword": {
+    "NAME": "宝石剑",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每有10点NP，伤害提高 !M!"
+  },
+  "KiyohimeMod:CelestialInvertedMoon": {
+    "NAME": "天之逆月",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 每有1个暴击星，获得 !M! 点 格挡 。"
+  },
+  "KiyohimeMod:HydraDagger": {
+    "NAME": "许德拉匕首",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 。"
+  },
+  "KiyohimeMod:RealityMarble": {
+    "NAME": "固有结界",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 目标身上每有1点 力量 ，伤害增加 !M! 。"
+  },
+  "KiyohimeMod:Destruction": {
+    "NAME": "破坏",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 目标身上有 格挡 时伤害翻倍。"
+  },
+  "KiyohimeMod:CommandCard_Buster": {
+    "NAME": "指令卡：Buster",
+    "DESCRIPTION": "指令卡 , buster 。基础伤害: !B! 。（造成 !D! 点伤害 !M! 次）"
+  },
+  "KiyohimeMod:CommandCard_Quick": {
+    "NAME": "指令卡：Quick",
+    "DESCRIPTION": "指令卡 , quick 。基础伤害: !B! 。（造成 !D! 点伤害 !M! 次）"
+  },
+  "KiyohimeMod:CommandCard_Arts": {
+    "NAME": "指令卡：Arts",
+    "DESCRIPTION": "指令卡 , arts 。基础伤害: !B! 。（造成 !D! 点伤害 !M! 次）"
+  },
+  "KiyohimeMod:DoujyoujikaneHyakuhachishikikaryuunagi": {
+    "NAME": "道成寺钟百八式火龙薙",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL NP越高伤害越高。 NL 宝具 , 消耗 , 虚无 。"
+  },
+  "KiyohimeMod:Shapeshift": {
+    "NAME": "变化",
+    "DESCRIPTION": "切换形态。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "切换形态。"
+  }
 }

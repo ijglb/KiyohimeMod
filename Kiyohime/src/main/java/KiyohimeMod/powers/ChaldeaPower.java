@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
+import KiyohimeMod.actions.ExtraAttackAction;
 import KiyohimeMod.cards.AbstractAttackCard;
 import KiyohimeMod.patches.KiyohimeTags;
 
@@ -24,7 +25,7 @@ public class ChaldeaPower extends AbstractPower {
     public static final String Arts = " #bA ";
     public static final String Quick = " #gQ ";
 
-    private ArrayList<String> CardList = new ArrayList<String>();
+    public ArrayList<String> CardList = new ArrayList<String>();
     private boolean isChain = false;
 
     public ChaldeaPower(AbstractCreature owner) {
@@ -89,8 +90,7 @@ public class ChaldeaPower extends AbstractPower {
                 if (last1Card == last2Card && last2Card == last3Card) {
                     flash();
                     if (last1Card == Buster) {
-                        //use again
-                        card.use(AbstractDungeon.player, m);
+                        AbstractDungeon.actionManager.addToBottom(new ExtraAttackAction(m));
                     } else if (last1Card == Arts) {
                         AbstractDungeon.actionManager
                                 .addToBottom(new ApplyPowerAction(owner, owner, new NPPower(owner), 20));

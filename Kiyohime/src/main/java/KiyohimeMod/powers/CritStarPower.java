@@ -1,6 +1,7 @@
 package KiyohimeMod.powers;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -13,6 +14,8 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import KiyohimeMod.cards.AbstractAttackCard;
+import KiyohimeMod.character.AbstractServant;
+import KiyohimeMod.character.Kiyohime;
 import KiyohimeMod.patches.KiyohimeTags;
 
 public class CritStarPower extends AbstractPower {
@@ -21,7 +24,7 @@ public class CritStarPower extends AbstractPower {
     public static final String NAME = cardStrings.NAME;
     public static final String[] DESCRIPTIONS = cardStrings.DESCRIPTIONS;
 
-    public static final float Star_Rate = 0.49f;
+    //public static final float Star_Rate = 0.49f;
     public static final float[] Star_Buster = { 0.1f, 0.15f, 0.20f };
     public static final float[] Star_Quick = { 0.8f, 1.3f, 1.8f };
 
@@ -54,6 +57,11 @@ public class CritStarPower extends AbstractPower {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, this, -50, true));
             if (usedCard instanceof AbstractAttackCard) {
                 //从者掉星率 + 指令卡掉星率 * (1 ± 指令卡性能BUFF ∓ 指令卡耐性) + 首位加成 + 敌补正 ± 掉星率BUFF ± 敌人掉星率BUFF + 暴击补正 + Overkill补正
+                float starRate = 0;
+                if(AbstractDungeon.player instanceof Kiyohime){
+                    AbstractServant servant = ((Kiyohime)AbstractDungeon.player).Servant;
+                    starRate = servant.starRate;
+                }
                 float first = 0f;//首位加成
                 if (owner.hasPower(QuickFirstPower.POWER_ID))
                     first = 1f;
@@ -68,10 +76,10 @@ public class CritStarPower extends AbstractPower {
                     card = Star_Quick[position];
                 }
                 int hits = ((AbstractAttackCard) usedCard).Hits;
-                float getStar = hits * (Star_Rate + card * (1 + cardbuff) + first);
-                if ((int) getStar > 0)
+                int getStar = MathUtils.round(hits * (starRate + card * (1 + cardbuff) + first));
+                if (getStar > 0)
                     AbstractDungeon.actionManager
-                            .addToBottom(new ApplyPowerAction(owner, owner, this, (int) getStar, true));
+                            .addToBottom(new ApplyPowerAction(owner, owner, this, getStar, true));
             }
         }
     }

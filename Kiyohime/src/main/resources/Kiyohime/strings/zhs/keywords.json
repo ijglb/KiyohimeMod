@@ -3,7 +3,7 @@
       "NAMES": [
         "buster"
       ],
-      "DESCRIPTION": "每回合作为首张攻击卡牌打出时，本回合获得伤害加成。 NL 连续打出3次Buster时追加一次攻击。"
+      "DESCRIPTION": "每回合作为首张攻击卡牌打出时，本回合获得伤害加成。 NL 连续打出3次Buster时追加一次Extra攻击。"
     },
     "Arts": {
       "NAMES": [
@@ -28,5 +28,11 @@
         "挂逼作成"
       ],
       "DESCRIPTION": "手上每有一张Buster卡，能量消耗减少1。"
+    },
+    "CommandCard": {
+      "NAMES": [
+        "指令卡"
+      ],
+      "DESCRIPTION": "指令卡拥有明确的卡色和基础伤害数值，但伤害和打击次数由当前人物隐藏数值决定。"
     }
   }

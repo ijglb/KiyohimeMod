@@ -97,18 +97,16 @@ public abstract class AbstractAttackCard extends CustomCard {
     private void setRandomTag() {
         if (!isSetTag) {
             if (!isSpecialTag && AbstractDungeon.player.hasPower(ChaldeaPower.POWER_ID)) {
-                //QABBB
-                int i = AbstractDungeon.miscRng.random(1, 5);
+                //随机分配
+                int i = AbstractDungeon.miscRng.random(1, 3);
                 switch (i) {
                 case 1:
-                    this.tags.add(KiyohimeTags.ATTACK_Quick);
-                    break;
-                case 2:
                     this.tags.add(KiyohimeTags.ATTACK_Arts);
                     break;
+                case 2:
+                    this.tags.add(KiyohimeTags.ATTACK_Quick);
+                    break;
                 case 3:
-                case 4:
-                case 5:
                     this.tags.add(KiyohimeTags.ATTACK_Buster);
                 default:
                     break;
