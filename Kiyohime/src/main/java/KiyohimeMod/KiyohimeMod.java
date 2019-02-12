@@ -159,12 +159,12 @@ public class KiyohimeMod implements EditCharactersSubscriber, EditStringsSubscri
         BaseMod.addCard(new ExSpicyMapoTofu());
         BaseMod.addCard(new Grimoire());
         BaseMod.addCard(new DivineConstruct());
-        BaseMod.addCard(new Barrier());
         BaseMod.addCard(new Projection());
+        BaseMod.addCard(new CelestialInvertedMoon());
         //RARE
         BaseMod.addCard(new ImaginaryNumberMagecraft());
         BaseMod.addCard(new HeroCreation());
-        BaseMod.addCard(new CelestialInvertedMoon());
+        BaseMod.addCard(new Barrier());
 
         //Power
         //COMMON
@@ -186,6 +186,20 @@ public class KiyohimeMod implements EditCharactersSubscriber, EditStringsSubscri
         //add sounds
         HashMap<String, Sfx> reflectedMap = getSoundsMap();
         reflectedMap.put("KiyohimeMod:SELECT", new Sfx("Kiyohime/sounds/Kiyohime_SELECT.ogg"));
+
+        reflectedMap.put("KiyohimeMod:Lancer_BattleStart_1",
+                new Sfx("Kiyohime/sounds/Kiyohime_Lancer_BattleStart_1.ogg"));
+        reflectedMap.put("KiyohimeMod:Lancer_BattleStart_2",
+                new Sfx("Kiyohime/sounds/Kiyohime_Lancer_BattleStart_2.ogg"));
+
+        reflectedMap.put("KiyohimeMod:Berserker_BattleStart_1",
+                new Sfx("Kiyohime/sounds/Kiyohime_Berserker_BattleStart_1.ogg"));
+        reflectedMap.put("KiyohimeMod:Berserker_BattleStart_2",
+                new Sfx("Kiyohime/sounds/Kiyohime_Berserker_BattleStart_2.ogg"));
+        reflectedMap.put("KiyohimeMod:Berserker_BattleStart_3",
+                new Sfx("Kiyohime/sounds/Kiyohime_Berserker_BattleStart_3.ogg"));
+        reflectedMap.put("KiyohimeMod:Berserker_BattleStart_4",
+                new Sfx("Kiyohime/sounds/Kiyohime_Berserker_BattleStart_4.ogg"));
     }
     
     @SuppressWarnings("unchecked")

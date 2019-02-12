@@ -3,6 +3,6 @@
     "name": "清姬",
     "author_list": ["jglb"],
     "description": "清姬mod",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "dependencies": ["basemod","stslib"]
 }

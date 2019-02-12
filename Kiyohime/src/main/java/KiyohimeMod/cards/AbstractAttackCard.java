@@ -50,7 +50,7 @@ public abstract class AbstractAttackCard extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             int base = GetBaseCost();
-            if (base > 0) {
+            if (base > 0 && this.rarity == CardRarity.RARE) {
                 upgradeBaseCost(base - 1);
             }
         }

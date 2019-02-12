@@ -58,21 +58,25 @@ public class Kiyohime extends CustomPlayer {
 
     @Override
     public void preBattlePrep() {
-        if (!(this.Servant instanceof BerserkerKiyohime)) {
-            this.Servant = new BerserkerKiyohime();
-            this.animation = this.Servant.animation;
+        String sound = Servant.getBattleStartSound();
+        if (sound != null) {
+            CardCrawlGame.sound.playA(sound, MathUtils.random(0F, 0.2F));
         }
         super.preBattlePrep();
     }
 
     public void changeAbstractServant(AbstractServant servant) {
+        String sound = servant.getBattleStartSound();
+        if (sound != null) {
+            CardCrawlGame.sound.playA(sound, MathUtils.random(0F, 0.2F));
+        }
         this.Servant = servant;
         this.animation = this.Servant.animation;
     }
 
     @Override
     public void doCharSelectScreenSelectEffect() {
-        CardCrawlGame.sound.playA("KiyohimeMod:SELECT", MathUtils.random(-0.1F, 0.1F));
+        CardCrawlGame.sound.playA("KiyohimeMod:SELECT", MathUtils.random(0F, 0.2F));
     }
 
     @Override

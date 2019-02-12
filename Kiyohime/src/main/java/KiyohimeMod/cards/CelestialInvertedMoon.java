@@ -22,13 +22,13 @@ public class CelestialInvertedMoon extends CustomCard {
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
-    private static final int UPGRADE_COST = 0;
+    //private static final int UPGRADE_COST = 0;
     private static final int BLOCK = 0;
     private static final int BASE_MAGIC = 1;
 
     public CelestialInvertedMoon() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL, AbstractCardEnum.Kiyohime_Color,
-                AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
+                AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
         this.block = this.baseBlock = BLOCK;
         this.magicNumber = this.baseMagicNumber = BASE_MAGIC;
     }
@@ -73,7 +73,7 @@ public class CelestialInvertedMoon extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADE_COST);
+            //upgradeBaseCost(UPGRADE_COST);
         }
     }
 }

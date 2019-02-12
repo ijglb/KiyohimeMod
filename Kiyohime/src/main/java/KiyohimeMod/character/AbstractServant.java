@@ -27,4 +27,8 @@ public abstract class AbstractServant {
     public abstract int getQuickHits();
 
     public abstract int getArtsHits();
+
+    public String getBattleStartSound() {
+        return null;
+    }
 }

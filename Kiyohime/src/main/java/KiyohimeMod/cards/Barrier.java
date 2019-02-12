@@ -22,13 +22,13 @@ public class Barrier extends CustomCard {
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
     private static final int COST = 1;
-    private static final int UPGRADE_COST = 0;
+    //private static final int UPGRADE_COST = 0;
     private static final int BASE_MAGIC = 1;
     private static final int BASE_DMG = 20;
 
     public Barrier() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL, AbstractCardEnum.Kiyohime_Color,
-                AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+                AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
         this.baseMagicNumber = this.magicNumber = BASE_MAGIC;
         this.baseDamage = this.damage = BASE_DMG;
         this.exhaust = true;
@@ -77,7 +77,7 @@ public class Barrier extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADE_COST);
+            //upgradeBaseCost(UPGRADE_COST);
         }
     }
 }

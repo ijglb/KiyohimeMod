@@ -10,3 +10,5 @@ Card
 [card-Berserker:72621556](https://www.pixiv.net/member_illust.php?mode=medium&illust_id=72621556)  
 [card-WaterTurn:71212205](https://www.pixiv.net/member_illust.php?mode=medium&illust_id=71212205)  
 [card-TenshinKashoZanmaii:60987874](https://www.pixiv.net/member_illust.php?mode=medium&illust_id=60987874)  
+[card-Shapeshift:69344168](https://www.pixiv.net/member_illust.php?mode=medium&illust_id=69344168)  
+[card-DoujyoujikaneHyakuhachishikikaryuunagi:73073323](https://www.pixiv.net/member_illust.php?mode=medium&illust_id=73073323)  
