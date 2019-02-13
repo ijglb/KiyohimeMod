@@ -1,62 +1,78 @@
 {
-    "KiyohimeMod:Stone": {
-      "NAME": "圣晶石",
-      "FLAVOR": "来自迦勒底的圣晶石...",
-      "DESCRIPTIONS": [
-          "获得 #g来自迦勒底的庇佑 ，获得 #g3个圣晶石 ，战斗中右击遗物可使用钞能力。",
-          "使用钞能力",
-          "灵基修复",
-          "使用 1 个圣晶石，恢复全部生命。",
-          "宝具解放",
-          "使用 1 个圣晶石，NP 增加 100。",
-          "取消使用钞能力",
-          "我不小心误点了"
-        ]
-    },
-    "KiyohimeMod:TheBlackGrail": {
-      "NAME": "黑之圣杯",
-      "FLAVOR": "被正义所附身的男性所看到的幻觉。漆黑浑浊的圣杯如是说。要付出代价作为回报。如同那歌颂爱的命运之女。",
-      "DESCRIPTIONS": [
-          "#y宝具 威力提升 #y80% ，每回合受到1点伤害"
-        ]
-    },
-    "KiyohimeMod:Bond": {
-      "NAME": "羁绊永存",
-      "FLAVOR": "即使与上次相遇时略有不同，你，仍然记得与她们的所有羁绊。",
-      "DESCRIPTIONS": [
-          "在战斗开始时，获得 #b",
-          " NP。"
-        ]
-    },
-    "KiyohimeMod:Necromancy": {
-      "NAME": "欧洲魔术",
-      "FLAVOR": "传闻只有欧洲人懂得使用此魔术。",
-      "DESCRIPTIONS": [
-          "每当受到 #r致命伤害 时，有一定概率使伤害 #r不致死 并恢复一定生命。"
-        ]
-    },
-    "KiyohimeMod:UnlimitedPranaSupply": {
-      "NAME": "无限的魔力供给",
-      "FLAVOR": "从万华镜魔杖得到无限的魔力供给......会不会导致魔力中毒呢。",
-      "DESCRIPTIONS": [
-          "每回合获得 #b",
-          " 点NP"
-        ]
-    },
-    "KiyohimeMod:TerritoryCreation": {
-      "NAME": "阵地作成",
-      "FLAVOR": "建造对于魔术师自身有利的阵地「工房」，达到A等级可以构筑超过「工房」的「神殿」",
-      "DESCRIPTIONS": [
-          "#bArts 性能提升 #b",
-          "% "
-        ]
-    },
-    "KiyohimeMod:Divinity": {
-      "NAME": "神性",
-      "FLAVOR": "具有神灵适应性。",
-      "DESCRIPTIONS": [
-          "每当你造成未被格挡的 #y攻击 伤害时，将伤害提升 #r",
-          " 点"
-        ]
-    }
+  "KiyohimeMod:Stone": {
+    "NAME": "圣晶石",
+    "FLAVOR": "来自迦勒底的圣晶石...",
+    "DESCRIPTIONS": [
+      "获得 #g来自迦勒底的庇佑 ，获得 #g3个圣晶石 ，战斗中右击遗物可使用钞能力。",
+      "使用钞能力",
+      "灵基修复",
+      "使用 1 个圣晶石，恢复全部生命。",
+      "宝具解放",
+      "使用 1 个圣晶石，NP 增加 100。",
+      "取消使用钞能力",
+      "我不小心误点了"
+    ]
+  },
+  "KiyohimeMod:TheBlackGrail": {
+    "NAME": "黑之圣杯",
+    "FLAVOR": "被正义所附身的男性所看到的幻觉。漆黑浑浊的圣杯如是说。要付出代价作为回报。如同那歌颂爱的命运之女。",
+    "DESCRIPTIONS": [
+      "#y宝具 威力提升 #y80% ，每回合受到1点伤害"
+    ]
+  },
+  "KiyohimeMod:Bond": {
+    "NAME": "羁绊永存",
+    "FLAVOR": "即使与上次相遇时略有不同，你，仍然记得与她们的所有羁绊。",
+    "DESCRIPTIONS": [
+      "在战斗开始时，获得 #b",
+      " NP。"
+    ]
+  },
+  "KiyohimeMod:Necromancy": {
+    "NAME": "欧洲魔术",
+    "FLAVOR": "传闻只有欧洲人懂得使用此魔术。",
+    "DESCRIPTIONS": [
+      "每当受到 #r致命伤害 时，有一定概率使伤害 #r不致死 并恢复一定生命。"
+    ]
+  },
+  "KiyohimeMod:UnlimitedPranaSupply": {
+    "NAME": "无限的魔力供给",
+    "FLAVOR": "从万华镜魔杖得到无限的魔力供给......会不会导致魔力中毒呢。",
+    "DESCRIPTIONS": [
+      "每回合获得 #b",
+      " 点NP"
+    ]
+  },
+  "KiyohimeMod:TerritoryCreation": {
+    "NAME": "阵地作成",
+    "FLAVOR": "建造对于魔术师自身有利的阵地「工房」，达到A等级可以构筑超过「工房」的「神殿」",
+    "DESCRIPTIONS": [
+      "#bArts 性能提升 #b",
+      "% "
+    ]
+  },
+  "KiyohimeMod:Divinity": {
+    "NAME": "神性",
+    "FLAVOR": "具有神灵适应性。",
+    "DESCRIPTIONS": [
+      "每当你造成未被格挡的 #y攻击 伤害时，将伤害提升 #r",
+      " 点"
+    ]
+  },
+  "KiyohimeMod:ElixirOfRejuvenation": {
+    "NAME": "返老还童的灵药",
+    "FLAVOR": "收纳于英雄王宝物库内的财宝之一。传说能令人的身体转瞬间返老还童。原本是从深渊捡来的灵草，只不过是冒充不老不死效果的“长寿之药”罢了。",
+    "DESCRIPTIONS": [
+      "如果你在战斗开始时生命值等于或低于 #b50% ，回复 #b",
+      " 点生命。"
+    ]
+  },
+  "KiyohimeMod:HolyShroudOfMagdalene": {
+    "NAME": "抹大拉的圣骸布",
+    "FLAVOR": "请不要触碰我（Noli me tangere）。正因身在驱魔的泥潭中，圣女的证明才得以成立。",
+    "DESCRIPTIONS": [
+      "每当你受到来自 #y精英 敌人的伤害，且 #y未被格挡 ，将伤害降低 #b",
+      " 点。"
+    ]
+  }
 }

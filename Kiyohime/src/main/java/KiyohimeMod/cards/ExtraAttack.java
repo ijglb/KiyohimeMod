@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import KiyohimeMod.character.Kiyohime;
 import KiyohimeMod.patches.KiyohimeTags;
 import KiyohimeMod.powers.ChaldeaPower;
 
@@ -44,16 +45,14 @@ public class ExtraAttack extends AbstractAttackCard {
     @Override
     public AbstractCard makeStatEquivalentCopy() {
         AbstractCard card = super.makeStatEquivalentCopy();
-        if(AbstractDungeon.player.hasPower(ChaldeaPower.POWER_ID)){
-            ChaldeaPower power = (ChaldeaPower)AbstractDungeon.player.getPower(ChaldeaPower.POWER_ID);
+        if (AbstractDungeon.player instanceof Kiyohime && AbstractDungeon.player.hasPower(ChaldeaPower.POWER_ID)) {
+            ChaldeaPower power = (ChaldeaPower) AbstractDungeon.player.getPower(ChaldeaPower.POWER_ID);
             String firstCard = power.CardList.get(0);
-            if(firstCard == ChaldeaPower.Buster){
+            if (firstCard == ChaldeaPower.Buster) {
                 card.tags.add(KiyohimeTags.ATTACK_Buster);
-            }
-            else if(firstCard == ChaldeaPower.Arts){
+            } else if (firstCard == ChaldeaPower.Arts) {
                 card.tags.add(KiyohimeTags.ATTACK_Arts);
-            }
-            else if(firstCard == ChaldeaPower.Quick){
+            } else if (firstCard == ChaldeaPower.Quick) {
                 card.tags.add(KiyohimeTags.ATTACK_Quick);
             }
         }

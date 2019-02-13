@@ -24,6 +24,7 @@ public class CelestialInvertedMoon extends CustomCard {
     private static final int COST = 1;
     //private static final int UPGRADE_COST = 0;
     private static final int BLOCK = 0;
+    private static final int UPGRADE_BLOCK = 5;
     private static final int BASE_MAGIC = 1;
 
     public CelestialInvertedMoon() {
@@ -73,6 +74,7 @@ public class CelestialInvertedMoon extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
+            upgradeBlock(UPGRADE_BLOCK);
             //upgradeBaseCost(UPGRADE_COST);
         }
     }

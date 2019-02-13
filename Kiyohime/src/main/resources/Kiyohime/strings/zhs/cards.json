@@ -169,7 +169,7 @@
   },
   "KiyohimeMod:CelestialInvertedMoon": {
     "NAME": "天之逆月",
-    "DESCRIPTION": "获得 !B! 点格挡。 NL 每有1个暴击星，获得 !M! 点 格挡 。"
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 每有1个暴击星，额外获得 !M! 点 格挡 。"
   },
   "KiyohimeMod:HydraDagger": {
     "NAME": "许德拉匕首",
@@ -201,7 +201,15 @@
   },
   "KiyohimeMod:Shapeshift": {
     "NAME": "变化",
-    "DESCRIPTION": "切换形态。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "切换形态。"
+    "DESCRIPTION": "切换 形态 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "切换 形态 。"
+  },
+  "KiyohimeMod:AndSoTheShipConquers": {
+    "NAME": "扬帆远航",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 在下一回合获得 !B! 点 格挡 。"
+  },
+  "KiyohimeMod:GoldenCarpFigure": {
+    "NAME": "黄金捕鲤图",
+    "DESCRIPTION": "获得 !B! 暴击星。 NL 将弃牌堆中的 !M! 张牌放入你的手牌。 NL 消耗 。"
   }
 }

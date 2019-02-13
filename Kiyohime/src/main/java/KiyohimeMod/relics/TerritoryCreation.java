@@ -15,7 +15,7 @@ public class TerritoryCreation extends CustomRelic {
     public static final Texture OUTLINE = new Texture("Kiyohime/images/relics/TerritoryCreation_P.png");
 
     public TerritoryCreation() {
-        super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);
         counter = -1;
     }
 

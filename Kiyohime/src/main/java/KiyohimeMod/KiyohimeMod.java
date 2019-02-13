@@ -107,10 +107,13 @@ public class KiyohimeMod implements EditCharactersSubscriber, EditStringsSubscri
         //start
         BaseMod.addRelicToCustomPool(new Stone(), Kiyohime_Color);
 
-        //RARE
-        BaseMod.addRelicToCustomPool(new UnlimitedPranaSupply(), Kiyohime_Color);
+        //UNCOMMON
         BaseMod.addRelicToCustomPool(new TerritoryCreation(), Kiyohime_Color);
+        BaseMod.addRelicToCustomPool(new ElixirOfRejuvenation(), Kiyohime_Color);
+        BaseMod.addRelicToCustomPool(new HolyShroudOfMagdalene(), Kiyohime_Color);
+        //RARE
         BaseMod.addRelicToCustomPool(new Divinity(), Kiyohime_Color);
+        BaseMod.addRelicToCustomPool(new UnlimitedPranaSupply(), Kiyohime_Color);
         //boss
         BaseMod.addRelicToCustomPool(new TheBlackGrail(), Kiyohime_Color);
         BaseMod.addRelicToCustomPool(new Bond(), Kiyohime_Color);
@@ -153,6 +156,7 @@ public class KiyohimeMod implements EditCharactersSubscriber, EditStringsSubscri
         BaseMod.addCard(new WaterTurn());
         BaseMod.addCard(new EatSoul());
         BaseMod.addCard(new SteelTraining());
+        BaseMod.addCard(new AndSoTheShipConquers());
         //UNCOMMON
         BaseMod.addCard(new DragonVein());
         BaseMod.addCard(new AgainstMagic());
@@ -165,6 +169,7 @@ public class KiyohimeMod implements EditCharactersSubscriber, EditStringsSubscri
         BaseMod.addCard(new ImaginaryNumberMagecraft());
         BaseMod.addCard(new HeroCreation());
         BaseMod.addCard(new Barrier());
+        BaseMod.addCard(new GoldenCarpFigure());
 
         //Power
         //COMMON
