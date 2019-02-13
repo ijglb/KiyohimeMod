@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 import KiyohimeMod.character.AbstractServant;
 import KiyohimeMod.character.Kiyohime;
@@ -26,7 +27,7 @@ public class ExtraAttackAction extends AbstractGameAction {
             AbstractServant servant = ((Kiyohime)AbstractDungeon.player).Servant;
             AbstractCard ex = servant.extraAttack.makeStatEquivalentCopy();
             ex.use(player, monster);
-
+            UnlockTracker.markCardAsSeen(ex.cardID);
             if(player.hasPower(NPPower.POWER_ID)){
                 player.getPower(NPPower.POWER_ID).onAfterUseCard(ex, null);
             }

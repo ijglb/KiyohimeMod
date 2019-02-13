@@ -8,7 +8,7 @@
   },
   "KiyohimeMod:ExtraAttack": {
     "NAME": "Extra攻击",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。根据人物状态不同伤害数据不同，卡色为本回合打出的首张卡卡色。自动使用，无法获得。"
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。根据形态不同伤害数据不同，卡色为本回合打出的首张卡卡色。无法获得。"
   },
   "KiyohimeMod:Strike": {
     "NAME": "打击",

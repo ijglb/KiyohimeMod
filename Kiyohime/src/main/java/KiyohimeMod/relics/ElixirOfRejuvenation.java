@@ -1,6 +1,7 @@
 package KiyohimeMod.relics;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -34,8 +35,8 @@ public class ElixirOfRejuvenation extends CustomRelic {
         AbstractPlayer p = AbstractDungeon.player;
         if ((p.currentHealth <= p.maxHealth / 2.0F) && (p.currentHealth > 0)) {
             flash();
-            AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            p.heal(HEAL);
+            AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+            AbstractDungeon.actionManager.addToBottom(new HealAction(p, p, HEAL));
         }
     }
 }
