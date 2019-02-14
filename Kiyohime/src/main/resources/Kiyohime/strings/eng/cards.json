@@ -93,7 +93,7 @@
   },
   "KiyohimeMod:TenshinKashoZanmaii": {
     "NAME": "Samadhi Through Transforming Flames",
-    "DESCRIPTION": "Deal !D! damage !M! times to ALL enemies,probability stuns the enemy. NL NPCard , Exhaust , Ethereal .",
+    "DESCRIPTION": "Deal !D! damage !M! times to ALL enemies,probability stuns the enemy. NL np-card , Exhaust , Ethereal .",
     "EXTENDED_DESCRIPTION": [
       "NP is not enough."
     ]
@@ -138,7 +138,7 @@
   },
   "KiyohimeMod:HeroCreation": {
     "NAME": "Hero Creation",
-    "DESCRIPTION": "buster Up !D! % for 3 turn.Crit Damage Up !M! % for 1 turn.Gain !B! temporary HP. NL HC .",
+    "DESCRIPTION": "buster Up !D! % for 3 turn.Crit Damage Up !M! % for 1 turn.Gain !B! temporary HP. NL hc .",
     "EXTENDED_DESCRIPTION": [
       "remove ",
       " temporary HP"
@@ -185,24 +185,24 @@
   },
   "KiyohimeMod:CommandCard_Buster": {
     "NAME": "Command Card:Buster",
-    "DESCRIPTION": "Command Card , buster . NL Base damage: !B! .(Deal !D! damage !M! times.)"
+    "DESCRIPTION": "command-card , buster .Base damage: !B! .(Deal !D! damage !M! times.)"
   },
   "KiyohimeMod:CommandCard_Quick": {
     "NAME": "Command Card:Quick",
-    "DESCRIPTION": "Command Card , quick . NL Base damage: !B! .(Deal !D! damage !M! times.)"
+    "DESCRIPTION": "command-card , quick .Base damage: !B! .(Deal !D! damage !M! times.)"
   },
   "KiyohimeMod:CommandCard_Arts": {
     "NAME": "Command Card:Arts",
-    "DESCRIPTION": "Command Card , arts . NL Base damage: !B! .(Deal !D! damage !M! times.)"
+    "DESCRIPTION": "command-card , arts .Base damage: !B! .(Deal !D! damage !M! times.)"
   },
   "KiyohimeMod:DoujyoujikaneHyakuhachishikikaryuunagi": {
     "NAME": "Dojoji Bell,Method 108 - Fire Dragon Mower",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL NPCard , Exhaust , Ethereal ."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL np-card , Exhaust , Ethereal ."
   },
   "KiyohimeMod:Shapeshift": {
     "NAME": "Shapeshift",
-    "DESCRIPTION": "Switch Spirit Origin . NL Exhaust .",
-    "UPGRADE_DESCRIPTION": "Switch Spirit Origin ."
+    "DESCRIPTION": "Switch spirit-origin . NL Exhaust .",
+    "UPGRADE_DESCRIPTION": "Switch spirit-origin ."
   },
   "KiyohimeMod:AndSoTheShipConquers": {
     "NAME": "And So The Ship Conquers",

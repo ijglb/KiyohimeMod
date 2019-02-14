@@ -201,8 +201,8 @@
   },
   "KiyohimeMod:Shapeshift": {
     "NAME": "变化",
-    "DESCRIPTION": "切换 形态 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "切换 形态 。"
+    "DESCRIPTION": "切换 灵基 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "切换 灵基 。"
   },
   "KiyohimeMod:AndSoTheShipConquers": {
     "NAME": "扬帆远航",

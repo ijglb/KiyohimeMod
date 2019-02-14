@@ -19,25 +19,25 @@
     },
     "EX": {
       "NAMES": [
-        "NPCard"
+        "np-card"
       ],
       "DESCRIPTION": "Special attack card.When NP >= 100,add it to your hand.Cost all NP when playing.Overcharge will more powerful."
     },
     "HeroCreation": {
       "NAMES": [
-        "HC"
+        "hc"
       ],
       "DESCRIPTION": "Reduce the cost of this card by 1 energy for each Buster in your hand."
     },
     "CommandCard": {
       "NAMES": [
-        "Command Card"
+        "command-card"
       ],
       "DESCRIPTION": "Has a clear color and base damage value, but the damage and hits are determined by the hidden value of the current Spirit Origin."
     },
     "Shape": {
       "NAMES": [
-        "Spirit Origin"
+        "spirit-origin"
       ],
       "DESCRIPTION": "Kiyohime currently has two Spirit Origin: #rBerserker and #rLancer .They have different NPCard and hidden value."
     }

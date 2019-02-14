@@ -236,9 +236,9 @@ public class KiyohimeMod implements EditCharactersSubscriber, EditStringsSubscri
 
             public void onLoad(String x) {
                 if (AbstractDungeon.player instanceof Kiyohime && x != null) {
-                    if (x == BerserkerKiyohime.NAME) {
+                    if (x.equals(BerserkerKiyohime.NAME)) {
                         ((Kiyohime) AbstractDungeon.player).changeAbstractServant(new BerserkerKiyohime(), false);
-                    } else if (x == LancerKiyohime.NAME) {
+                    } else if (x.equals(LancerKiyohime.NAME)) {
                         ((Kiyohime) AbstractDungeon.player).changeAbstractServant(new LancerKiyohime(), false);
                     }
                 }

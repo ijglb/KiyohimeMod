@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import KiyohimeMod.powers.AbstractStackablePower;
 import KiyohimeMod.powers.NPDamagePower;
 import KiyohimeMod.powers.NPPower;
-import KiyohimeMod.relics.TheBlackGrail;
 
 public abstract class AbstractNPCard extends AbstractAttackCard {
 
