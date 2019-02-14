@@ -8,12 +8,14 @@ import basemod.animations.SpriterAnimation;
 
 public class BerserkerKiyohime extends AbstractServant {
 
+    public static final String NAME = "Kiyohime_Berserker";
+
     private static final String[] BattleStartSounds = { "KiyohimeMod:Berserker_BattleStart_1",
             "KiyohimeMod:Berserker_BattleStart_2", "KiyohimeMod:Berserker_BattleStart_3",
             "KiyohimeMod:Berserker_BattleStart_4" };
 
     public BerserkerKiyohime() {
-        super(2.03f, 3f, 0.75f, new TenshinKashoZanmaii(), new ExtraAttack(5, 3),
+        super(NAME, 2.03f, 3f, 0.75f, new TenshinKashoZanmaii(), new ExtraAttack(5, 3),
                 new SpriterAnimation("Kiyohime/images/char/idle/Kiyohime.scml"));
     }
 

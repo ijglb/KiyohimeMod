@@ -1,0 +1,121 @@
+{
+    "KiyohimeMod:ChaldeaPower": {
+      "NAME": "Blessing from Chaldea",
+      "DESCRIPTIONS": [
+          "Give attack card special color,including #rBuster , #bArts and #gQuick .",
+          " NL #b",
+          "  card you played this turn.",
+          " NL Card played order:"
+      ]
+    },
+    "KiyohimeMod:NPPower": {
+      "NAME": "NP",
+      "DESCRIPTIONS": [
+          "You will get  #yNPCard  when NP >= 100.",
+          " NL Current NP: #b"
+      ]
+    },
+    "KiyohimeMod:CritStarPower": {
+      "NAME": "Crit Star",
+      "DESCRIPTIONS": [
+          "Your next attack will  #ycrit  when Crit Star >= 50.",
+          " NL Current Crit Star: #g"
+      ]
+    },
+    "KiyohimeMod:BusterFirstPower": {
+      "NAME": "Buster First",
+      "DESCRIPTIONS": [
+          "Damage Up  #r30% ."
+      ]
+    },
+    "KiyohimeMod:ArtsFirstPower": {
+      "NAME": "Arts First",
+      "DESCRIPTIONS": [
+          "NP generation rate Up  #b100% ."
+      ]
+    },
+    "KiyohimeMod:QuickFirstPower": {
+      "NAME": "Quick First",
+      "DESCRIPTIONS": [
+          "Crit Star generation rate Up  #g100% ."
+      ]
+    },
+    "KiyohimeMod:BusterUPPower": {
+      "NAME": "Buster Up",
+      "DESCRIPTIONS": [
+          "Buster Up  #r",
+          "% (Total)",
+          " NL #r+",
+          "% ( #b",
+          "  turn)"
+      ]
+    },
+    "KiyohimeMod:ArtsUPPower": {
+      "NAME": "Arts Up",
+      "DESCRIPTIONS": [
+          "Arts Up  #b",
+          "% (Total)",
+          " NL #b+",
+          "% ( #b",
+          "  turn)"
+      ]
+    },
+    "KiyohimeMod:QuickUPPower": {
+      "NAME": "Quick Up",
+      "DESCRIPTIONS": [
+          "Quick Up  #g",
+          "% (Total)",
+          " NL #g+",
+          "% ( #b",
+          "  turn)"
+      ]
+    },
+    "KiyohimeMod:RoundTimerPower": {
+      "NAME": "Timer",
+      "DESCRIPTIONS": [
+          "After  #r",
+          "  turn, #r"
+      ]
+    },
+    "KiyohimeMod:CritUPPower": {
+      "NAME": "Crit Damage Up",
+      "DESCRIPTIONS": [
+        "Crit damage Up  #y",
+        "% (Total)",
+        " NL #y+",
+        "% ( #b",
+        "  turn)"
+      ]
+    },
+    "KiyohimeMod:GetCritStarPower": {
+      "NAME": "Gain Crit Star Per Turn",
+      "DESCRIPTIONS": [
+        "At the start of your turn,gain  #y",
+        "  Crit Star"
+      ]
+    },
+    "KiyohimeMod:GetNPPower": {
+      "NAME": "Gain NP Per Turn",
+      "DESCRIPTIONS": [
+        "At the start of your turn,gain  #y",
+        "  NP"
+      ]
+    },
+    "KiyohimeMod:InvinciblePower": {
+      "NAME": "Invincible",
+      "DESCRIPTIONS": [
+        "Prevent all damage you will receive, #y",
+        "  turn"
+      ]
+    },
+    "KiyohimeMod:NPDamagePower": {
+      "NAME": "NP Damage Up",
+      "DESCRIPTIONS": [
+        "NP Damage Up  #b",
+        "% (Total)",
+        " NL #b+",
+        "% ( #b",
+        "  turn)"
+      ]
+    }
+  }

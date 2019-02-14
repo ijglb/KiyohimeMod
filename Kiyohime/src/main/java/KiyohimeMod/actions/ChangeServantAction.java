@@ -16,9 +16,9 @@ public class ChangeServantAction extends AbstractGameAction {
         if (AbstractDungeon.player instanceof Kiyohime) {
             Kiyohime kiyohime = (Kiyohime) AbstractDungeon.player;
             if (kiyohime.Servant instanceof BerserkerKiyohime) {
-                kiyohime.changeAbstractServant(new LancerKiyohime());
+                kiyohime.changeAbstractServant(new LancerKiyohime(), true);
             } else if (kiyohime.Servant instanceof LancerKiyohime) {
-                kiyohime.changeAbstractServant(new BerserkerKiyohime());
+                kiyohime.changeAbstractServant(new BerserkerKiyohime(), true);
             }
         }
         isDone = true;

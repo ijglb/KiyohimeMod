@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import KiyohimeMod.cards.AbstractAttackCard;
+import KiyohimeMod.cards.ExtraAttack;
 import KiyohimeMod.character.AbstractServant;
 import KiyohimeMod.character.Kiyohime;
 import KiyohimeMod.patches.KiyohimeTags;
@@ -85,7 +86,9 @@ public class NPPower extends AbstractPower {
             float first = 0f;//首位加成
             if (owner.hasPower(ArtsFirstPower.POWER_ID))
                 first = 1f;
-            int position = owner.getPower(ChaldeaPower.POWER_ID).amount;
+            int position = 0;
+            if(owner.hasPower(ChaldeaPower.POWER_ID))
+                position = owner.getPower(ChaldeaPower.POWER_ID).amount;
             if (position > 2)
                 position = 2;
             float card = 0f;//指令卡补正
@@ -94,6 +97,9 @@ public class NPPower extends AbstractPower {
                 card = NP_Arts[position];
             } else if (usedCard.hasTag(KiyohimeTags.ATTACK_Quick)) {
                 card = NP_Quick[position];
+            }
+            if (usedCard instanceof ExtraAttack) {
+                card = 1f;
             }
             int hits = ((AbstractAttackCard) usedCard).Hits;
             float getNP = hits * (npRate * (card * (1 + cardbuff) + first));

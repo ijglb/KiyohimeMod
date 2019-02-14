@@ -16,15 +16,19 @@ import com.megacrit.cardcrawl.audio.Sfx;
 import com.megacrit.cardcrawl.audio.SoundMaster;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.localization.*;
 
+import KiyohimeMod.character.BerserkerKiyohime;
 import KiyohimeMod.character.Kiyohime;
+import KiyohimeMod.character.LancerKiyohime;
 import KiyohimeMod.patches.KiyohimeEnum;
 import KiyohimeMod.relics.*;
 import KiyohimeMod.cards.*;
 import basemod.BaseMod;
 import basemod.ReflectionHacks;
+import basemod.abstracts.CustomSavable;
 import basemod.interfaces.EditCardsSubscriber;
 import basemod.interfaces.EditCharactersSubscriber;
 import basemod.interfaces.EditKeywordsSubscriber;
@@ -56,6 +60,7 @@ public class KiyohimeMod implements EditCharactersSubscriber, EditStringsSubscri
         BaseMod.subscribe(this);
         BaseMod.addColor(Kiyohime_Color, buster, buster, buster, buster, buster, buster, buster, attackCard, skillCard,
                 powerCard, energyOrb, attackCardPortrait, skillCardPortrait, powerCardPortrait, energyOrbPortrait);
+        addSaveField();
     }
 
     public static void initialize() {
@@ -82,8 +87,11 @@ public class KiyohimeMod implements EditCharactersSubscriber, EditStringsSubscri
 
     private String getLanguageString(Settings.GameLanguage language) {
         switch (language) {
-            default:
-                return "zhs";
+        case ZHS:
+        case ZHT:
+            return "zhs";
+        default:
+            return "eng";
         }
     }
 
@@ -208,9 +216,34 @@ public class KiyohimeMod implements EditCharactersSubscriber, EditStringsSubscri
     }
     
     @SuppressWarnings("unchecked")
-    private HashMap<String, Sfx> getSoundsMap(){
-        return (HashMap<String, Sfx>) ReflectionHacks.getPrivate(CardCrawlGame.sound,
-        SoundMaster.class, "map");
+    private HashMap<String, Sfx> getSoundsMap() {
+        return (HashMap<String, Sfx>) ReflectionHacks.getPrivate(CardCrawlGame.sound, SoundMaster.class, "map");
+    }
+
+    private void addSaveField() {
+        BaseMod.addSaveField("KiyohimeMod:Kiyohime:Servant", new CustomSavable<String>() {
+            public Class<String> savedType() {
+                return String.class;
+            }
+
+            public String onSave() {
+                String servant = null;
+                if (AbstractDungeon.player instanceof Kiyohime) {
+                    servant = ((Kiyohime) AbstractDungeon.player).Servant.name;
+                }
+                return servant;
+            }
+
+            public void onLoad(String x) {
+                if (AbstractDungeon.player instanceof Kiyohime && x != null) {
+                    if (x == BerserkerKiyohime.NAME) {
+                        ((Kiyohime) AbstractDungeon.player).changeAbstractServant(new BerserkerKiyohime(), false);
+                    } else if (x == LancerKiyohime.NAME) {
+                        ((Kiyohime) AbstractDungeon.player).changeAbstractServant(new LancerKiyohime(), false);
+                    }
+                }
+            }
+        });
     }
 
 }

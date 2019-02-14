@@ -185,15 +185,15 @@
   },
   "KiyohimeMod:CommandCard_Buster": {
     "NAME": "指令卡：Buster",
-    "DESCRIPTION": "指令卡 , buster 。基础伤害: !B! 。（造成 !D! 点伤害 !M! 次）"
+    "DESCRIPTION": "指令卡 , buster 。 NL 基础伤害: !B! 。（造成 !D! 点伤害 !M! 次）"
   },
   "KiyohimeMod:CommandCard_Quick": {
     "NAME": "指令卡：Quick",
-    "DESCRIPTION": "指令卡 , quick 。基础伤害: !B! 。（造成 !D! 点伤害 !M! 次）"
+    "DESCRIPTION": "指令卡 , quick 。 NL 基础伤害: !B! 。（造成 !D! 点伤害 !M! 次）"
   },
   "KiyohimeMod:CommandCard_Arts": {
     "NAME": "指令卡：Arts",
-    "DESCRIPTION": "指令卡 , arts 。基础伤害: !B! 。（造成 !D! 点伤害 !M! 次）"
+    "DESCRIPTION": "指令卡 , arts 。 NL 基础伤害: !B! 。（造成 !D! 点伤害 !M! 次）"
   },
   "KiyohimeMod:DoujyoujikaneHyakuhachishikikaryuunagi": {
     "NAME": "道成寺钟百八式火龙薙",

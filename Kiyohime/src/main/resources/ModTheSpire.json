@@ -1,8 +1,8 @@
 {
     "modid": "Kiyohime",
-    "name": "清姬",
+    "name": "Kiyohime（清姬）",
     "author_list": ["jglb"],
-    "description": "清姬mod",
-    "version": "0.0.3",
+    "description": "Kiyohime（清姬） Mod",
+    "version": "0.0.4",
     "dependencies": ["basemod","stslib"]
 }

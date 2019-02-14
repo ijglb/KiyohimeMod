@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
+import KiyohimeMod.actions.ApplyStackablePowerAction;
+import KiyohimeMod.powers.NPDamagePower;
 import basemod.abstracts.CustomRelic;
 
 
@@ -28,6 +30,13 @@ public class TheBlackGrail extends CustomRelic {
     @Override
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];
+    }
+
+    @Override
+    public void atBattleStart() {
+        this.flash();
+        AbstractDungeon.actionManager.addToBottom(new ApplyStackablePowerAction(AbstractDungeon.player,
+                AbstractDungeon.player, new NPDamagePower(AbstractDungeon.player, 80, -1), 80, -1, true));
     }
 
     @Override

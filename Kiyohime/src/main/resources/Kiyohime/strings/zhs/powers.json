@@ -107,5 +107,15 @@
         "赋予无敌状态 #y",
         " 回合"
       ]
+    },
+    "KiyohimeMod:NPDamagePower": {
+      "NAME": "宝具威力提升",
+      "DESCRIPTIONS": [
+        "宝具威力提升 #b",
+        "% (总)",
+        " NL #b+",
+        "% ( #b",
+        " 回合)"
+      ]
     }
   }

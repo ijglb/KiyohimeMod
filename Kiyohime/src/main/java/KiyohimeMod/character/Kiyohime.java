@@ -65,10 +65,12 @@ public class Kiyohime extends CustomPlayer {
         super.preBattlePrep();
     }
 
-    public void changeAbstractServant(AbstractServant servant) {
-        String sound = servant.getBattleStartSound();
-        if (sound != null) {
-            CardCrawlGame.sound.playA(sound, MathUtils.random(0F, 0.2F));
+    public void changeAbstractServant(AbstractServant servant, boolean playSound) {
+        if (playSound) {
+            String sound = servant.getBattleStartSound();
+            if (sound != null) {
+                CardCrawlGame.sound.playA(sound, MathUtils.random(0F, 0.2F));
+            }
         }
         this.Servant = servant;
         this.animation = this.Servant.animation;

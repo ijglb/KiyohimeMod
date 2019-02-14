@@ -6,6 +6,7 @@ import basemod.animations.AbstractAnimation;
 
 public abstract class AbstractServant {
 
+    public String name;
     public float npRate;
     public float npSuffer;
     public float starRate;
@@ -13,7 +14,9 @@ public abstract class AbstractServant {
     public ExtraAttack extraAttack;
     public AbstractAnimation animation;
 
-    public AbstractServant(float npRate,float npSuffer,float starRate, AbstractAttackCard npCard,ExtraAttack extraAttack,AbstractAnimation animation){
+    public AbstractServant(String name, float npRate, float npSuffer, float starRate, AbstractAttackCard npCard,
+            ExtraAttack extraAttack, AbstractAnimation animation) {
+        this.name = name;
         this.npRate = npRate;
         this.npSuffer = npSuffer;
         this.starRate = starRate;

@@ -1,0 +1,44 @@
+{
+    "Buster": {
+      "NAMES": [
+        "buster"
+      ],
+      "DESCRIPTION": "As the first attack card you played,gain damage up buff this turn. NL When playing 3 Buster cards in a row,make an Extra Attack."
+    },
+    "Arts": {
+      "NAMES": [
+        "arts"
+      ],
+      "DESCRIPTION": "As the first attack card you played,gain NP generation rate up buff this turn. NL When playing 3 times in a row,gains extra NP."
+    },
+    "Quick": {
+      "NAMES": [
+        "quick"
+      ],
+      "DESCRIPTION": "As the first attack card you played,gain Crit Star generation rate up buff this turn. NL When playing 3 times in a row,gains extra Crit Star."
+    },
+    "EX": {
+      "NAMES": [
+        "NPCard"
+      ],
+      "DESCRIPTION": "Special attack card.When NP >= 100,add it to your hand.Cost all NP when playing.Overcharge will more powerful."
+    },
+    "HeroCreation": {
+      "NAMES": [
+        "HC"
+      ],
+      "DESCRIPTION": "Reduce the cost of this card by 1 energy for each Buster in your hand."
+    },
+    "CommandCard": {
+      "NAMES": [
+        "Command Card"
+      ],
+      "DESCRIPTION": "Has a clear color and base damage value, but the damage and hits are determined by the hidden value of the current Spirit Origin."
+    },
+    "Shape": {
+      "NAMES": [
+        "Spirit Origin"
+      ],
+      "DESCRIPTION": "Kiyohime currently has two Spirit Origin: #rBerserker and #rLancer .They have different NPCard and hidden value."
+    }
+  }

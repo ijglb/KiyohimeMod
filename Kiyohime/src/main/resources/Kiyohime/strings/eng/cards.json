@@ -1,0 +1,215 @@
+{
+  "KiyohimeMod:NPCard": {
+    "NAME": "NPCard",
+    "DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": [
+      "NP is not enough."
+    ]
+  },
+  "KiyohimeMod:ExtraAttack": {
+    "NAME": "Extra Attack",
+    "DESCRIPTION": "Unobtainable. NL Deal !D! damage !M! times.Damage and hit count varies depending on current Spirit Origin.Card color is determined by the first attack you played this turn."
+  },
+  "KiyohimeMod:Strike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "KiyohimeMod:Defend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "KiyohimeMod:Track": {
+    "NAME": "Stalking",
+    "DESCRIPTION": "Apply 3 Vulnerable ,and gain 1 Strength to it !M! turn.",
+    "EXTENDED_DESCRIPTION": [
+      "Pursuer of Love",
+      "lose 1 Strength"
+    ]
+  },
+  "KiyohimeMod:FlameKiss": {
+    "NAME": "Flame Coloured Kiss",
+    "DESCRIPTION": "buster Up !M! % for 1 turn",
+    "UPGRADE_DESCRIPTION": "buster Up !M! % for 1 turn,remove a random debuff from yourself."
+  },
+  "KiyohimeMod:WaterTurn": {
+    "NAME": "Bathing Transformation",
+    "DESCRIPTION": "buster Up !D! % for !M! turn."
+  },
+  "KiyohimeMod:Berserker": {
+    "NAME": "Mad Enhancement",
+    "DESCRIPTION": "buster Up !M! %."
+  },
+  "KiyohimeMod:Preemptive": {
+    "NAME": "Preemption",
+    "DESCRIPTION": "Deal !D! damage !M! times."
+  },
+  "KiyohimeMod:EatSoul": {
+    "NAME": "Spirit Eater",
+    "DESCRIPTION": "Apply 99 Weak. NL Exhaust ."
+  },
+  "KiyohimeMod:Fragarach": {
+    "NAME": "Fragarach",
+    "DESCRIPTION": "Deal !D! damage.At end of round,Deal !B! damage.",
+    "EXTENDED_DESCRIPTION": [
+      "Receive ",
+      " damage."
+    ]
+  },
+  "KiyohimeMod:RedBlackKey": {
+    "NAME": "Red Black Key",
+    "DESCRIPTION": "Deal !D! damage. buster Up !M! % for 1 turn."
+  },
+  "KiyohimeMod:BlueBlackKey": {
+    "NAME": "Blue Black Key",
+    "DESCRIPTION": "Deal !D! damage. arts Up !M! % for 1 turn."
+  },
+  "KiyohimeMod:GreenBlackKey": {
+    "NAME": "Green Black Key",
+    "DESCRIPTION": "Deal !D! damage. quick Up !M! % for 1 turn."
+  },
+  "KiyohimeMod:Tenacious": {
+    "NAME": "Tenacious",
+    "DESCRIPTION": "Gain !M! Plated Armor."
+  },
+  "KiyohimeMod:DragonVein": {
+    "NAME": "Ley Line",
+    "DESCRIPTION": "Gain !M! NP. NL Exhaust ."
+  },
+  "KiyohimeMod:ImaginaryNumberMagecraft": {
+    "NAME": "Imaginary Number Magecraft",
+    "DESCRIPTION": "Gain !M! NP. NL Exhaust ."
+  },
+  "KiyohimeMod:SteelTraining": {
+    "NAME": "Steel Training",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "KiyohimeMod:AgainstMagic": {
+    "NAME": "Mooncell Automaton",
+    "DESCRIPTION": "Gain !M! Artifact. NL Exhaust ."
+  },
+  "KiyohimeMod:ExSpicyMapoTofu": {
+    "NAME": "Extremely Spicy Mapo Tofu",
+    "DESCRIPTION": "Heal !M! HP. NL  Exhaust ."
+  },
+  "KiyohimeMod:TenshinKashoZanmaii": {
+    "NAME": "Samadhi Through Transforming Flames",
+    "DESCRIPTION": "Deal !D! damage !M! times to ALL enemies,probability stuns the enemy. NL NPCard , Exhaust , Ethereal .",
+    "EXTENDED_DESCRIPTION": [
+      "NP is not enough."
+    ]
+  },
+  "KiyohimeMod:PrismaCosmos": {
+    "NAME": "Prisma Cosmos",
+    "DESCRIPTION": "Gain !M! NP each turn."
+  },
+  "KiyohimeMod:FragmentsOf2030": {
+    "NAME": "Fragments of 2030",
+    "DESCRIPTION": "Gain !M! Crit Star each turn."
+  },
+  "KiyohimeMod:Grimoire": {
+    "NAME": "Grimoire",
+    "DESCRIPTION": "Discard your hand, NL then draw !M! cards. NL Exhaust .",
+    "UPGRADE_DESCRIPTION": "Discard your hand, NL then draw !M! cards."
+  },
+  "KiyohimeMod:DivineConstruct": {
+    "NAME": "Divine Construct",
+    "DESCRIPTION": "Gain !M! Crit Star."
+  },
+  "KiyohimeMod:LimitedZeroOver": {
+    "NAME": "Limited/Zero Over",
+    "DESCRIPTION": "buster Up !M! %."
+  },
+  "KiyohimeMod:ImaginaryAround": {
+    "NAME": "Imaginary Around",
+    "DESCRIPTION": "quick Up !M! %."
+  },
+  "KiyohimeMod:FormalCraft": {
+    "NAME": "Formal Craft",
+    "DESCRIPTION": "arts Up !M! %."
+  },
+  "KiyohimeMod:HotSpringOfTheMoon": {
+    "NAME": "Hot Spring of The Moon",
+    "DESCRIPTION": "Crit Damage Up !D! %. NL Gain !M! Crit Star each turn."
+  },
+  "KiyohimeMod:AVerseOfBurningLoveStory": {
+    "NAME": "Burning Love Story",
+    "DESCRIPTION": "buster , arts , quick and Crit Damage Up !D! %. NL Gain !B! NP, !M! Crit Star each turn.",
+    "UPGRADE_DESCRIPTION": "Innate . buster , arts , quick and Crit Damage Up !D! %. NL Gain !B! NP, !M! Crit Star each turn."
+  },
+  "KiyohimeMod:HeroCreation": {
+    "NAME": "Hero Creation",
+    "DESCRIPTION": "buster Up !D! % for 3 turn.Crit Damage Up !M! % for 1 turn.Gain !B! temporary HP. NL HC .",
+    "EXTENDED_DESCRIPTION": [
+      "remove ",
+      " temporary HP"
+    ]
+  },
+  "KiyohimeMod:Barrier": {
+    "NAME": "Barrier",
+    "DESCRIPTION": "Use !D! NP.Gain Invincible buff for !M! turn. NL Exhaust .",
+    "EXTENDED_DESCRIPTION": [
+      "NP is not enough."
+    ]
+  },
+  "KiyohimeMod:Projection": {
+    "NAME": "Projection",
+    "DESCRIPTION": "Use !D! NP.Gain !M! Strength . NL Exhaust .",
+    "UPGRADE_DESCRIPTION": "Use !D! NP.Gain !M! Strength .",
+    "EXTENDED_DESCRIPTION": [
+      "NP is not enough."
+    ]
+  },
+  "KiyohimeMod:BeastOfBillows": {
+    "NAME": "Beast of Billows",
+    "DESCRIPTION": "Deal !D! damage !M! times.(random enemies)"
+  },
+  "KiyohimeMod:JeweledSword": {
+    "NAME": "Jeweled Sword",
+    "DESCRIPTION": "Deal !D! damage. NL For each 10 NP you have,add !M! damage."
+  },
+  "KiyohimeMod:CelestialInvertedMoon": {
+    "NAME": "Celestial Inverted Moon",
+    "DESCRIPTION": "Gain !B! Block. NL For each Crit Star you have,Gain !M! Block."
+  },
+  "KiyohimeMod:HydraDagger": {
+    "NAME": "Hydra Dagger",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak ."
+  },
+  "KiyohimeMod:RealityMarble": {
+    "NAME": "Reality Marble",
+    "DESCRIPTION": "Deal !D! damage. NL For each Strength the enemy has,add !M! damage."
+  },
+  "KiyohimeMod:Destruction": {
+    "NAME": "Destruction",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy has Block,double the damage."
+  },
+  "KiyohimeMod:CommandCard_Buster": {
+    "NAME": "Command Card:Buster",
+    "DESCRIPTION": "Command Card , buster . NL Base damage: !B! .(Deal !D! damage !M! times.)"
+  },
+  "KiyohimeMod:CommandCard_Quick": {
+    "NAME": "Command Card:Quick",
+    "DESCRIPTION": "Command Card , quick . NL Base damage: !B! .(Deal !D! damage !M! times.)"
+  },
+  "KiyohimeMod:CommandCard_Arts": {
+    "NAME": "Command Card:Arts",
+    "DESCRIPTION": "Command Card , arts . NL Base damage: !B! .(Deal !D! damage !M! times.)"
+  },
+  "KiyohimeMod:DoujyoujikaneHyakuhachishikikaryuunagi": {
+    "NAME": "Dojoji Bell,Method 108 - Fire Dragon Mower",
+    "DESCRIPTION": "Deal !D! damage !M! times. NL NPCard , Exhaust , Ethereal ."
+  },
+  "KiyohimeMod:Shapeshift": {
+    "NAME": "Shapeshift",
+    "DESCRIPTION": "Switch Spirit Origin . NL Exhaust .",
+    "UPGRADE_DESCRIPTION": "Switch Spirit Origin ."
+  },
+  "KiyohimeMod:AndSoTheShipConquers": {
+    "NAME": "And So The Ship Conquers",
+    "DESCRIPTION": "Gain !B! Block. NL Next turn, gain !B! Block."
+  },
+  "KiyohimeMod:GoldenCarpFigure": {
+    "NAME": "Golden Carp Figure",
+    "DESCRIPTION": "Gain !B! Crit Star. NL Put !M! card from your discard pile into your hand. NL Exhaust ."
+  }
+}

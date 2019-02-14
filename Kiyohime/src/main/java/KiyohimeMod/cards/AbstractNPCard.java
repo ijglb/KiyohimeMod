@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import KiyohimeMod.powers.AbstractStackablePower;
+import KiyohimeMod.powers.NPDamagePower;
 import KiyohimeMod.powers.NPPower;
 import KiyohimeMod.relics.TheBlackGrail;
 
@@ -61,8 +63,10 @@ public abstract class AbstractNPCard extends AbstractAttackCard {
                 temp = temp * ((float) np / 100);
             }
         }
-        if (AbstractDungeon.player.hasRelic(TheBlackGrail.ID)) {
-            temp = temp * 1.8f;//黑杯80%
+        if (AbstractDungeon.player.hasPower(NPDamagePower.POWER_ID)) {
+            float up = (((AbstractStackablePower) AbstractDungeon.player.getPower(NPDamagePower.POWER_ID)).valueAmount)
+                    / 100.0f;
+            temp = temp * (1 + up);
         }
 
         return super.calculate(temp, target);

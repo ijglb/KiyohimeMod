@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import KiyohimeMod.cards.AbstractAttackCard;
+import KiyohimeMod.cards.ExtraAttack;
 import KiyohimeMod.character.AbstractServant;
 import KiyohimeMod.character.Kiyohime;
 import KiyohimeMod.patches.KiyohimeTags;
@@ -25,8 +26,8 @@ public class CritStarPower extends AbstractPower {
     public static final String[] DESCRIPTIONS = cardStrings.DESCRIPTIONS;
 
     //public static final float Star_Rate = 0.49f;
-    public static final float[] Star_Buster = { 0.1f, 0.15f, 0.20f };
-    public static final float[] Star_Quick = { 0.8f, 1.3f, 1.8f };
+    public static final float[] Star_Buster = { 0.1f, 0.15f, 0.20f, 1f };
+    public static final float[] Star_Quick = { 0.8f, 1.3f, 1.8f, 1f };
 
     public CritStarPower(AbstractCreature owner) {
         this.name = NAME;
@@ -65,7 +66,9 @@ public class CritStarPower extends AbstractPower {
                 float first = 0f;//首位加成
                 if (owner.hasPower(QuickFirstPower.POWER_ID))
                     first = 1f;
-                int position = owner.getPower(ChaldeaPower.POWER_ID).amount;
+                int position = 0;
+                if (owner.hasPower(ChaldeaPower.POWER_ID))
+                    position = owner.getPower(ChaldeaPower.POWER_ID).amount;
                 if (position > 2)
                     position = 2;
                 float card = 0f;//指令卡掉星率
@@ -74,6 +77,9 @@ public class CritStarPower extends AbstractPower {
                     card = Star_Buster[position];
                 } else if (usedCard.hasTag(KiyohimeTags.ATTACK_Quick)) {
                     card = Star_Quick[position];
+                }
+                if (usedCard instanceof ExtraAttack) {
+                    card = 1f;
                 }
                 int hits = ((AbstractAttackCard) usedCard).Hits;
                 int getStar = MathUtils.round(hits * (starRate + card * (1 + cardbuff) + first));
