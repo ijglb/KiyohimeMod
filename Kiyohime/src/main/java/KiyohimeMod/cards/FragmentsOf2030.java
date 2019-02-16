@@ -21,9 +21,9 @@ public class FragmentsOf2030 extends CustomCard {
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
-    private static final int COST = 3;
-    private static final int BASE_MAGIC = 8;
-    private static final int UPGRADE_PLUS_MAGIC = 2;
+    private static final int COST = 2;
+    private static final int BASE_MAGIC = 10;
+    private static final int UPGRADE_PLUS_MAGIC = 5;
 
     public FragmentsOf2030() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.POWER, AbstractCardEnum.Kiyohime_Color,

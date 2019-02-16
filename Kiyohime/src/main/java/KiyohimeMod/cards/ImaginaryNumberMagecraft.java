@@ -22,6 +22,7 @@ public class ImaginaryNumberMagecraft extends CustomCard {
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
     private static final int COST = 2;
+    private static final int UPGRADE_COST = 1;
     private static final int BASE_MAGIC = 60;
     private static final int UPGRADE_PLUS_MAGIC = 15;
 
@@ -43,6 +44,7 @@ public class ImaginaryNumberMagecraft extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
+            upgradeBaseCost(UPGRADE_COST);
             upgradeMagicNumber(UPGRADE_PLUS_MAGIC);
         }
     }
