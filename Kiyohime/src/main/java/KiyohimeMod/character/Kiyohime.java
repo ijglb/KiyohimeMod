@@ -181,7 +181,7 @@ public class Kiyohime extends CustomPlayer {
 
     @Override
     public String getVampireText() {
-        return characterStrings.TEXT[2];
+        return com.megacrit.cardcrawl.events.city.Vampires.DESCRIPTIONS[1];
     }
 
     @Override
