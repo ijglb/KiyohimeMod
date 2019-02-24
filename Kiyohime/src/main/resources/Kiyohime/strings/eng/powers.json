@@ -117,5 +117,19 @@
         "% ( #b",
         "  turn)"
       ]
+    },
+    "KiyohimeMod:CritStarGenerationRatePower": {
+      "NAME": "Crit Star generation rate Up",
+      "DESCRIPTIONS": [
+        "Crit Star generation rate Up #y",
+        "%"
+      ]
+    },
+    "KiyohimeMod:NPGenerationRatePower": {
+      "NAME": "NP generation rate Up",
+      "DESCRIPTIONS": [
+        "NP generation rate Up #b",
+        "%"
+      ]
     }
   }

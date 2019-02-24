@@ -5,7 +5,6 @@ import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -57,7 +56,6 @@ public class CritStarPower extends AbstractPower {
             if (this.amount >= 50)
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, this, -50, true));
             if (usedCard instanceof AbstractAttackCard) {
-                //从者掉星率 + 指令卡掉星率 * (1 ± 指令卡性能BUFF ∓ 指令卡耐性) + 首位加成 + 敌补正 ± 掉星率BUFF ± 敌人掉星率BUFF + 暴击补正 + Overkill补正
                 float starRate = 0;
                 if(AbstractDungeon.player instanceof Kiyohime){
                     AbstractServant servant = ((Kiyohime)AbstractDungeon.player).Servant;
@@ -81,8 +79,13 @@ public class CritStarPower extends AbstractPower {
                 if (usedCard instanceof ExtraAttack) {
                     card = 1f;
                 }
+                float starGenerationRate = 0f;
+                if (owner.hasPower(CritStarGenerationRatePower.POWER_ID)) {
+                    starGenerationRate = owner.getPower(CritStarGenerationRatePower.POWER_ID).amount / 100.0f;
+                }
                 int hits = ((AbstractAttackCard) usedCard).Hits;
-                int getStar = MathUtils.round(hits * (starRate + card * (1 + cardbuff) + first));
+                //从者掉星率 + 指令卡掉星率 * (1 ± 指令卡性能BUFF ∓ 指令卡耐性) + 首位加成 + 敌补正 ± 掉星率BUFF ± 敌人掉星率BUFF + 暴击补正 + Overkill补正
+                int getStar = MathUtils.round(hits * (starRate + card * (1 + cardbuff) + first + starGenerationRate));
                 if (getStar > 0)
                     AbstractDungeon.actionManager
                             .addToBottom(new ApplyPowerAction(owner, owner, this, getStar, true));
@@ -100,12 +103,5 @@ public class CritStarPower extends AbstractPower {
             return damage * (2 * (1 + (buff / 100)));
         }
         return damage;
-    }
-
-    @Override
-    public void onAfterCardPlayed(AbstractCard usedCard) {
-        if (usedCard.type == CardType.ATTACK && this.amount >= 50) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, this, -50, true));
-        }
     }
 }

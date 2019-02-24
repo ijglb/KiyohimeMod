@@ -83,6 +83,8 @@ public class KiyohimeMod implements EditCharactersSubscriber, EditStringsSubscri
         BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);
         String cardStrings = Gdx.files.internal(languageString + "/cards.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(CardStrings.class, cardStrings);
+        String monsterStrings = Gdx.files.internal(languageString + "/monsters.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        BaseMod.loadCustomStrings(MonsterStrings.class, monsterStrings);
     }
 
     private String getLanguageString(Settings.GameLanguage language) {
@@ -178,6 +180,8 @@ public class KiyohimeMod implements EditCharactersSubscriber, EditStringsSubscri
         BaseMod.addCard(new HeroCreation());
         BaseMod.addCard(new Barrier());
         BaseMod.addCard(new GoldenCarpFigure());
+        //Servant
+        BaseMod.addCard(new Servant_TamamoNoMae());
 
         //Power
         //COMMON
@@ -192,6 +196,7 @@ public class KiyohimeMod implements EditCharactersSubscriber, EditStringsSubscri
         BaseMod.addCard(new PrismaCosmos());
         BaseMod.addCard(new FragmentsOf2030());
         BaseMod.addCard(new AVerseOfBurningLoveStory());
+        BaseMod.addCard(new CastleOfTheSun());
     }
 
     @Override
@@ -213,6 +218,9 @@ public class KiyohimeMod implements EditCharactersSubscriber, EditStringsSubscri
                 new Sfx("Kiyohime/sounds/Kiyohime_Berserker_BattleStart_3.ogg"));
         reflectedMap.put("KiyohimeMod:Berserker_BattleStart_4",
                 new Sfx("Kiyohime/sounds/Kiyohime_Berserker_BattleStart_4.ogg"));
+
+        reflectedMap.put("KiyohimeMod:Servants_TamamoNoMae_Summon",
+                new Sfx("Kiyohime/sounds/servants/TamamoNoMae_Summon.ogg"));
     }
     
     @SuppressWarnings("unchecked")

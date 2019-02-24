@@ -211,5 +211,16 @@
   "KiyohimeMod:GoldenCarpFigure": {
     "NAME": "Golden Carp Figure",
     "DESCRIPTION": "Gain !B! Crit Star. NL Put !M! card from your discard pile into your hand. NL Exhaust ."
+  },
+  "KiyohimeMod:CastleOfTheSun": {
+    "NAME": "Castle of the Sun",
+    "DESCRIPTION": "Crit Damage Up !D! %. NL Crit Star generation rate Up !B! %. NL Gain !M! NP."
+  },
+  "KiyohimeMod:Servant_TamamoNoMae": {
+    "NAME": "Tamamo no Mae",
+    "DESCRIPTION": "summon . NL Summoning Tamamo-no-Mae. NL If exists,Gain !M! NP.",
+    "EXTENDED_DESCRIPTION":[
+      "There are already two servants in the combat."
+    ]
   }
 }

@@ -27,6 +27,7 @@ import KiyohimeMod.patches.AbstractCardEnum;
 import KiyohimeMod.patches.KiyohimeEnum;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
+import kobting.friendlyminions.helpers.BasePlayerMinionHelper;
 import KiyohimeMod.relics.Stone;
 
 public class Kiyohime extends CustomPlayer {
@@ -48,6 +49,7 @@ public class Kiyohime extends CustomPlayer {
         this.dialogX = (this.drawX + 0.0F * Settings.scale); // set location for text bubbles
         this.dialogY = (this.drawY + 220.0F * Settings.scale); // you can just copy these values
         this.Servant = new BerserkerKiyohime();
+        BasePlayerMinionHelper.changeMaxMinionAmount(this, 2);
 
         initializeClass(null,
                 MY_CHARACTER_SHOULDER_2,

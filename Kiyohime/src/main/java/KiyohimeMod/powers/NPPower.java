@@ -77,7 +77,6 @@ public class NPPower extends AbstractPower {
     @Override
     public void onAfterUseCard(AbstractCard usedCard, UseCardAction action) {
         if (usedCard.type == AbstractCard.CardType.ATTACK && usedCard instanceof AbstractAttackCard) {
-            //NP率 * (指令卡补正 * (1 ± 指令卡性能BUFF ∓ 指令卡耐性) + 首位加成) * 敌补正 * (1 ± NP获得量BUFF) * 暴击补正 * Overkill补正
             float npRate = 0;
             if(AbstractDungeon.player instanceof Kiyohime){
                 AbstractServant servant = ((Kiyohime)AbstractDungeon.player).Servant;
@@ -101,8 +100,13 @@ public class NPPower extends AbstractPower {
             if (usedCard instanceof ExtraAttack) {
                 card = 1f;
             }
+            float npGenerationRate = 0f;
+            if (owner.hasPower(NPGenerationRatePower.POWER_ID)) {
+                npGenerationRate = owner.getPower(NPGenerationRatePower.POWER_ID).amount / 100.0f;
+            }
             int hits = ((AbstractAttackCard) usedCard).Hits;
-            float getNP = hits * (npRate * (card * (1 + cardbuff) + first));
+            //NP率 * (指令卡补正 * (1 ± 指令卡性能BUFF ∓ 指令卡耐性) + 首位加成) * 敌补正 * (1 ± NP获得量BUFF) * 暴击补正 * Overkill补正
+            float getNP = hits * (npRate * (card * (1 + cardbuff) + first)) * (1 + npGenerationRate);
             if((int) getNP > 0)
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, this, (int) getNP, true));
         }
@@ -110,13 +114,17 @@ public class NPPower extends AbstractPower {
 
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
-        //受击NP率 * 敌补正 * (1 ± NP获得量BUFF ± 受击NP获得量BUFF) * Overkill补正
         float npSuffer = 0;
-        if(AbstractDungeon.player instanceof Kiyohime){
-            AbstractServant servant = ((Kiyohime)AbstractDungeon.player).Servant;
+        if (AbstractDungeon.player instanceof Kiyohime) {
+            AbstractServant servant = ((Kiyohime) AbstractDungeon.player).Servant;
             npSuffer = servant.npSuffer;
         }
-        float getNP = npSuffer;
+        float npGenerationRate = 0f;
+        if (owner.hasPower(NPGenerationRatePower.POWER_ID)) {
+            npGenerationRate = owner.getPower(NPGenerationRatePower.POWER_ID).amount / 100.0f;
+        }
+        //受击NP率 * 敌补正 * (1 ± NP获得量BUFF ± 受击NP获得量BUFF) * Overkill补正
+        float getNP = npSuffer * (1 + npGenerationRate);
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, this, (int) getNP, true));
         return damageAmount;
     }

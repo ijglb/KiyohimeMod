@@ -211,5 +211,16 @@
   "KiyohimeMod:GoldenCarpFigure": {
     "NAME": "黄金捕鲤图",
     "DESCRIPTION": "获得 !B! 暴击星。 NL 将弃牌堆中的 !M! 张牌放入你的手牌。 NL 消耗 。"
+  },
+  "KiyohimeMod:CastleOfTheSun": {
+    "NAME": "日轮之城",
+    "DESCRIPTION": "暴击威力提升 !D! %。 NL 暴击星掉落率提升 !B! %。 NL 获得 !M! NP。"
+  },
+  "KiyohimeMod:Servant_TamamoNoMae": {
+    "NAME": "玉藻前",
+    "DESCRIPTION": "召唤 。 NL 召唤玉藻前。 NL 已存在时，获得 !M! NP。",
+    "EXTENDED_DESCRIPTION":[
+      "场上已存在两个助战从者。"
+    ]
   }
 }

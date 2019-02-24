@@ -1,0 +1,20 @@
+{
+    "KiyohimeMod:TamamoNoMae": {
+        "NAME": "Tamamo no Mae",
+        "DIALOG": [
+            "Tamamo no Mae",
+            "Attack",
+            "Witchcraft[EX]",
+            "Shapeshift[A]",
+            "Fox's Wedding[EX]"
+        ],
+        "MOVES": [
+            "At the start of each turn,arts Up #b15% for 1 turn.",
+            "Deal #r",
+            " damage.",
+            "NP Damage Up #r30% for 3 turns.Let an enemy lose #r1 Strength.",
+            "All of us gain #b10 Block.",
+            "Arts Up #b50% for 3 turns.Heal #r6 HP."
+        ]
+    }
+}

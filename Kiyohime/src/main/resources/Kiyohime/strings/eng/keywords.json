@@ -40,5 +40,11 @@
         "spirit-origin"
       ],
       "DESCRIPTION": "Kiyohime currently has two Spirit Origin: #rBerserker and #rLancer .They have different NPCard and hidden value."
+    },
+    "Summon": {
+      "NAMES": [
+        "summon"
+      ],
+      "DESCRIPTION": "Summoning a servant to help you in combat.If this servant exists,reset their skills,and increase the maximum HP."
     }
   }

@@ -117,5 +117,19 @@
         "% ( #b",
         " 回合)"
       ]
+    },
+    "KiyohimeMod:CritStarGenerationRatePower": {
+      "NAME": "暴击星掉落率提升",
+      "DESCRIPTIONS": [
+        "暴击星掉落率提升 #y",
+        "%"
+      ]
+    },
+    "KiyohimeMod:NPGenerationRatePower": {
+      "NAME": "NP获得量提升",
+      "DESCRIPTIONS": [
+        "NP获得量提升 #b",
+        "%"
+      ]
     }
   }

@@ -6,7 +6,7 @@
 
   <groupId>Kiyohime</groupId>
   <artifactId>Kiyohime</artifactId>
-  <version>0.0.4</version>
+  <version>0.0.6</version>
 
   <name>Kiyohime</name>
   <!-- FIXME change it to the project's website -->
@@ -46,6 +46,13 @@
         <version>1.10.0</version>
         <scope>system</scope>
         <systemPath>${basedir}/lib/StSLib.jar</systemPath>
+    </dependency>
+    <dependency>
+            <groupId>friendlyminions</groupId>
+            <artifactId>FriendlyMinions</artifactId>
+            <version>0.1.2</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/FriendlyMinions.jar</systemPath>
     </dependency>
   </dependencies>
 
