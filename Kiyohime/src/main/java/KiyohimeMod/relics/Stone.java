@@ -17,7 +17,8 @@ import KiyohimeMod.powers.CritStarPower;
 import KiyohimeMod.powers.NPPower;
 import basemod.abstracts.CustomRelic;
 import basemod.helpers.ModalChoice;
-import basemod.helpers.ModalChoiceBuilder;;
+import basemod.helpers.ModalChoiceBuilder;
+import kobting.friendlyminions.helpers.BasePlayerMinionHelper;;
 
 public class Stone extends CustomRelic implements ModalChoice.Callback,ClickableRelic {
     public static final String ID = "KiyohimeMod:Stone";
@@ -72,6 +73,7 @@ public class Stone extends CustomRelic implements ModalChoice.Callback,Clickable
                 new NPPower(AbstractDungeon.player)));
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
                 new ChaldeaPower(AbstractDungeon.player)));
+        BasePlayerMinionHelper.changeMaxMinionAmount(AbstractDungeon.player, 2);
     }
 
     @Override

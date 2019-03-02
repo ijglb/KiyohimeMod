@@ -180,8 +180,10 @@ public class KiyohimeMod implements EditCharactersSubscriber, EditStringsSubscri
         BaseMod.addCard(new HeroCreation());
         BaseMod.addCard(new Barrier());
         BaseMod.addCard(new GoldenCarpFigure());
+        BaseMod.addCard(new FacelessMoon());
         //Servant
         BaseMod.addCard(new Servant_TamamoNoMae());
+        BaseMod.addCard(new Servant_Osakabehime());
 
         //Power
         //COMMON
@@ -219,8 +221,17 @@ public class KiyohimeMod implements EditCharactersSubscriber, EditStringsSubscri
         reflectedMap.put("KiyohimeMod:Berserker_BattleStart_4",
                 new Sfx("Kiyohime/sounds/Kiyohime_Berserker_BattleStart_4.ogg"));
 
-        reflectedMap.put("KiyohimeMod:Servants_TamamoNoMae_Summon",
-                new Sfx("Kiyohime/sounds/servants/TamamoNoMae_Summon.ogg"));
+        reflectedMap.put("KiyohimeMod:Servants_TamamoNoMae_BattleStart1",
+                new Sfx("Kiyohime/sounds/servants/TamamoNoMae_BattleStart1.ogg"));
+        reflectedMap.put("KiyohimeMod:Servants_TamamoNoMae_BattleStart2",
+                new Sfx("Kiyohime/sounds/servants/TamamoNoMae_BattleStart2.ogg"));
+        reflectedMap.put("KiyohimeMod:Servants_TamamoNoMae_BattleStart3",
+                new Sfx("Kiyohime/sounds/servants/TamamoNoMae_BattleStart3.ogg"));
+
+        reflectedMap.put("KiyohimeMod:Servants_Osakabehime_BattleStart1",
+                new Sfx("Kiyohime/sounds/servants/Osakabehime_BattleStart1.ogg"));
+        reflectedMap.put("KiyohimeMod:Servants_Osakabehime_BattleStart2",
+                new Sfx("Kiyohime/sounds/servants/Osakabehime_BattleStart2.ogg"));
     }
     
     @SuppressWarnings("unchecked")

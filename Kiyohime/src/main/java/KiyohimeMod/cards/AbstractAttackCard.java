@@ -17,6 +17,7 @@ import KiyohimeMod.powers.AbstractStackablePower;
 import KiyohimeMod.powers.ArtsUPPower;
 import KiyohimeMod.powers.BusterUPPower;
 import KiyohimeMod.powers.ChaldeaPower;
+import KiyohimeMod.powers.FacelessMoonPower;
 import KiyohimeMod.powers.QuickUPPower;
 
 public abstract class AbstractAttackCard extends CustomCard {
@@ -97,19 +98,37 @@ public abstract class AbstractAttackCard extends CustomCard {
     private void setRandomTag() {
         if (!isSetTag) {
             if (!isSpecialTag && AbstractDungeon.player.hasPower(ChaldeaPower.POWER_ID)) {
-                //随机分配
-                int i = AbstractDungeon.miscRng.random(1, 3);
-                switch (i) {
-                case 1:
-                    this.tags.add(KiyohimeTags.ATTACK_Arts);
-                    break;
-                case 2:
-                    this.tags.add(KiyohimeTags.ATTACK_Quick);
-                    break;
-                case 3:
-                    this.tags.add(KiyohimeTags.ATTACK_Buster);
-                default:
-                    break;
+                if (AbstractDungeon.player.hasPower(FacelessMoonPower.POWER_ID)) {
+                    //锁定卡色
+                    String lockedCard = ((FacelessMoonPower) AbstractDungeon.player
+                            .getPower(FacelessMoonPower.POWER_ID)).lockedCard;
+                    switch (lockedCard) {
+                    case "Arts":
+                        this.tags.add(KiyohimeTags.ATTACK_Arts);
+                        break;
+                    case "Quick":
+                        this.tags.add(KiyohimeTags.ATTACK_Quick);
+                        break;
+                    case "Buster":
+                        this.tags.add(KiyohimeTags.ATTACK_Buster);
+                    default:
+                        break;
+                    }
+                } else {
+                    //随机分配
+                    int i = AbstractDungeon.miscRng.random(1, 3);
+                    switch (i) {
+                    case 1:
+                        this.tags.add(KiyohimeTags.ATTACK_Arts);
+                        break;
+                    case 2:
+                        this.tags.add(KiyohimeTags.ATTACK_Quick);
+                        break;
+                    case 3:
+                        this.tags.add(KiyohimeTags.ATTACK_Buster);
+                    default:
+                        break;
+                    }
                 }
                 isSetTag = true;
             }

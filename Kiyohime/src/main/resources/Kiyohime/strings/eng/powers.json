@@ -122,14 +122,26 @@
       "NAME": "Crit Star generation rate Up",
       "DESCRIPTIONS": [
         "Crit Star generation rate Up #y",
-        "%"
+        "% (Total)",
+        " NL #y+",
+        "% ( #b",
+        "  turn)"
       ]
     },
     "KiyohimeMod:NPGenerationRatePower": {
       "NAME": "NP generation rate Up",
       "DESCRIPTIONS": [
         "NP generation rate Up #b",
-        "%"
+        "% (Total)",
+        " NL #b+",
+        "% ( #b",
+        "  turn)"
+      ]
+    },
+    "KiyohimeMod:FacelessMoonPower": {
+      "NAME": "Faceless Moon Power",
+      "DESCRIPTIONS": [
+        "Lock the attack card to: "
       ]
     }
   }

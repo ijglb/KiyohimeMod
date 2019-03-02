@@ -122,14 +122,26 @@
       "NAME": "暴击星掉落率提升",
       "DESCRIPTIONS": [
         "暴击星掉落率提升 #y",
-        "%"
+        "% (总)",
+        " NL #y+",
+        "% ( #b",
+        " 回合)"
       ]
     },
     "KiyohimeMod:NPGenerationRatePower": {
       "NAME": "NP获得量提升",
       "DESCRIPTIONS": [
         "NP获得量提升 #b",
-        "%"
+        "% (总)",
+        " NL #b+",
+        "% ( #b",
+        " 回合)"
+      ]
+    },
+    "KiyohimeMod:FacelessMoonPower": {
+      "NAME": "无貌之月",
+      "DESCRIPTIONS": [
+        "锁定攻击卡为："
       ]
     }
   }

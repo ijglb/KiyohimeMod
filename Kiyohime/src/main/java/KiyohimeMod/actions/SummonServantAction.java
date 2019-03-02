@@ -1,6 +1,5 @@
 package KiyohimeMod.actions;
 
-import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -20,11 +19,11 @@ public class SummonServantAction extends AbstractGameAction {
     @Override
     public void update() {
         if (AbstractDungeon.player instanceof Kiyohime) {
+            BasePlayerMinionHelper.addMinion(AbstractDungeon.player, servant);
             String sound = servant.getSummonSound();
             if (sound != null) {
-                CardCrawlGame.sound.playA(sound, MathUtils.random(0F, 0.2F));
+                CardCrawlGame.sound.play(sound);
             }
-            BasePlayerMinionHelper.addMinion(AbstractDungeon.player, servant);
         }
         isDone = true;
     }

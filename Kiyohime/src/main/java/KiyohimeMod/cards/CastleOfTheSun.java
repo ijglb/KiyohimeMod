@@ -44,7 +44,8 @@ public class CastleOfTheSun extends CustomCard {
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyStackablePowerAction(p, p, new CritUPPower(p, this.damage, -1), this.damage, -1, true));
         AbstractDungeon.actionManager
-                .addToBottom(new ApplyPowerAction(p, p, new CritStarGenerationRatePower(p, this.block), this.block));
+                .addToBottom(new ApplyStackablePowerAction(p, p, new CritStarGenerationRatePower(p, this.block, -1),
+                        this.block, -1,true));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new NPPower(p), this.magicNumber));
     }
 

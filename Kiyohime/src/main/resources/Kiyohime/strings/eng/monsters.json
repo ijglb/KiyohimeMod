@@ -2,7 +2,7 @@
     "KiyohimeMod:TamamoNoMae": {
         "NAME": "Tamamo no Mae",
         "DIALOG": [
-            "Tamamo no Mae",
+            "Tamamo's Fan Club",
             "Attack",
             "Witchcraft[EX]",
             "Shapeshift[A]",
@@ -15,6 +15,24 @@
             "NP Damage Up #r30% for 3 turns.Let an enemy lose #r1 Strength.",
             "All of us gain #b10 Block.",
             "Arts Up #b50% for 3 turns.Heal #r6 HP."
+        ]
+    },
+    "KiyohimeMod:Osakabehime": {
+        "NAME": "Osakabehime",
+        "DIALOG": [
+            "Princess' Origami",
+            "Attack",
+            "Shapeshift[A+]",
+            "Chiyogami Manipulation[EX]",
+            "Castle Ghost[A++]"
+        ],
+        "MOVES": [
+            "At the start of each turn,NP generation rate Up #b15% for 1 turn.",
+            "Deal #r",
+            " damage.",
+            "All of us gain #b10 Block.Remove a random DEBUFF from yourself.",
+            "Gain #b20 NP.Crit Star generation rate Up #y50% for #r3 turns.",
+            "Apply an enemy 1 Vulnerable,and remove all BUFF from it."
         ]
     }
 }

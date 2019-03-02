@@ -32,11 +32,14 @@ public class TamamoNoMae extends AbstractFriendlyServant {
         "Kiyohime/images/servants/TamamoNoMae/attack_intent_5.png", 
         "Kiyohime/images/servants/TamamoNoMae/attack_intent_6.png", 
             "Kiyohime/images/servants/TamamoNoMae/attack_intent_7.png" };
+    private static final String[] BattleStartSounds = { "KiyohimeMod:Servants_TamamoNoMae_BattleStart1",
+            "KiyohimeMod:Servants_TamamoNoMae_BattleStart2", "KiyohimeMod:Servants_TamamoNoMae_BattleStart3" };
     public int baseDamageAmount = 6;
 
     public TamamoNoMae(float x) {
         super(NAME, ID, 25, "Kiyohime/images/servants/TamamoNoMae/TamamoNoMae.png", x, 10f, AttackIntents);
         addMoves();
+        initMoves();
     }
 
     private void addMoves() {
@@ -76,8 +79,6 @@ public class TamamoNoMae extends AbstractFriendlyServant {
                             this, new ArtsUPPower(AbstractDungeon.player, 50, 3), 50, 3, true));
                     AbstractDungeon.actionManager.addToBottom(new HealAction(AbstractDungeon.player, this, 6));
                 }, true));
-
-        initMoves();
     }
 
     @Override
@@ -89,6 +90,7 @@ public class TamamoNoMae extends AbstractFriendlyServant {
 
     @Override
     public String getSummonSound() {
-        return "KiyohimeMod:Servants_TamamoNoMae_Summon";
+        int r = AbstractDungeon.miscRng.random(0, BattleStartSounds.length - 1);
+        return BattleStartSounds[r];
     }
 }

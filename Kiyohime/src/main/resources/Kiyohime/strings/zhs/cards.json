@@ -222,5 +222,23 @@
     "EXTENDED_DESCRIPTION":[
       "场上已存在两个助战从者。"
     ]
+  },
+  "KiyohimeMod:Servant_Osakabehime": {
+    "NAME": "刑部姬",
+    "DESCRIPTION": "召唤 。 NL 召唤刑部姬。 NL 已存在时，获得 !M! 临时HP。",
+    "EXTENDED_DESCRIPTION":[
+      "场上已存在两个助战从者。"
+    ]
+  },
+  "KiyohimeMod:FacelessMoon": {
+    "NAME": "无貌之月",
+    "DESCRIPTION": "接下来 !M! 回合，锁定所有攻击卡牌的卡色为所选卡色。",
+    "EXTENDED_DESCRIPTION":[
+      "当前已拥有此BUFF，无法叠加。",
+      "选择一种卡色来锁定",
+      "Buster",
+      "Arts",
+      "Quick"
+    ]
   }
 }

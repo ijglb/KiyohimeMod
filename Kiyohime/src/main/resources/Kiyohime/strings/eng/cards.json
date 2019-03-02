@@ -222,5 +222,23 @@
     "EXTENDED_DESCRIPTION":[
       "There are already two servants in the combat."
     ]
+  },
+  "KiyohimeMod:Servant_Osakabehime": {
+    "NAME": "Osakabehime",
+    "DESCRIPTION": "summon . NL Summoning Osakabehime. NL If exists,Gain !M! Temp HP.",
+    "EXTENDED_DESCRIPTION":[
+      "There are already two servants in the combat."
+    ]
+  },
+  "KiyohimeMod:FacelessMoon": {
+    "NAME": "Faceless Moon",
+    "DESCRIPTION": "In the next !M! turns,lock the card color of all attack cards to the selected card color.",
+    "EXTENDED_DESCRIPTION":[
+      "This BUFF is currently owned and cannot be overlaid.",
+      "Choose a card color to lock",
+      "Buster",
+      "Arts",
+      "Quick"
+    ]
   }
 }

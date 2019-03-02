@@ -28,7 +28,7 @@ public abstract class AbstractFriendlyServant extends AbstractFriendlyMonster {
         this.moves.setxStart(200);
         int yStart = 630;
         int size = BasePlayerMinionHelper.getMinions(AbstractDungeon.player).monsters.size();
-        yStart = yStart - size * 50;
+        yStart = yStart - size * 60;
         this.moves.setyStart(yStart);
     }
 
