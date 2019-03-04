@@ -4,12 +4,18 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.MonsterGroup;
 
 import KiyohimeMod.character.Kiyohime;
+import kobting.friendlyminions.characters.AbstractPlayerWithMinions;
+import kobting.friendlyminions.helpers.BasePlayerMinionHelper;
 import kobting.friendlyminions.monsters.MinionMove;
 import kobting.friendlyminions.monsters.MinionMoveGroup;
+import kobting.friendlyminions.patches.PlayerAddFieldsPatch;
+import kobting.friendlyminions.patches.PlayerMethodPatches;
 
 public  class MinionMoveGroupPatch {
     @SpirePatch(clz = MinionMoveGroup.class, method = "drawMoveImage")
@@ -23,6 +29,55 @@ public  class MinionMoveGroupPatch {
                 return SpireReturn.Return(null);
             }
             return SpireReturn.Continue();
+        }
+    }
+
+    @SpirePatch(clz = PlayerMethodPatches.RenderPatch.class, method = "Prefix")
+    public static class RenderPatch {
+
+        public static SpireReturn<Object> Prefix(AbstractPlayer _instance, SpriteBatch sb) {
+
+            if (!(_instance instanceof AbstractPlayerWithMinions)) {
+                MonsterGroup minions;
+                minions = PlayerAddFieldsPatch.f_minions.get(AbstractDungeon.player);
+
+                if (AbstractDungeon.getCurrRoom() != null) {
+                    switch (AbstractDungeon.getCurrRoom().phase) {
+                    case COMBAT:
+                        if (BasePlayerMinionHelper.hasMinions(AbstractDungeon.player))
+                            minions.render(sb);
+                        break;
+                    default:
+                        break;
+                    }
+                }
+            }
+            return SpireReturn.Return(null);
+        }
+
+    }
+
+    @SpirePatch(clz = PlayerMethodPatches.UpdatePatch.class, method = "Postfix")
+    public static class UpdatePatch {
+
+        public static SpireReturn<Object> Prefix(AbstractPlayer _instance) {
+
+            if (!(_instance instanceof AbstractPlayerWithMinions)) {
+                MonsterGroup minions;
+                minions = PlayerAddFieldsPatch.f_minions.get(AbstractDungeon.player);
+
+                if (AbstractDungeon.getCurrRoom() != null) {
+                    switch (AbstractDungeon.getCurrRoom().phase) {
+                    case COMBAT:
+                        if (BasePlayerMinionHelper.hasMinions(AbstractDungeon.player))
+                            minions.update();
+                        break;
+                    default:
+                        break;
+                    }
+                }
+            }
+            return SpireReturn.Return(null);
         }
     }
 }
