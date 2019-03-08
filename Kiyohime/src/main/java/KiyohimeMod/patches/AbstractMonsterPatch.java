@@ -19,7 +19,7 @@ import KiyohimeMod.relics.Stone;
 import javassist.CannotCompileException;
 import javassist.CtBehavior;
 
-public class AbstractMonsterPath {
+public class AbstractMonsterPatch {
 
     @SpirePatch(clz = AbstractMonster.class, method = "damage")
     public static class DamagePatch {

@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import KiyohimeMod.actions.ExtraAttackAction;
 import KiyohimeMod.cards.AbstractAttackCard;
+import KiyohimeMod.character.Kiyohime;
 import KiyohimeMod.patches.KiyohimeTags;
 
 public class ChaldeaPower extends AbstractPower {
@@ -95,8 +96,11 @@ public class ChaldeaPower extends AbstractPower {
                         AbstractDungeon.actionManager
                                 .addToBottom(new ApplyPowerAction(owner, owner, new NPPower(owner), 20));
                     } else if (last1Card == Quick) {
-                        AbstractDungeon.actionManager
-                                .addToBottom(new ApplyPowerAction(owner, owner, new CritStarPower(owner), 25));
+                        // AbstractDungeon.actionManager
+                        //         .addToBottom(new ApplyPowerAction(owner, owner, new CritStarPower(owner), 25));
+                        if (AbstractDungeon.player instanceof Kiyohime) {
+                            ((Kiyohime) AbstractDungeon.player).StarCounter.addStarCount(25);
+                        }
                     }
                     isChain = true;
                 }

@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
@@ -37,21 +38,31 @@ public class Kiyohime extends CustomPlayer {
     private static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(ID);
     private static final Color buster = CardHelper.getColor(254.0f, 32.0f, 22.0f);
     public static final String[] orbTextures = {
-        "images/orbs/plasma.png"
+            "images/ui/topPanel/blue/1.png",
+            "images/ui/topPanel/blue/2.png",
+            "images/ui/topPanel/blue/3.png",
+            "images/ui/topPanel/blue/4.png",
+            "images/ui/topPanel/blue/5.png",
+            "images/ui/topPanel/blue/border.png",
+            "images/ui/topPanel/blue/1d.png",
+            "images/ui/topPanel/blue/2d.png",
+            "images/ui/topPanel/blue/3d.png",
+            "images/ui/topPanel/blue/4d.png",
+            "images/ui/topPanel/blue/5d.png"
     };
 
     public AbstractServant Servant;
+    public StarCounter StarCounter;
 
     public Kiyohime(String name) {
-        super(name, KiyohimeEnum.Kiyohime, orbTextures,"images/orbs/plasma.png", new SpriterAnimation("Kiyohime/images/char/idle/Kiyohime.scml"));
+        super(name, KiyohimeEnum.Kiyohime, orbTextures, "images/ui/topPanel/energyBlueVFX.png",
+                new SpriterAnimation("Kiyohime/images/char/idle/Kiyohime.scml"));
         this.dialogX = (this.drawX + 0.0F * Settings.scale); // set location for text bubbles
         this.dialogY = (this.drawY + 220.0F * Settings.scale); // you can just copy these values
         this.Servant = new BerserkerKiyohime();
-        initializeClass(null,
-                MY_CHARACTER_SHOULDER_2,
-                MY_CHARACTER_SHOULDER_1,
-                MY_CHARACTER_CORPSE,
-                getLoadout(), 20.0F, -10.0F, 220.0F, 290.0F, new EnergyManager(ENERGY_PER_TURN));
+        this.StarCounter = new StarCounter();
+        initializeClass(null, MY_CHARACTER_SHOULDER_2, MY_CHARACTER_SHOULDER_1, MY_CHARACTER_CORPSE, getLoadout(),
+                20.0F, -10.0F, 220.0F, 290.0F, new EnergyManager(ENERGY_PER_TURN));
     }
 
     @Override
@@ -60,7 +71,20 @@ public class Kiyohime extends CustomPlayer {
         if (sound != null) {
             CardCrawlGame.sound.play(sound);
         }
+        this.StarCounter.resetCounter();
         super.preBattlePrep();
+    }
+
+    @Override
+    public void update() {
+        super.update();
+        this.StarCounter.update();
+    }
+
+    @Override
+    public void useCard(AbstractCard c, AbstractMonster monster, int energyOnUse) {
+        super.useCard(c, monster, energyOnUse);
+        this.StarCounter.onUseCard(c);
     }
 
     public void changeAbstractServant(AbstractServant servant, boolean playSound) {

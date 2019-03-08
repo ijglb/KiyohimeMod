@@ -46,5 +46,17 @@
         "summon"
       ],
       "DESCRIPTION": "Summoning a servant to help you in combat.If this servant exists,reset their skills,and increase the maximum HP."
+    },
+    "CritStar": {
+      "NAMES": [
+        "☆"
+      ],
+      "DESCRIPTION": "The more crit stars,the higher the crit probability."
+    },
+    "CriticalStar": {
+      "NAMES": [
+        "★"
+      ],
+      "DESCRIPTION": "The more crit stars,the higher the crit probability. #rCrit #rdetermined."
     }
   }

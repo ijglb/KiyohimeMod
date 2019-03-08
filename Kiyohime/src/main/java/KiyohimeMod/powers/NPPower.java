@@ -105,8 +105,9 @@ public class NPPower extends AbstractPower {
                 npGenerationRate = owner.getPower(NPGenerationRatePower.POWER_ID).amount / 100.0f;
             }
             int hits = ((AbstractAttackCard) usedCard).Hits;
+            float critical = ((AbstractAttackCard) usedCard).isCritical() ? 1.5f : 1f;//暴击补正
             //NP率 * (指令卡补正 * (1 ± 指令卡性能BUFF ∓ 指令卡耐性) + 首位加成) * 敌补正 * (1 ± NP获得量BUFF) * 暴击补正 * Overkill补正
-            float getNP = hits * (npRate * (card * (1 + cardbuff) + first)) * (1 + npGenerationRate);
+            float getNP = hits * ((npRate * (card * (1 + cardbuff) + first)) * (1 + npGenerationRate) * critical);
             if((int) getNP > 0)
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, this, (int) getNP, true));
         }

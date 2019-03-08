@@ -9,6 +9,7 @@ import java.util.Map;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -23,7 +24,9 @@ import com.megacrit.cardcrawl.localization.*;
 import KiyohimeMod.character.BerserkerKiyohime;
 import KiyohimeMod.character.Kiyohime;
 import KiyohimeMod.character.LancerKiyohime;
+import KiyohimeMod.character.StarCounter;
 import KiyohimeMod.patches.KiyohimeEnum;
+import KiyohimeMod.powers.ChaldeaPower;
 import KiyohimeMod.relics.*;
 import KiyohimeMod.cards.*;
 import basemod.BaseMod;
@@ -35,13 +38,14 @@ import basemod.interfaces.EditKeywordsSubscriber;
 import basemod.interfaces.EditRelicsSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
+import basemod.interfaces.RenderSubscriber;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 @SpireInitializer
 public class KiyohimeMod implements EditCharactersSubscriber, EditStringsSubscriber, EditKeywordsSubscriber,
-        EditRelicsSubscriber, EditCardsSubscriber,PostInitializeSubscriber {
+        EditRelicsSubscriber, EditCardsSubscriber, PostInitializeSubscriber, RenderSubscriber {
 
     public static final Logger Logger = LogManager.getLogger(KiyohimeMod.class.getName());
     private static final Color buster = CardHelper.getColor(254.0f, 32.0f, 22.0f);
@@ -75,16 +79,24 @@ public class KiyohimeMod implements EditCharactersSubscriber, EditStringsSubscri
     @Override
     public void receiveEditStrings() {
         String languageString = "Kiyohime/strings/" + getLanguageString(Settings.language);
-        String characterStrings = Gdx.files.internal(languageString + "/character.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        String characterStrings = Gdx.files.internal(languageString + "/character.json")
+                .readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(CharacterStrings.class, characterStrings);
-        String relicStrings = Gdx.files.internal(languageString + "/relics.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        String relicStrings = Gdx.files.internal(languageString + "/relics.json")
+                .readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(RelicStrings.class, relicStrings);
-        String powerStrings = Gdx.files.internal(languageString + "/powers.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        String powerStrings = Gdx.files.internal(languageString + "/powers.json")
+                .readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);
-        String cardStrings = Gdx.files.internal(languageString + "/cards.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        String cardStrings = Gdx.files.internal(languageString + "/cards.json")
+                .readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(CardStrings.class, cardStrings);
-        String monsterStrings = Gdx.files.internal(languageString + "/monsters.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        String monsterStrings = Gdx.files.internal(languageString + "/monsters.json")
+                .readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(MonsterStrings.class, monsterStrings);
+        String uiStrings = Gdx.files.internal(languageString + "/ui.json")
+                .readString(String.valueOf(StandardCharsets.UTF_8));
+        BaseMod.loadCustomStrings(UIStrings.class, uiStrings);
     }
 
     private String getLanguageString(Settings.GameLanguage language) {
@@ -102,29 +114,31 @@ public class KiyohimeMod implements EditCharactersSubscriber, EditStringsSubscri
         Gson gson = new Gson();
 
         String languageString = "Kiyohime/strings/" + getLanguageString(Settings.language);
-        String keywordStrings = Gdx.files.internal(languageString + "/keywords.json").readString(String.valueOf(StandardCharsets.UTF_8));
-        Type typeToken = new TypeToken<Map<String, Keyword>>() {}.getType();
+        String keywordStrings = Gdx.files.internal(languageString + "/keywords.json")
+                .readString(String.valueOf(StandardCharsets.UTF_8));
+        Type typeToken = new TypeToken<Map<String, Keyword>>() {
+        }.getType();
 
         Map<String, Keyword> keywords = gson.fromJson(keywordStrings, typeToken);
 
-        keywords.forEach((k,v)->{
+        keywords.forEach((k, v) -> {
             BaseMod.addKeyword(v.NAMES, v.DESCRIPTION);
         });
     }
 
     @Override
     public void receiveEditRelics() {
-        //start
+        // start
         BaseMod.addRelicToCustomPool(new Stone(), Kiyohime_Color);
 
-        //UNCOMMON
+        // UNCOMMON
         BaseMod.addRelicToCustomPool(new TerritoryCreation(), Kiyohime_Color);
         BaseMod.addRelicToCustomPool(new ElixirOfRejuvenation(), Kiyohime_Color);
         BaseMod.addRelicToCustomPool(new HolyShroudOfMagdalene(), Kiyohime_Color);
-        //RARE
+        // RARE
         BaseMod.addRelicToCustomPool(new Divinity(), Kiyohime_Color);
         BaseMod.addRelicToCustomPool(new UnlimitedPranaSupply(), Kiyohime_Color);
-        //boss
+        // boss
         BaseMod.addRelicToCustomPool(new TheBlackGrail(), Kiyohime_Color);
         BaseMod.addRelicToCustomPool(new Bond(), Kiyohime_Color);
         BaseMod.addRelicToCustomPool(new Necromancy(), Kiyohime_Color);
@@ -132,20 +146,21 @@ public class KiyohimeMod implements EditCharactersSubscriber, EditStringsSubscri
 
     @Override
     public void receiveEditCards() {
-        //Basic ASSP
+        BaseMod.addDynamicVariable(new AbstractAttackCard.StarCountNumber());
+        // Basic ASSP
         BaseMod.addCard(new Strike());
         BaseMod.addCard(new Defend());
         BaseMod.addCard(new Track());
         BaseMod.addCard(new FlameKiss());
         BaseMod.addCard(new Shapeshift());
 
-        //Attack
-        //COMMON
+        // Attack
+        // COMMON
         BaseMod.addCard(new Preemptive());
         BaseMod.addCard(new RedBlackKey());
         BaseMod.addCard(new BlueBlackKey());
         BaseMod.addCard(new GreenBlackKey());
-        //UNCOMMON
+        // UNCOMMON
         BaseMod.addCard(new Fragarach());
         BaseMod.addCard(new BeastOfBillows());
         BaseMod.addCard(new HydraDagger());
@@ -153,21 +168,21 @@ public class KiyohimeMod implements EditCharactersSubscriber, EditStringsSubscri
         BaseMod.addCard(new CommandCard_Buster());
         BaseMod.addCard(new CommandCard_Quick());
         BaseMod.addCard(new CommandCard_Arts());
-        //RARE
+        // RARE
         BaseMod.addCard(new Destruction());
         BaseMod.addCard(new JeweledSword());
-        //SPECIAL
+        // SPECIAL
         BaseMod.addCard(new TenshinKashoZanmaii());
-        BaseMod.addCard(new ExtraAttack(0,0));
+        BaseMod.addCard(new ExtraAttack(0, 0));
         BaseMod.addCard(new DoujyoujikaneHyakuhachishikikaryuunagi());
 
-        //Skill
-        //COMMON
+        // Skill
+        // COMMON
         BaseMod.addCard(new WaterTurn());
         BaseMod.addCard(new EatSoul());
         BaseMod.addCard(new SteelTraining());
         BaseMod.addCard(new AndSoTheShipConquers());
-        //UNCOMMON
+        // UNCOMMON
         BaseMod.addCard(new DragonVein());
         BaseMod.addCard(new AgainstMagic());
         BaseMod.addCard(new ExSpicyMapoTofu());
@@ -175,26 +190,26 @@ public class KiyohimeMod implements EditCharactersSubscriber, EditStringsSubscri
         BaseMod.addCard(new DivineConstruct());
         BaseMod.addCard(new Projection());
         BaseMod.addCard(new CelestialInvertedMoon());
-        //RARE
+        // RARE
         BaseMod.addCard(new ImaginaryNumberMagecraft());
         BaseMod.addCard(new HeroCreation());
         BaseMod.addCard(new Barrier());
         BaseMod.addCard(new GoldenCarpFigure());
         BaseMod.addCard(new FacelessMoon());
-        //Servant
+        // Servant
         BaseMod.addCard(new Servant_TamamoNoMae());
         BaseMod.addCard(new Servant_Osakabehime());
 
-        //Power
-        //COMMON
+        // Power
+        // COMMON
         BaseMod.addCard(new Berserker());
-        //UNCOMMON
+        // UNCOMMON
         BaseMod.addCard(new Tenacious());
         BaseMod.addCard(new LimitedZeroOver());
         BaseMod.addCard(new ImaginaryAround());
         BaseMod.addCard(new FormalCraft());
         BaseMod.addCard(new HotSpringOfTheMoon());
-        //RARE
+        // RARE
         BaseMod.addCard(new PrismaCosmos());
         BaseMod.addCard(new FragmentsOf2030());
         BaseMod.addCard(new AVerseOfBurningLoveStory());
@@ -203,7 +218,7 @@ public class KiyohimeMod implements EditCharactersSubscriber, EditStringsSubscri
 
     @Override
     public void receivePostInitialize() {
-        //add sounds
+        // add sounds
         HashMap<String, Sfx> reflectedMap = getSoundsMap();
         reflectedMap.put("KiyohimeMod:SELECT", new Sfx("Kiyohime/sounds/Kiyohime_SELECT.ogg"));
 
@@ -233,7 +248,7 @@ public class KiyohimeMod implements EditCharactersSubscriber, EditStringsSubscri
         reflectedMap.put("KiyohimeMod:Servants_Osakabehime_BattleStart2",
                 new Sfx("Kiyohime/sounds/servants/Osakabehime_BattleStart2.ogg"));
     }
-    
+
     @SuppressWarnings("unchecked")
     private HashMap<String, Sfx> getSoundsMap() {
         return (HashMap<String, Sfx>) ReflectionHacks.getPrivate(CardCrawlGame.sound, SoundMaster.class, "map");
@@ -265,4 +280,15 @@ public class KiyohimeMod implements EditCharactersSubscriber, EditStringsSubscri
         });
     }
 
+    @Override
+    public void receiveRender(SpriteBatch sb) {
+        if (AbstractDungeon.player != null && CardCrawlGame.dungeon != null
+                && AbstractDungeon.player.hasPower(ChaldeaPower.POWER_ID)) {
+            if (!AbstractDungeon.isScreenUp) {
+                StarCounter counter = ((Kiyohime) AbstractDungeon.player).StarCounter;
+                counter.render(sb);
+                counter.update();
+            }
+        }
+    }
 }

@@ -1,6 +1,5 @@
 package KiyohimeMod.cards;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.defect.DiscardPileToHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -9,8 +8,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import KiyohimeMod.character.Kiyohime;
 import KiyohimeMod.patches.AbstractCardEnum;
-import KiyohimeMod.powers.CritStarPower;
 import basemod.abstracts.CustomCard;
 
 public class GoldenCarpFigure extends CustomCard {
@@ -46,7 +45,10 @@ public class GoldenCarpFigure extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new CritStarPower(p), this.block));
+        if (AbstractDungeon.player instanceof Kiyohime) {
+            ((Kiyohime) AbstractDungeon.player).StarCounter.addStarCount(this.block);
+        }
+        // AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new CritStarPower(p), this.block));
         if (AbstractDungeon.player.discardPile.size() > 0) {
             AbstractDungeon.actionManager.addToBottom(new DiscardPileToHandAction(this.magicNumber));
         }

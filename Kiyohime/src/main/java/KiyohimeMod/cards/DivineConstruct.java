@@ -1,6 +1,5 @@
 package KiyohimeMod.cards;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -8,8 +7,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import KiyohimeMod.character.Kiyohime;
 import KiyohimeMod.patches.AbstractCardEnum;
-import KiyohimeMod.powers.CritStarPower;
 import basemod.abstracts.CustomCard;
 
 public class DivineConstruct extends CustomCard {
@@ -32,7 +31,10 @@ public class DivineConstruct extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new CritStarPower(p), this.magicNumber));
+        // AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new CritStarPower(p), this.magicNumber));
+        if (AbstractDungeon.player instanceof Kiyohime) {
+            ((Kiyohime) AbstractDungeon.player).StarCounter.addStarCount(this.magicNumber);
+        }
     }
 
     public AbstractCard makeCopy() {

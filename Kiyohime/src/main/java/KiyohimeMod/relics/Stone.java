@@ -13,7 +13,6 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase;
 
 import KiyohimeMod.powers.ChaldeaPower;
-import KiyohimeMod.powers.CritStarPower;
 import KiyohimeMod.powers.NPPower;
 import basemod.abstracts.CustomRelic;
 import basemod.helpers.ModalChoice;
@@ -67,8 +66,8 @@ public class Stone extends CustomRelic implements ModalChoice.Callback,Clickable
     @Override
     public void atBattleStart() {
         this.flash();
-        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                new CritStarPower(AbstractDungeon.player)));
+        // AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
+        //         new CritStarPower(AbstractDungeon.player)));
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
                 new NPPower(AbstractDungeon.player)));
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,

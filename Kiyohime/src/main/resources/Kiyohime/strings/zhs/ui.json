@@ -1,0 +1,11 @@
+{
+  "KiyohimeMod:StarCounter": {
+    "TEXT": [
+      "暴击星",
+      "点击将暴击星分配到攻击卡牌中。 NL 当前暴击伤害： #r",
+      "正在分配暴击星。",
+      "[ !kiyoStar! ☆ ] ",
+      "[ !kiyoStar! ★ ] "
+    ]
+  }
+}

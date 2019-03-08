@@ -2,21 +2,26 @@ package KiyohimeMod.cards;
 
 import java.util.ArrayList;
 
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import KiyohimeMod.actions.LoadCardBGAction;
+import KiyohimeMod.character.StarCounter;
 import KiyohimeMod.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
+import basemod.abstracts.DynamicVariable;
 import KiyohimeMod.patches.KiyohimeTags;
 import KiyohimeMod.powers.AbstractStackablePower;
 import KiyohimeMod.powers.ArtsUPPower;
 import KiyohimeMod.powers.BusterUPPower;
 import KiyohimeMod.powers.ChaldeaPower;
+import KiyohimeMod.powers.CritUPPower;
 import KiyohimeMod.powers.FacelessMoonPower;
 import KiyohimeMod.powers.QuickUPPower;
 
@@ -30,21 +35,60 @@ public abstract class AbstractAttackCard extends CustomCard {
     public static String BG_Quick_L = "Kiyohime/images/1024/bg_attack_quick.png";
     public static String BG_Defult = "Kiyohime/images/512/bg_attack.png";
     public static String BG_Defult_L = "Kiyohime/images/1024/bg_attack.png";
+    public static String Star_Defult = StarCounter.starCounterText[3];
+    public static String Star_Crit = StarCounter.starCounterText[4];
+    private static int MaxStarRoom = 15;
 
+    private int starCount = 0;
+    private boolean critical = false;
     private boolean isSetTag = false;
     private int ampDamage = -1;
+    private String origDescription;
     protected int[] multiAmpDamage;
     protected boolean isCalcBlock = false;
     protected boolean isSpecialTag = false;
     public int Hits;
 
-    public AbstractAttackCard(String id, String name, String img, String rawDescription,int hits, AbstractCard.CardRarity rarity,
-            AbstractCard.CardTarget target) {
+    public AbstractAttackCard(String id, String name, String img, String rawDescription, int hits,
+            AbstractCard.CardRarity rarity, AbstractCard.CardTarget target) {
 
         super(id, name, img, 0, rawDescription, CardType.ATTACK, AbstractCardEnum.Kiyohime_Color, rarity, target);
         this.Hits = hits;
         this.cost = GetBaseCost();
         this.costForTurn = this.cost;
+        this.origDescription = this.rawDescription;
+        //this.rawDescription = Star_Defult + this.origDescription;
+        //initializeDescription();
+    }
+
+    public int getStarCount() {
+        return starCount;
+    }
+
+    public int getStarRoom() {
+        return MaxStarRoom - starCount;
+    }
+
+    public void addStarCount(int count) {
+        starCount += count;
+        if (starCount >= MaxStarRoom) {
+            starCount = MaxStarRoom;
+            critical = true;
+
+        } else {
+            int i = AbstractDungeon.miscRng.random(1, MaxStarRoom);
+            critical = starCount >= i;
+        }
+        if (critical)
+            this.rawDescription = Star_Crit + this.origDescription;
+        else
+            this.rawDescription = Star_Defult + this.origDescription;
+        initializeDescription();
+        calculateDamageDisplay(null);
+    }
+
+    public boolean isCritical() {
+        return critical;
     }
 
     @Override
@@ -56,7 +100,13 @@ public abstract class AbstractAttackCard extends CustomCard {
             }
         }
     }
-    
+
+    public void upgradeDescription(String description) {
+        this.origDescription = description;
+        this.rawDescription = this.origDescription;
+        initializeDescription();
+    }
+
     private int GetBaseCost() {
         switch (rarity) {
         case BASIC:
@@ -76,7 +126,7 @@ public abstract class AbstractAttackCard extends CustomCard {
     public void onMoveToDiscard() {
         setDefultTag();
     }
-    
+
     @Override
     public void triggerOnExhaust() {
         setDefultTag();
@@ -93,6 +143,10 @@ public abstract class AbstractAttackCard extends CustomCard {
             isSetTag = false;
             AbstractDungeon.actionManager.addToBottom(new LoadCardBGAction(this, BG_Defult, BG_Defult_L, false));
         }
+        this.rawDescription = this.origDescription;
+        initializeDescription();
+        this.starCount = 0;
+        this.critical = false;
     }
 
     private void setRandomTag() {
@@ -177,6 +231,13 @@ public abstract class AbstractAttackCard extends CustomCard {
                 temp = p.atDamageFinalReceive(temp, this.damageTypeForTurn);
             }
         }
+        if (critical) {
+            float buff = 0f;
+            if (player.hasPower(CritUPPower.POWER_ID)) {
+                buff = ((AbstractStackablePower) AbstractDungeon.player.getPower(CritUPPower.POWER_ID)).valueAmount;
+            }
+            temp = temp * 1.5f * (1f + (buff / 100f));
+        }
         if (temp < 0) {
             temp = 0;
         }
@@ -229,7 +290,7 @@ public abstract class AbstractAttackCard extends CustomCard {
     public void calculateCardDamage(AbstractMonster mo) {
         this.damage = this.baseDamage;
         this.block = this.baseBlock;
-        
+
         this.isDamageModified = false;
         this.isBlockModified = false;
         if ((!this.isMultiDamage) && (mo != null)) {
@@ -281,5 +342,55 @@ public abstract class AbstractAttackCard extends CustomCard {
     @Override
     public void calculateDamageDisplay(AbstractMonster mo) {
         calculateCardDamage(mo);
+    }
+
+    public static class StarCountNumber extends DynamicVariable {
+
+        @Override
+        public int baseValue(AbstractCard card) {
+            if (card instanceof AbstractAttackCard) {
+                return ((AbstractAttackCard) card).getStarCount();
+            } else {
+                return -1;
+            }
+        }
+
+        @Override
+        public Color getNormalColor() {
+            return Settings.GOLD_COLOR;
+        }
+
+        @Override
+        public Color getUpgradedColor() {
+            return Settings.RED_TEXT_COLOR;
+        }
+
+        @Override
+        public boolean isModified(AbstractCard card) {
+            return false;
+        }
+
+        @Override
+        public String key() {
+            return "kiyoStar";
+        }
+
+        @Override
+        public boolean upgraded(AbstractCard card) {
+            if (card instanceof AbstractAttackCard) {
+                return ((AbstractAttackCard) card).isCritical();
+            } else {
+                return false;
+            }
+        }
+
+        @Override
+        public int value(AbstractCard card) {
+            if (card instanceof AbstractAttackCard) {
+                return ((AbstractAttackCard) card).getStarCount();
+            } else {
+                return -1;
+            }
+        }
     }
 }

@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 import KiyohimeMod.character.AbstractServant;
 import KiyohimeMod.character.Kiyohime;
-import KiyohimeMod.powers.CritStarPower;
 import KiyohimeMod.powers.NPPower;
 
 public class ExtraAttackAction extends AbstractGameAction {
@@ -23,17 +22,15 @@ public class ExtraAttackAction extends AbstractGameAction {
     @Override
     public void update() {
         AbstractPlayer player = AbstractDungeon.player;
-        if(player instanceof Kiyohime){
-            AbstractServant servant = ((Kiyohime)AbstractDungeon.player).Servant;
+        if (player instanceof Kiyohime) {
+            AbstractServant servant = ((Kiyohime) AbstractDungeon.player).Servant;
             AbstractCard ex = servant.extraAttack.makeStatEquivalentCopy();
             ex.use(player, monster);
             UnlockTracker.markCardAsSeen(ex.cardID);
-            if(player.hasPower(NPPower.POWER_ID)){
+            if (player.hasPower(NPPower.POWER_ID)) {
                 player.getPower(NPPower.POWER_ID).onAfterUseCard(ex, null);
             }
-            if(player.hasPower(CritStarPower.POWER_ID)){
-                player.getPower(CritStarPower.POWER_ID).onAfterUseCard(ex, null);
-            }
+            ((Kiyohime) player).StarCounter.onUseCard(ex);
         }
         isDone = true;
     }

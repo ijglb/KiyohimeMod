@@ -10,8 +10,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
+import KiyohimeMod.character.Kiyohime;
 import KiyohimeMod.patches.AbstractCardEnum;
-import KiyohimeMod.powers.CritStarPower;
 import basemod.abstracts.CustomCard;
 
 public class CelestialInvertedMoon extends CustomCard {
@@ -42,9 +42,8 @@ public class CelestialInvertedMoon extends CustomCard {
     public void applyPowers() {
         this.isBlockModified = false;
         float tmp = this.baseBlock;
-        if (AbstractDungeon.player.hasPower(CritStarPower.POWER_ID)) {
-            AbstractPower pow = AbstractDungeon.player.getPower(CritStarPower.POWER_ID);
-            int star = pow.amount;
+        if (AbstractDungeon.player instanceof Kiyohime) {
+            int star = ((Kiyohime) AbstractDungeon.player).StarCounter.getStarCount();
             tmp += (star * this.magicNumber);
             if (this.baseBlock != MathUtils.floor(tmp)) {
                 this.isBlockModified = true;
