@@ -104,6 +104,8 @@ public class KiyohimeMod implements EditCharactersSubscriber, EditStringsSubscri
         case ZHS:
         case ZHT:
             return "zhs";
+        case KOR:
+            return "kor";
         default:
             return "eng";
         }

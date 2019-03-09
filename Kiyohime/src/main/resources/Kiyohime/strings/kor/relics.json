@@ -1,0 +1,78 @@
+{
+  "KiyohimeMod:Stone": {
+    "NAME": "Saint Quartz",
+    "FLAVOR": "Saint Quartz from Chaldea.",
+    "DESCRIPTIONS": [
+      "Gain #gBlessing-from-Chaldea .Gain #g3 Saint Quartz.Right-click it in combat to use.",
+      "Use Saint Quartz",
+      "Repair Spirit Origin",
+      "Use 1 Saint Quartz,heal 100% of your HP.",
+      "Release Noble Phantasm",
+      "Use 1 Saint Quartz,gain 100 NP.",
+      "Cancel",
+      "I accidentally made a mistake."
+    ]
+  },
+  "KiyohimeMod:TheBlackGrail": {
+    "NAME": "The Black Grail",
+    "FLAVOR": "An illusion seen by a man haunted by justice.The corrupted Grail speaks.It says a price is required for what he seeks.Just like the maiden of fate, singing of love.",
+    "DESCRIPTIONS": [
+      "NP Damage Up  #y80% .At the end of your turn,give 1 damage to you."
+    ]
+  },
+  "KiyohimeMod:Bond": {
+    "NAME": "Bond",
+    "FLAVOR": "Even if it's slightly different from the last time you met them, you still remember all the bonds with them.",
+    "DESCRIPTIONS": [
+      "At battle start,gain  #b",
+      "  NP。"
+    ]
+  },
+  "KiyohimeMod:Necromancy": {
+    "NAME": "Necromancy",
+    "FLAVOR": "In the world of mages, there are many spells that should be avoided.",
+    "DESCRIPTIONS": [
+      "When you receive #rFatal   #rDamage ,There is a certain probability that reduce damage to avoid death,and heal a little HP."
+    ]
+  },
+  "KiyohimeMod:UnlimitedPranaSupply": {
+    "NAME": "Unlimited Prana Supply",
+    "FLAVOR": "Unlimited Prana Supply.",
+    "DESCRIPTIONS": [
+      "Gain  #b",
+      "  NP each turn"
+    ]
+  },
+  "KiyohimeMod:TerritoryCreation": {
+    "NAME": "Territory Creation",
+    "FLAVOR": "Territory Creation.",
+    "DESCRIPTIONS": [
+      "#bArts  Up  #b",
+      "% "
+    ]
+  },
+  "KiyohimeMod:Divinity": {
+    "NAME": "Divinity",
+    "FLAVOR": "Divinity.",
+    "DESCRIPTIONS": [
+      "Whenever you would deal unblocked attack damage,increase it by  #r",
+      "  ."
+    ]
+  },
+  "KiyohimeMod:ElixirOfRejuvenation": {
+    "NAME": "Elixir of Rejuvenation",
+    "FLAVOR": "One of the treasures inside the Treasury of the King of Heroes.It is said to be able to rejuvenate a person's physical appearance.It was originally a spiritual herb that was plucked from a ravine,It is a 'Medicine for Longevity' that was misrepresented as the Medicine for Immortality.",
+    "DESCRIPTIONS": [
+      "If your HP is at or below #b50% at the start of combat, heal  #b",
+      "  HP."
+    ]
+  },
+  "KiyohimeMod:HolyShroudOfMagdalene": {
+    "NAME": "Holy Shroud of Magdalene",
+    "FLAVOR": "Noli me tangere.It is precisely in the mud of exorcism, where proof of a Saint is set.",
+    "DESCRIPTIONS": [
+      "Whenever you would receive unblocked attack damage from an Elite,reduce it by  #b",
+      "  ."
+    ]
+  }
+}
