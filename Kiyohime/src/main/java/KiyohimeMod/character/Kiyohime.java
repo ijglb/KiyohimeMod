@@ -5,12 +5,14 @@ import java.util.ArrayList;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardColor;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
@@ -25,8 +27,11 @@ import KiyohimeMod.cards.Strike;
 import KiyohimeMod.cards.Track;
 import KiyohimeMod.patches.AbstractCardEnum;
 import KiyohimeMod.patches.KiyohimeEnum;
+import KiyohimeMod.powers.ChaldeaPower;
+import KiyohimeMod.powers.NPPower;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
+import kobting.friendlyminions.helpers.BasePlayerMinionHelper;
 import KiyohimeMod.relics.Stone;
 
 public class Kiyohime extends CustomPlayer {
@@ -73,6 +78,17 @@ public class Kiyohime extends CustomPlayer {
         }
         this.StarCounter.resetCounter();
         super.preBattlePrep();
+    }
+
+    @Override
+    public void applyStartOfCombatLogic() {
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
+                new NPPower(AbstractDungeon.player)));
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
+                new ChaldeaPower(AbstractDungeon.player)));
+        BasePlayerMinionHelper.changeMaxMinionAmount(AbstractDungeon.player, 2);
+        
+        super.applyStartOfCombatLogic();
     }
 
     @Override

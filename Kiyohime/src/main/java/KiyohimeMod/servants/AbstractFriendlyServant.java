@@ -3,6 +3,7 @@ package KiyohimeMod.servants;
 import java.util.ArrayList;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -25,10 +26,9 @@ public abstract class AbstractFriendlyServant extends AbstractFriendlyMonster {
             tempAttackIntents.toArray(this.attackIntents);
         }
         this.baseMoves = new ArrayList<ServantMove>();
-        this.moves.setxStart(200);
-        int yStart = 630;
+        this.moves.setxStart(200 * Settings.scale);
         int size = BasePlayerMinionHelper.getMinions(AbstractDungeon.player).monsters.size();
-        yStart = yStart - size * 60;
+        float yStart = (930 - size * 85) * Settings.scale;
         this.moves.setyStart(yStart);
     }
 

@@ -12,12 +12,10 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase;
 
-import KiyohimeMod.powers.ChaldeaPower;
 import KiyohimeMod.powers.NPPower;
 import basemod.abstracts.CustomRelic;
 import basemod.helpers.ModalChoice;
 import basemod.helpers.ModalChoiceBuilder;
-import kobting.friendlyminions.helpers.BasePlayerMinionHelper;;
 
 public class Stone extends CustomRelic implements ModalChoice.Callback,ClickableRelic {
     public static final String ID = "KiyohimeMod:Stone";
@@ -63,17 +61,17 @@ public class Stone extends CustomRelic implements ModalChoice.Callback,Clickable
         return DESCRIPTIONS[0];
     }
 
-    @Override
-    public void atBattleStart() {
-        this.flash();
-        // AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-        //         new CritStarPower(AbstractDungeon.player)));
-        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                new NPPower(AbstractDungeon.player)));
-        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                new ChaldeaPower(AbstractDungeon.player)));
-        BasePlayerMinionHelper.changeMaxMinionAmount(AbstractDungeon.player, 2);
-    }
+    // @Override
+    // public void atBattleStart() {
+    //     this.flash();
+    //     // AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
+    //     //         new CritStarPower(AbstractDungeon.player)));
+    //     AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
+    //             new NPPower(AbstractDungeon.player)));
+    //     AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
+    //             new ChaldeaPower(AbstractDungeon.player)));
+    //     BasePlayerMinionHelper.changeMaxMinionAmount(AbstractDungeon.player, 2);
+    // }
 
     @Override
     public void optionSelected(AbstractPlayer p, AbstractMonster m, int i) {

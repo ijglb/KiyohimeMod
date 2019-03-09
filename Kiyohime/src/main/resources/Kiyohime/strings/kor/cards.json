@@ -93,7 +93,7 @@
   },
   "KiyohimeMod:TenshinKashoZanmaii": {
     "NAME": "Samadhi Through Transforming Flames",
-    "DESCRIPTION": "Deal !D! damage !M! times to ALL enemies,probability stuns the enemy. NL np-card , Exhaust , Ethereal .",
+    "DESCRIPTION": "Deal !D! damage !M! times to ALL enemies,probability stuns the enemy. NL np_card , Exhaust , Ethereal .",
     "EXTENDED_DESCRIPTION": [
       "NP is not enough."
     ]
@@ -185,24 +185,24 @@
   },
   "KiyohimeMod:CommandCard_Buster": {
     "NAME": "Command Card:Buster",
-    "DESCRIPTION": "command-card , buster .Base damage: !B! .(Deal !D! damage !M! times.)"
+    "DESCRIPTION": "command_card , buster .Base damage: !B! .(Deal !D! damage !M! times.)"
   },
   "KiyohimeMod:CommandCard_Quick": {
     "NAME": "Command Card:Quick",
-    "DESCRIPTION": "command-card , quick .Base damage: !B! .(Deal !D! damage !M! times.)"
+    "DESCRIPTION": "command_card , quick .Base damage: !B! .(Deal !D! damage !M! times.)"
   },
   "KiyohimeMod:CommandCard_Arts": {
     "NAME": "Command Card:Arts",
-    "DESCRIPTION": "command-card , arts .Base damage: !B! .(Deal !D! damage !M! times.)"
+    "DESCRIPTION": "command_card , arts .Base damage: !B! .(Deal !D! damage !M! times.)"
   },
   "KiyohimeMod:DoujyoujikaneHyakuhachishikikaryuunagi": {
     "NAME": "Dojoji Bell,Method 108 - Fire Dragon Mower",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL np-card , Exhaust , Ethereal ."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL np_card , Exhaust , Ethereal ."
   },
   "KiyohimeMod:Shapeshift": {
     "NAME": "Shapeshift",
-    "DESCRIPTION": "Switch spirit-origin . NL Exhaust .",
-    "UPGRADE_DESCRIPTION": "Switch spirit-origin ."
+    "DESCRIPTION": "Switch spirit_origin . NL Exhaust .",
+    "UPGRADE_DESCRIPTION": "Switch spirit_origin ."
   },
   "KiyohimeMod:AndSoTheShipConquers": {
     "NAME": "And So The Ship Conquers",
@@ -218,7 +218,7 @@
   },
   "KiyohimeMod:Servant_TamamoNoMae": {
     "NAME": "Tamamo no Mae",
-    "DESCRIPTION": "summon . NL Summoning Tamamo-no-Mae. NL If exists,Gain !M! NP.",
+    "DESCRIPTION": "summon . NL Summoning Tamamo_no_Mae. NL If exists,Gain !M! NP.",
     "EXTENDED_DESCRIPTION":[
       "There are already two servants in the combat."
     ]

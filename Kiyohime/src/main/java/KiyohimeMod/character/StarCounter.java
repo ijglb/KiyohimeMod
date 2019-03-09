@@ -27,8 +27,8 @@ import KiyohimeMod.powers.CritUPPower;
 import KiyohimeMod.powers.QuickFirstPower;
 
 public class StarCounter extends ClickableUIElement {
-    private static float x = 20f * Settings.scale;
-    private static float y = 190f * Settings.scale;
+    private static float x = 16f;
+    private static float y = 126f;
     private static float textX = 80f * Settings.scale;
     private static float textY = 190f * Settings.scale;
     private static float hb_w = 128f;
