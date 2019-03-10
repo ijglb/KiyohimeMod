@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.MonsterStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 
@@ -95,7 +96,7 @@ public class Osakabehime extends AbstractFriendlyServant {
                     target = AbstractDungeon.getRandomMonster();
                     AbstractDungeon.actionManager.addToBottom(
                             new ApplyPowerAction(target, this, new VulnerablePower(target, 1, false), 1, true));
-                    if (!target.powers.isEmpty()) {
+                    if (target.type != AbstractMonster.EnemyType.BOSS && !target.powers.isEmpty()) {
                         for (AbstractPower pow : target.powers) {
                             if (pow.type == AbstractPower.PowerType.BUFF) {
                                 AbstractDungeon.actionManager

@@ -32,7 +32,7 @@
             " damage.",
             "All of us gain #b10 Block.Remove a random DEBUFF from yourself.",
             "Gain #b20 NP.Crit Star generation rate Up #y50% for #r3 turns.",
-            "Apply an enemy 1 Vulnerable,and remove all BUFF from it."
+            "Apply an enemy 1 Vulnerable,and remove all BUFF from it(Invalid for BOSS).."
         ]
     }
 }

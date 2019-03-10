@@ -21,7 +21,7 @@
       "NAMES": [
         "宝具"
       ],
-      "DESCRIPTION": "特殊攻击卡牌，在NP超出100时加入手牌。使用后消耗所有NP。"
+      "DESCRIPTION": "特殊攻击卡牌，在NP超出100时加入手牌。使用后消耗所有NP。NP越高宝具越强。"
     },
     "HeroCreation": {
       "NAMES": [

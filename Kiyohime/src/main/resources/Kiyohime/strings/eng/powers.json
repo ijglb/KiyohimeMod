@@ -143,5 +143,11 @@
       "DESCRIPTIONS": [
         "Lock the attack card to: "
       ]
+    },
+    "KiyohimeMod:SkillSealPower": {
+      "NAME": "Skill Seal",
+      "DESCRIPTIONS": [
+        "Can't give anyone BUFF or DEBUFF."
+      ]
     }
   }

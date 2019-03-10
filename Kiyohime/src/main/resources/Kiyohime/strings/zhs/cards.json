@@ -197,7 +197,7 @@
   },
   "KiyohimeMod:DoujyoujikaneHyakuhachishikikaryuunagi": {
     "NAME": "道成寺钟百八式火龙薙",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL NP越高伤害越高。 NL 宝具 , 消耗 , 虚无 。"
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。赋予技能封印1回合。 NL 宝具 , 消耗 , 虚无 。"
   },
   "KiyohimeMod:Shapeshift": {
     "NAME": "变化",

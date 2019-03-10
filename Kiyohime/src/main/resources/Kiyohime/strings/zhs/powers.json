@@ -143,5 +143,11 @@
       "DESCRIPTIONS": [
         "锁定攻击卡为："
       ]
+    },
+    "KiyohimeMod:SkillSealPower": {
+      "NAME": "技能封印",
+      "DESCRIPTIONS": [
+        "无法赋予任何人BUFF或DEBUFF。"
+      ]
     }
   }

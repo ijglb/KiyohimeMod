@@ -197,7 +197,7 @@
   },
   "KiyohimeMod:DoujyoujikaneHyakuhachishikikaryuunagi": {
     "NAME": "Dojoji Bell,Method 108 - Fire Dragon Mower",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL np_card , Exhaust , Ethereal ."
+    "DESCRIPTION": "Deal !D! damage !M! times.Apply it skill seal 1 turn. NL np_card , Exhaust , Ethereal ."
   },
   "KiyohimeMod:Shapeshift": {
     "NAME": "Shapeshift",

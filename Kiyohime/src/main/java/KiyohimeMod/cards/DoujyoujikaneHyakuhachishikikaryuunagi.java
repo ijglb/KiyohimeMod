@@ -1,6 +1,7 @@
 package KiyohimeMod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -11,6 +12,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import KiyohimeMod.patches.KiyohimeTags;
+import KiyohimeMod.powers.SkillSealPower;
 
 public class DoujyoujikaneHyakuhachishikikaryuunagi extends AbstractNPCard {
 
@@ -20,7 +22,7 @@ public class DoujyoujikaneHyakuhachishikikaryuunagi extends AbstractNPCard {
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
     public static final String IMG_PATH = "Kiyohime/images/cards/DoujyoujikaneHyakuhachishikikaryuunagi.png";
-    private static final int ATTACK_DMG = 8;
+    private static final int ATTACK_DMG = 12;
     //private static final int UPGRADE_PLUS_DMG = 2;
     private static final int BASE_MAGIC = 6;//hits
 
@@ -46,10 +48,11 @@ public class DoujyoujikaneHyakuhachishikikaryuunagi extends AbstractNPCard {
         super.use(p, m);
         //attack
         for (int i = 0; i < magicNumber; i++) {
-            AbstractDungeon.actionManager
-                    .addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
-                            AbstractGameAction.AttackEffect.FIRE));
+            AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
+                    new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
         }
+        //SkillSealPower
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SkillSealPower(m, 1), 1, true));
     }
 
     @Override
