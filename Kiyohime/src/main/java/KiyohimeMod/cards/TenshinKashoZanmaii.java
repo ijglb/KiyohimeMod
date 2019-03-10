@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.monsters.AbstractMonster.EnemyType;
 
 import KiyohimeMod.patches.KiyohimeTags;
 import KiyohimeMod.powers.NPPower;
@@ -55,12 +56,16 @@ public class TenshinKashoZanmaii extends AbstractNPCard {
         }
         //stun
         int np = AbstractDungeon.player.getPower(NPPower.POWER_ID).amount;
-        float stun = 50;
-        if (np >= 100) {
-            stun = stun * (np / 100);
-        }
+
         ArrayList<AbstractMonster> monsters = AbstractDungeon.getCurrRoom().monsters.monsters;
         for (AbstractMonster monster : monsters) {
+            float stun = 50;
+            if (monster.type == EnemyType.BOSS) {
+                stun = 35;
+            }
+            if (np >= 100) {
+                stun = stun * (np / 100);
+            }
             int rd = AbstractDungeon.miscRng.random(0, 100);
             if (stun >= rd) {
                 AbstractDungeon.actionManager.addToBottom(new StunMonsterAction(monster, p));
