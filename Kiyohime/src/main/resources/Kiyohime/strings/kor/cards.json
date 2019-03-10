@@ -185,15 +185,15 @@
   },
   "KiyohimeMod:CommandCard_Buster": {
     "NAME": "커맨드 카드:버스터",
-    "DESCRIPTION": "커맨드 카드, Buster. 기본 데미지: !B! .(피해 !D! 를 !M! 번 줍니다.)"
+    "DESCRIPTION": "커맨드 카드, Buster. 기본 피해량: !B! .(피해 !D! 를 !M! 번 줍니다.)"
   },
   "KiyohimeMod:CommandCard_Quick": {
     "NAME": "커맨드 카드:퀵",
-    "DESCRIPTION": "커맨드 카드, Quick. 기본 데미지: !B! .(피해 !D! 를 !M! 번 줍니다.)"
+    "DESCRIPTION": "커맨드 카드, Quick. 기본 피해량: !B! .(피해 !D! 를 !M! 번 줍니다.)"
   },
   "KiyohimeMod:CommandCard_Arts": {
     "NAME": "커맨드 카드:아츠",
-    "DESCRIPTION": "커맨드 카드, Arts. 기본 데미지: !B! .(피해 !D! 를 !M! 번 줍니다.)"
+    "DESCRIPTION": "커맨드 카드, Arts. 기본 : !B! .(피해 !D! 를 !M! 번 줍니다.)"
   },
   "KiyohimeMod:DoujyoujikaneHyakuhachishikikaryuunagi": {
     "NAME": "도성사 종 백팔식 화룡치",
