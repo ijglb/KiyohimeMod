@@ -1,65 +1,62 @@
 {
     "Buster": {
       "NAMES": [
-        "buster"
+        "Buster"
       ],
-      "DESCRIPTION": "As the first attack card you played,gain damage up buff this turn. NL When playing 3 Buster cards in a row,make an Extra Attack."
+      "DESCRIPTION": "첫 공격 카드가 버스터인 경우, 피해 증가 이로운 효과가 부여됩니다. NL 버스터 공격 카드를 3회 연속으로 내면 추가 공격을 합니다."
     },
     "Arts": {
       "NAMES": [
-        "arts"
+        "Arts"
       ],
-      "DESCRIPTION": "As the first attack card you played,gain NP generation rate up buff this turn. NL When playing 3 times in a row,gains extra NP."
+      "DESCRIPTION": "첫 공격 카드가 아츠인 경우, NP 생성률 증가 이로운 효과가 부여됩니다. NL 아츠 공격 카드를 3회 연속으로 내면 추가 NP를 얻습니다."
     },
     "Quick": {
       "NAMES": [
-        "quick"
+        "Quick"
       ],
-      "DESCRIPTION": "As the first attack card you played,gain Crit Star generation rate up buff this turn. NL When playing 3 times in a row,gains extra Crit Star."
+      "DESCRIPTION": "첫 공격 카드가 퀵인 경우, 스타 생성률 증가 이로운 효과가 부여됩니다. NL 퀵 공격 카드를 3회 연속으로 내면 추가 스타를 얻습니다."
     },
     "EX": {
       "NAMES": [
-        "np card",
-        "np_card"
+        "보구"
       ],
-      "DESCRIPTION": "Special attack card.When NP >= 100,add it to your hand.Cost all NP when playing.Overcharge will more powerful."
+      "DESCRIPTION": "특수 공격 카드입니다. NP가 100보다 클 때 손에 넣습니다. 사용 시 NP를 모두 소모합니다. 오버차지 시 위력이 강해집니다."
     },
     "HeroCreation": {
       "NAMES": [
-        "hc"
+        "영웅작성"
       ],
-      "DESCRIPTION": "Reduce the cost of this card by 1 energy for each Buster in your hand."
+      "DESCRIPTION": "패의 'Buster' 카드 하나마다 에너지 소모가 1씩 감소합니다."
     },
     "CommandCard": {
       "NAMES": [
-        "command card",
-        "command_card"
+        "커맨드 카드"
       ],
-      "DESCRIPTION": "Has a clear color and base damage value, but the damage and hits are determined by the hidden value of the current Spirit Origin."
+      "DESCRIPTION": "Buster, Arts, Quick에 속하지 않습니다.기본 피해량이 있으며, 피해가 영기의 히든 스탯에 따라 결정됩니다."
     },
     "Shape": {
       "NAMES": [
-        "spirit origin",
-        "spirit_origin"
+        "영기"
       ],
-      "DESCRIPTION": "Kiyohime currently has two Spirit Origin: #rBerserker and #rLancer .They have different NPCard and hidden value."
+      "DESCRIPTION": "키요히메는 현재 두 영기가 있습니다(#r버서커와 #r랜서). 두 영기는 서로 다른 보구와 히든 스탯을 갖습니다."
     },
     "Summon": {
       "NAMES": [
-        "summon"
+        "소환"
       ],
-      "DESCRIPTION": "Summoning a servant to help you in combat.If this servant exists,reset their skills,and increase the maximum HP."
+      "DESCRIPTION": "전투를 도와줄 서번트를 소환합니다. 서번트가 이미 존재하면, 스킬을 초기화하고 최대 HP를 늘립니다."
     },
     "CritStar": {
       "NAMES": [
         "☆"
       ],
-      "DESCRIPTION": "The more crit stars,the higher the crit probability."
+      "DESCRIPTION": "스타가 많을수록, 크리티컬 확률이 올라갑니다."
     },
     "CriticalStar": {
       "NAMES": [
         "★"
       ],
-      "DESCRIPTION": "The more crit stars,the higher the crit probability. #rCrit #rdetermined."
+      "DESCRIPTION": "스타가 많을수록, 크리티컬 확률이 올라갑니다. #r크리티컬 #r확정."
     }
   }
