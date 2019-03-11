@@ -146,9 +146,9 @@
       ]
     },
     "KiyohimeMod:SkillSealPower": {
-      "NAME": "Skill Seal",
+      "NAME": "스킬 봉인",
       "DESCRIPTIONS": [
-        "Can't give anyone BUFF or DEBUFF."
+        "이로운 효과나 해로운 효과를 줄 ."
       ]
     }
   }
