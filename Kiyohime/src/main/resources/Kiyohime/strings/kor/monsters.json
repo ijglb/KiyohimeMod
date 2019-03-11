@@ -1,38 +1,38 @@
 {
     "KiyohimeMod:TamamoNoMae": {
-        "NAME": "Tamamo no Mae",
+        "NAME": "타마모노마에",
         "DIALOG": [
-            "Tamamo's Fan Club",
-            "Attack",
-            "Witchcraft[EX]",
-            "Shapeshift[A]",
-            "Fox's Wedding[EX]"
+            "타마모 클럽",
+            "공격",
+            "주술[EX]",
+            "변화[A]",
+            "여우 시집가기[EX]"
         ],
         "MOVES": [
-            "At the start of each turn,arts Up #b15% for 1 turn.",
-            "Deal #r",
-            " damage.",
-            "NP Damage Up #r30% for 3 turns.Let an enemy lose #r1 Strength.",
-            "All of us gain #b10 Block.",
-            "Arts Up #b50% for 3 turns.Heal #r6 HP."
+            "매 턴 시작마다, 아츠 업 #b15%을 1턴간 부여합니다.",
+            "피해를 #r",
+            " 줍니다.",
+            "3턴간 NP 피해 업 #r30%을 부여합니다. 무작위 적이 힘 #r1을 잃습니다.",
+            "아군 모두가 방어를 #b10 얻습니다.",
+            "3턴간 아츠 업 #b50%을 부여합니다. HP를 #r6 회복합니다."
         ]
     },
     "KiyohimeMod:Osakabehime": {
-        "NAME": "Osakabehime",
+        "NAME": "오사카베히메",
         "DIALOG": [
-            "Princess' Origami",
-            "Attack",
-            "Shapeshift[A+]",
-            "Chiyogami Manipulation[EX]",
-            "Castle Ghost[A++]"
+            "공주님의 종이접기",
+            "공격",
+            "변화[A+]",
+            "치요가미 술법[EX]",
+            "성요괴[A++]"
         ],
         "MOVES": [
-            "At the start of each turn,NP generation rate Up #b15% for 1 turn.",
-            "Deal #r",
-            " damage.",
-            "All of us gain #b10 Block.Remove a random DEBUFF from yourself.",
-            "Gain #b20 NP.Crit Star generation rate Up #y50% for #r3 turns.",
-            "Apply an enemy 1 Vulnerable,and remove all BUFF from it(Invalid for BOSS)."
+            "매 턴 시작마다, NP 생성률 업 #b15%을 1턴간 부여합니다.",
+            "피해를 #r",
+            " 줍니다.",
+            "아군 모두가 방어를 #b10 얻습니다.자신의 무작위 해로운 효과 하나를 제거합니다.",
+            "NP를 #b20 얻습니다. 3턴간 스타 생성률 업 #y50%을 부여합니다.",
+            "적 하나에게 취약을 부여하고, 모든 이로운 효과를 제거합니다(Invalid for BOSS)."
         ]
     }
 }

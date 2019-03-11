@@ -1,147 +1,148 @@
 {
     "KiyohimeMod:ChaldeaPower": {
-      "NAME": "Blessing from Chaldea",
+      "NAME": "칼데아의 축복",
       "DESCRIPTIONS": [
-          "Give attack card special color,including #rBuster , #bArts and #gQuick .",
-          " NL #b",
-          "  card you played this turn.",
-          " NL Card played order:"
+          "공격 카드에 #rBuster , #bArts and #gQuick 중 하나를 부여합니다.",
+          " NL 이번 턴에 #b",
+          "  장의 카드를 사용했습니다.",
+          " NL 카드 사용 순서:"
       ]
     },
     "KiyohimeMod:NPPower": {
       "NAME": "NP",
       "DESCRIPTIONS": [
-          "You will get  #yNPCard  when NP >= 100.",
-          " NL Current NP: #b"
+          "NP가 100 이상일때 #y보구",
+      "를 얻습니다.",
+          " NL 현재 NP: #b"
       ]
     },
     "KiyohimeMod:CritStarPower": {
-      "NAME": "Crit Star",
+      "NAME": "스타",
       "DESCRIPTIONS": [
-          "Your next attack will  #ycrit  when Crit Star >= 50.",
-          " NL Current Crit Star: #g"
+          "스타가 50 이상일 때, 다음 공격이 #y크리티컬 #y로 적용됩니다.",
+          " NL 현재 스타: #g"
       ]
     },
     "KiyohimeMod:BusterFirstPower": {
-      "NAME": "Buster First",
+      "NAME": "첫 카드: Buster",
       "DESCRIPTIONS": [
-          "Damage Up  #r30% ."
+          "피해량 증가 #r30% ."
       ]
     },
     "KiyohimeMod:ArtsFirstPower": {
-      "NAME": "Arts First",
+      "NAME": "첫 카드: Arts",
       "DESCRIPTIONS": [
-          "NP generation rate Up  #b100% ."
+          "NP 생성률 증가 #b100% ."
       ]
     },
     "KiyohimeMod:QuickFirstPower": {
-      "NAME": "Quick First",
+      "NAME": "첫 카드: Quick",
       "DESCRIPTIONS": [
-          "Crit Star generation rate Up  #g100% ."
+          "스타 생성률 증가 #g100% ."
       ]
     },
     "KiyohimeMod:BusterUPPower": {
-      "NAME": "Buster Up",
+      "NAME": "버스터 업",
       "DESCRIPTIONS": [
-          "Buster Up  #r",
-          "% (Total)",
+          "버스터 피해 증가  #r",
+          "% (총)",
           " NL #r+",
           "% ( #b",
-          "  turn)"
+          "  턴간)"
       ]
     },
     "KiyohimeMod:ArtsUPPower": {
-      "NAME": "Arts Up",
+      "NAME": "아츠 업",
       "DESCRIPTIONS": [
-          "Arts Up  #b",
-          "% (Total)",
+          "아츠 피해 증가  #b",
+          "% (총)",
           " NL #b+",
           "% ( #b",
-          "  turn)"
+          "  턴간)"
       ]
     },
     "KiyohimeMod:QuickUPPower": {
-      "NAME": "Quick Up",
+      "NAME": "퀵 업",
       "DESCRIPTIONS": [
-          "Quick Up  #g",
-          "% (Total)",
+          "퀵 피해 증가  #g",
+          "% (총)",
           " NL #g+",
           "% ( #b",
-          "  turn)"
+          "  턴간)"
       ]
     },
     "KiyohimeMod:RoundTimerPower": {
-      "NAME": "Timer",
+      "NAME": "타이머",
       "DESCRIPTIONS": [
-          "After  #r",
-          "  turn, #r"
+          "다음  #r",
+          "  턴 후에, #r"
       ]
     },
     "KiyohimeMod:CritUPPower": {
-      "NAME": "Crit Damage Up",
+      "NAME": "크리티컬 피해 업",
       "DESCRIPTIONS": [
-        "Crit damage Up  #y",
-        "% (Total)",
+        "크리티컬 피해 증가  #y",
+        "% (총)",
         " NL #y+",
         "% ( #b",
-        "  turn)"
+        "  턴간)"
       ]
     },
     "KiyohimeMod:GetCritStarPower": {
-      "NAME": "Gain Crit Star Per Turn",
+      "NAME": "매 턴 스타 획득",
       "DESCRIPTIONS": [
-        "At the start of your turn,gain  #y",
-        "  Crit Star"
+        "매 턴의 시작마다, 스타 #y",
+        " 를 얻습니다"
       ]
     },
     "KiyohimeMod:GetNPPower": {
-      "NAME": "Gain NP Per Turn",
+      "NAME": "매 턴 NP 획득",
       "DESCRIPTIONS": [
-        "At the start of your turn,gain  #y",
-        "  NP"
+        "매 턴의 시작마다, NP #y",
+        " 를 얻습니다"
       ]
     },
     "KiyohimeMod:InvinciblePower": {
-      "NAME": "Invincible",
+      "NAME": "무적",
       "DESCRIPTIONS": [
-        "Prevent all damage you will receive, #y",
-        "  turn"
+        "모든 피해를 받지 않습니다, #y",
+        "  턴"
       ]
     },
     "KiyohimeMod:NPDamagePower": {
-      "NAME": "NP Damage Up",
+      "NAME": "보구 데미지 업",
       "DESCRIPTIONS": [
-        "NP Damage Up  #b",
-        "% (Total)",
+        "보구 데미지 증가  #b",
+        "% (총)",
         " NL #b+",
         "% ( #b",
-        "  turn)"
+        "  턴간)"
       ]
     },
     "KiyohimeMod:CritStarGenerationRatePower": {
-      "NAME": "Crit Star generation rate Up",
+      "NAME": "스타 생성률 업",
       "DESCRIPTIONS": [
-        "Crit Star generation rate Up #y",
-        "% (Total)",
+        "스타 생성률 증가 #y",
+        "% (총)",
         " NL #y+",
         "% ( #b",
-        "  turn)"
+        "  턴)"
       ]
     },
     "KiyohimeMod:NPGenerationRatePower": {
-      "NAME": "NP generation rate Up",
+      "NAME": "NP 생성률 업",
       "DESCRIPTIONS": [
-        "NP generation rate Up #b",
-        "% (Total)",
+        "NP 생성률 증가 #b",
+        "% (총)",
         " NL #b+",
         "% ( #b",
-        "  turn)"
+        "  턴)"
       ]
     },
     "KiyohimeMod:FacelessMoonPower": {
-      "NAME": "Faceless Moon Power",
+      "NAME": "얼굴없는 달의 힘",
       "DESCRIPTIONS": [
-        "Lock the attack card to: "
+        "공격 카드를 이 색으로 고정: "
       ]
     },
     "KiyohimeMod:SkillSealPower": {

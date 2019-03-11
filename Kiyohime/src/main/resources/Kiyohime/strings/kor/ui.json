@@ -1,9 +1,9 @@
 {
   "KiyohimeMod:StarCounter": {
     "TEXT": [
-      "Crit Star",
-      "Click it to assign crit star to attack card. NL Current crit damage : #r",
-      "The crit star is being assigned.",
+      "스타",
+      "스타를 배정하려면 클릭하십시오. NL 현재 크리티컬 피해 : #r",
+      "스타가 배정되었습니다.",
       "[ !kiyoStar! ☆ ] ",
       "[ !kiyoStar! ★ ] "
     ]

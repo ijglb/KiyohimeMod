@@ -1,77 +1,77 @@
 {
   "KiyohimeMod:Stone": {
-    "NAME": "Saint Quartz",
-    "FLAVOR": "Saint Quartz from Chaldea.",
+    "NAME": "성정석",
+    "FLAVOR": "칼데아의 성정석.",
     "DESCRIPTIONS": [
-      "Gain #gBlessing-from-Chaldea .Gain #g3 Saint Quartz.Right-click it in combat to use.",
-      "Use Saint Quartz",
-      "Repair Spirit Origin",
-      "Use 1 Saint Quartz,heal 100% of your HP.",
-      "Release Noble Phantasm",
-      "Use 1 Saint Quartz,gain 100 NP.",
-      "Cancel",
-      "I accidentally made a mistake."
+      "#g칼데아의 축복 부여. #g3 정석. 우클릭으로 전투 중 사용.",
+      "성정석 사용",
+      "영기회복",
+      "성정석 1개 사용, HP 100% 회복.",
+      "보구 해방",
+      "성정석 1개 사용, NP 100 회복.",
+      "취소",
+      "실수로 클릭했습니다."
     ]
   },
   "KiyohimeMod:TheBlackGrail": {
-    "NAME": "The Black Grail",
-    "FLAVOR": "An illusion seen by a man haunted by justice.The corrupted Grail speaks.It says a price is required for what he seeks.Just like the maiden of fate, singing of love.",
+    "NAME": "검은 성배",
+    "FLAVOR": "정의에 사로잡힌 남자의 환영입니다. 타락한 성배가 말하기를, 그가 원하는 것을 위해서는 대가가 필요하다고 합니다. 마치 사랑을 노래하는 운명의 소녀처럼.",
     "DESCRIPTIONS": [
-      "NP Damage Up  #y80% .At the end of your turn,give 1 damage to you."
+      "보구 데미지 업 #y80% .매 자신의 턴 종료시, 체력을 1 잃습니다."
     ]
   },
   "KiyohimeMod:Bond": {
-    "NAME": "Bond",
-    "FLAVOR": "Even if it's slightly different from the last time you met them, you still remember all the bonds with them.",
+    "NAME": "인연레벨",
+    "FLAVOR": "마지막으로 만났을 때와는 약간 다르지만, 그 때의 모든 유대를 기억하고 있습니다.",
     "DESCRIPTIONS": [
-      "At battle start,gain  #b",
-      "  NP。"
+      "전투 시작 시,  #b",
+      "  NP 획득."
     ]
   },
   "KiyohimeMod:Necromancy": {
-    "NAME": "Necromancy",
-    "FLAVOR": "In the world of mages, there are many spells that should be avoided.",
+    "NAME": "사령마술",
+    "FLAVOR": "마술사의 세계에는, 피해야 할 마술들이 많습니다.",
     "DESCRIPTIONS": [
-      "When you receive #rFatal   #rDamage ,There is a certain probability that reduce damage to avoid death,and heal a little HP."
+      "#r치명적인 #r피해를 입었을 때, 약간의HP를 회복시키고 죽음을 면하게 해줄 가능성을 제공합니다."
     ]
   },
   "KiyohimeMod:UnlimitedPranaSupply": {
-    "NAME": "Unlimited Prana Supply",
-    "FLAVOR": "Unlimited Prana Supply.",
+    "NAME": "무한의 마력공급",
+    "FLAVOR": "무한의 마력공급.",
     "DESCRIPTIONS": [
-      "Gain  #b",
-      "  NP each turn"
+      "매 턴 NP를 #b",
+      " 얻습니다"
     ]
   },
   "KiyohimeMod:TerritoryCreation": {
-    "NAME": "Territory Creation",
-    "FLAVOR": "Territory Creation.",
+    "NAME": "도구작성",
+    "FLAVOR": "도구작성.",
     "DESCRIPTIONS": [
-      "#bArts  Up  #b",
+      "#b아츠 업 #b",
       "% "
     ]
   },
   "KiyohimeMod:Divinity": {
-    "NAME": "Divinity",
-    "FLAVOR": "Divinity.",
+    "NAME": "신성",
+    "FLAVOR": "신성.",
     "DESCRIPTIONS": [
-      "Whenever you would deal unblocked attack damage,increase it by  #r",
+      "방어되지 않은 모든 피해 +#r",
       "  ."
     ]
   },
   "KiyohimeMod:ElixirOfRejuvenation": {
-    "NAME": "Elixir of Rejuvenation",
-    "FLAVOR": "One of the treasures inside the Treasury of the King of Heroes.It is said to be able to rejuvenate a person's physical appearance.It was originally a spiritual herb that was plucked from a ravine,It is a 'Medicine for Longevity' that was misrepresented as the Medicine for Immortality.",
+    "NAME": "회춘의 영약",
+    "FLAVOR": "영웅왕의 재보 중 하나입니다 . 사람의 외양을 회춘시킬 수 있다고 합니다. 원래는 계곡에서 자라나는 영적인 약초였으며, 불사의 영약으로 잘못 알려진 '장수의 영약'의 재료이기도 합니다.",
     "DESCRIPTIONS": [
-      "If your HP is at or below #b50% at the start of combat, heal  #b",
-      "  HP."
+      "전투 시작시 HP가 #b50% 이하면, HP #b",
+      " 회복."
     ]
   },
   "KiyohimeMod:HolyShroudOfMagdalene": {
-    "NAME": "Holy Shroud of Magdalene",
-    "FLAVOR": "Noli me tangere.It is precisely in the mud of exorcism, where proof of a Saint is set.",
+    "NAME": "막달라의 성해포",
+    "FLAVOR": "Noli me tangere. 성자의 증거는 뚜렷한 악마의 진흙에서 분명해질것이다.",
     "DESCRIPTIONS": [
-      "Whenever you would receive unblocked attack damage from an Elite,reduce it by  #b",
+      "엘리트 몬스터에게 방어되지 않은 데미지를 받으면, 피해 -#b",
       "  ."
     ]
   }

@@ -3,239 +3,239 @@
     "NAME": "NPCard",
     "DESCRIPTION": "",
     "EXTENDED_DESCRIPTION": [
-      "NP is not enough."
+      "NP가 부족해."
     ]
   },
   "KiyohimeMod:ExtraAttack": {
-    "NAME": "Extra Attack",
-    "DESCRIPTION": "Unobtainable. NL Deal !D! damage !M! times.Damage and hit count varies depending on current Spirit Origin.Card color is determined by the first attack you played this turn."
+    "NAME": "추가 공격",
+    "DESCRIPTION": "사용불가. NL 피해 !D! 를 !M! 번 줍니다. 피해량과 타격 횟수는 영기에 따라 달라집니다. 카드의 색은 첫 공격의 색을 따릅니다."
   },
   "KiyohimeMod:Strike": {
-    "NAME": "Strike",
-    "DESCRIPTION": "Deal !D! damage."
+    "NAME": "타격",
+    "DESCRIPTION": "피해를 !D! 줍니다."
   },
   "KiyohimeMod:Defend": {
-    "NAME": "Defend",
-    "DESCRIPTION": "Gain !B! Block."
+    "NAME": "방어",
+    "DESCRIPTION": "방어를 !B! 획득합니다."
   },
   "KiyohimeMod:Track": {
-    "NAME": "Stalking",
-    "DESCRIPTION": "Apply 3 Vulnerable ,and gain 1 Strength to it !M! turn.",
+    "NAME": "스토킹",
+    "DESCRIPTION": "취약을 3 부여하고, 힘 1을 !M! 턴동안 부여합니다.",
     "EXTENDED_DESCRIPTION": [
-      "Pursuer of Love",
-      "lose 1 Strength"
+      "사랑의 추적자",
+      "힘을 1 잃습니다"
     ]
   },
   "KiyohimeMod:FlameKiss": {
-    "NAME": "Flame Coloured Kiss",
-    "DESCRIPTION": "buster Up !M! % for 1 turn",
-    "UPGRADE_DESCRIPTION": "buster Up !M! % for 1 turn,remove a random debuff from yourself."
+    "NAME": "불꽃색의 입맞춤",
+    "DESCRIPTION": "1턴간 버스터 업 !M! %을 부여합니다",
+    "UPGRADE_DESCRIPTION": "1턴간 버스터 업 !M! %, 무작위 해로운 효과를 제거합니다."
   },
   "KiyohimeMod:WaterTurn": {
-    "NAME": "Bathing Transformation",
-    "DESCRIPTION": "buster Up !D! % for !M! turn."
+    "NAME": "수욕전신",
+    "DESCRIPTION": "  !M! 턴간  버스터 업 !D! %을 부여합니다 ."
   },
   "KiyohimeMod:Berserker": {
-    "NAME": "Mad Enhancement",
-    "DESCRIPTION": "buster Up !M! %."
+    "NAME": "광화",
+    "DESCRIPTION": "버스터 업 !M! %을 부여합니다."
   },
   "KiyohimeMod:Preemptive": {
-    "NAME": "Preemption",
-    "DESCRIPTION": "Deal !D! damage !M! times."
+    "NAME": "선제",
+    "DESCRIPTION": "피해 !D! 를 !M! 번 줍니다."
   },
   "KiyohimeMod:EatSoul": {
-    "NAME": "Spirit Eater",
-    "DESCRIPTION": "Apply 99 Weak. NL Exhaust ."
+    "NAME": "영혼 포식",
+    "DESCRIPTION": "약화를 99 부여합니다. NL 소멸 ."
   },
   "KiyohimeMod:Fragarach": {
-    "NAME": "Fragarach",
-    "DESCRIPTION": "Deal !D! damage.At end of round,Deal !B! damage.",
+    "NAME": "프라가라흐",
+    "DESCRIPTION": "피해를 !D! 줍니다. 매 턴 끝에, 피해를 !B! 줍니다.",
     "EXTENDED_DESCRIPTION": [
-      "Receive ",
-      " damage."
+      "피해를 ",
+      " 받습니다."
     ]
   },
   "KiyohimeMod:RedBlackKey": {
-    "NAME": "Red Black Key",
-    "DESCRIPTION": "Deal !D! damage. buster Up !M! % for 1 turn."
+    "NAME": "붉은 흑건",
+    "DESCRIPTION": "피해를 !D! 줍니다. 버스터 업 !M! %을 1턴간 부여합니다."
   },
   "KiyohimeMod:BlueBlackKey": {
-    "NAME": "Blue Black Key",
-    "DESCRIPTION": "Deal !D! damage. arts Up !M! % for 1 turn."
+    "NAME": "청색 흑건",
+    "DESCRIPTION": "피해를 !D! 줍니다. 아츠 업 !M! % 을 1턴간 부여합니다."
   },
   "KiyohimeMod:GreenBlackKey": {
-    "NAME": "Green Black Key",
-    "DESCRIPTION": "Deal !D! damage. quick Up !M! % for 1 turn."
+    "NAME": "녹색 흑건",
+    "DESCRIPTION": "피해를 !D! 줍니다. 퀵 업 !M! % 을 1턴간 부여합니다."
   },
   "KiyohimeMod:Tenacious": {
-    "NAME": "Tenacious",
-    "DESCRIPTION": "Gain !M! Plated Armor."
+    "NAME": "완강",
+    "DESCRIPTION": "판금 갑옷 !M! 을 얻습니다."
   },
   "KiyohimeMod:DragonVein": {
-    "NAME": "Ley Line",
-    "DESCRIPTION": "Gain !M! NP. NL Exhaust ."
+    "NAME": "용맥",
+    "DESCRIPTION": "NP !M! 을 얻습니다. NL 소멸 ."
   },
   "KiyohimeMod:ImaginaryNumberMagecraft": {
-    "NAME": "Imaginary Number Magecraft",
-    "DESCRIPTION": "Gain !M! NP. NL Exhaust ."
+    "NAME": "허수마술",
+    "DESCRIPTION": "NP  !M! 을 얻습니다. NL 소멸 ."
   },
   "KiyohimeMod:SteelTraining": {
-    "NAME": "Steel Training",
-    "DESCRIPTION": "Gain !B! Block."
+    "NAME": "강철의 단련",
+    "DESCRIPTION": "방어를 !B! 얻습니다."
   },
   "KiyohimeMod:AgainstMagic": {
-    "NAME": "Mooncell Automaton",
-    "DESCRIPTION": "Gain !M! Artifact. NL Exhaust ."
+    "NAME": "문 셀 오토마톤",
+    "DESCRIPTION": "인공물을 !M! 얻습니다. NL 소멸 ."
   },
   "KiyohimeMod:ExSpicyMapoTofu": {
-    "NAME": "Extremely Spicy Mapo Tofu",
-    "DESCRIPTION": "Heal !M! HP. NL  Exhaust ."
+    "NAME": "아주 매운 마파두부",
+    "DESCRIPTION": "HP를 !M! 회복합니다. NL  소멸 ."
   },
   "KiyohimeMod:TenshinKashoZanmaii": {
-    "NAME": "Samadhi Through Transforming Flames",
-    "DESCRIPTION": "Deal !D! damage !M! times to ALL enemies,probability stuns the enemy. NL np_card , Exhaust , Ethereal .",
+    "NAME": "전신화생삼매",
+    "DESCRIPTION": "피해 !D! 을 !M! 번 적 전체에게 주고, 확률적으로 기절시킵니다, NL 보구 , 소멸 , 휘발성 .",
     "EXTENDED_DESCRIPTION": [
-      "NP is not enough."
+      "NP 가 부족해."
     ]
   },
   "KiyohimeMod:PrismaCosmos": {
-    "NAME": "Prisma Cosmos",
-    "DESCRIPTION": "Gain !M! NP each turn."
+    "NAME": "프리즈마 코스모스",
+    "DESCRIPTION": "매 턴 NP를 !M! 얻습니다."
   },
   "KiyohimeMod:FragmentsOf2030": {
-    "NAME": "Fragments of 2030",
-    "DESCRIPTION": "Gain !M! Crit Star each turn."
+    "NAME": "2030년의 조각",
+    "DESCRIPTION": "스타 !M! 를 매 턴 획득합니다."
   },
   "KiyohimeMod:Grimoire": {
-    "NAME": "Grimoire",
-    "DESCRIPTION": "Discard your hand, NL then draw !M! cards. NL Exhaust .",
-    "UPGRADE_DESCRIPTION": "Discard your hand, NL then draw !M! cards."
+    "NAME": "마도서",
+    "DESCRIPTION": "손 패를 모두 버리고, NL  카드를 !M! 장 뽑습니다. NL 소멸 .",
+    "UPGRADE_DESCRIPTION": "손 패를 모두 버리고, NL 카드를 !M! 장 뽑습니다."
   },
   "KiyohimeMod:DivineConstruct": {
-    "NAME": "Divine Construct",
-    "DESCRIPTION": "Gain !M! Crit Star."
+    "NAME": "신조병장",
+    "DESCRIPTION": "스타 !M! 를 얻습니다."
   },
   "KiyohimeMod:LimitedZeroOver": {
-    "NAME": "Limited/Zero Over",
-    "DESCRIPTION": "buster Up !M! %."
+    "NAME": "리미티드/제로 오버",
+    "DESCRIPTION": "버스터 업 !M! %을 부여합니다."
   },
   "KiyohimeMod:ImaginaryAround": {
-    "NAME": "Imaginary Around",
-    "DESCRIPTION": "quick Up !M! %."
+    "NAME": "이매지너리 어라운드",
+    "DESCRIPTION": "퀵 업 !M! %을 부여합니다."
   },
   "KiyohimeMod:FormalCraft": {
-    "NAME": "Formal Craft",
-    "DESCRIPTION": "arts Up !M! %."
+    "NAME": "포멀 크래프트",
+    "DESCRIPTION": "아츠 업 !M! %을 부여합니다."
   },
   "KiyohimeMod:HotSpringOfTheMoon": {
-    "NAME": "Hot Spring of The Moon",
-    "DESCRIPTION": "Crit Damage Up !D! %. NL Gain !M! Crit Star each turn."
+    "NAME": "달의 탕치",
+    "DESCRIPTION": "크리티컬 피해 업 !D! %을 부여합니다. NL 매 턴 !M! 스타를 얻습니다."
   },
   "KiyohimeMod:AVerseOfBurningLoveStory": {
-    "NAME": "Burning Love Story",
-    "DESCRIPTION": "buster , arts , quick and Crit Damage Up !D! %. NL Gain !B! NP, !M! Crit Star each turn.",
-    "UPGRADE_DESCRIPTION": "Innate . buster , arts , quick and Crit Damage Up !D! %. NL Gain !B! NP, !M! Crit Star each turn."
+    "NAME": "연담화염행",
+    "DESCRIPTION": "버스터 업, 아츠 업, 퀵 업, 크리티컬 피해 업 !D! %을 부여합니다. NL NP를 !B! , 스타를 !M! 매 턴 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선천성 . 버스터 업, 아츠 업, 퀵 업, 크리티컬 피해 업 !D! %을 부여합니다. NL NP를 !B! , 스타를 !M! 매 턴 얻습니다."
   },
   "KiyohimeMod:HeroCreation": {
-    "NAME": "Hero Creation",
-    "DESCRIPTION": "buster Up !D! % for 3 turn.Crit Damage Up !M! % for 1 turn.Gain !B! temporary HP. NL hc .",
+    "NAME": "영웅작성",
+    "DESCRIPTION": "3턴간 버스터 업 !D! %을 부여합니다 .크리티컬 피해 업 !M! %을 1턴간 부여합니다. 임시 HP !B! 를 부여합니다. NL 영웅작성 .",
     "EXTENDED_DESCRIPTION": [
-      "remove ",
-      " temporary HP"
+      "임시 HP를 ",
+      " 제거합니다"
     ]
   },
   "KiyohimeMod:Barrier": {
-    "NAME": "Barrier",
-    "DESCRIPTION": "Use !D! NP.Gain Invincible buff for !M! turn. NL Exhaust .",
+    "NAME": "삼중결계",
+    "DESCRIPTION": "NP !D! 를 사용합니다. 무적을 !M! 턴간 부여합니다. NL 소멸 .",
     "EXTENDED_DESCRIPTION": [
-      "NP is not enough."
+      "NP가 부족해."
     ]
   },
   "KiyohimeMod:Projection": {
-    "NAME": "Projection",
-    "DESCRIPTION": "Use !D! NP.Gain !M! Strength . NL Exhaust .",
-    "UPGRADE_DESCRIPTION": "Use !D! NP.Gain !M! Strength .",
+    "NAME": "투영마술",
+    "DESCRIPTION": "NP !D! 를 사용합니다. 힘을 !M! 얻습니다. NL 소멸 .",
+    "UPGRADE_DESCRIPTION": "NP !D! 를 사용합니다. 힘을 !M! 얻습니다.",
     "EXTENDED_DESCRIPTION": [
-      "NP is not enough."
+      "NP가 부족해."
     ]
   },
   "KiyohimeMod:BeastOfBillows": {
-    "NAME": "Beast of Billows",
-    "DESCRIPTION": "Deal !D! damage !M! times.(random enemies)"
+    "NAME": "파도의 짐승",
+    "DESCRIPTION": "무작위 적에게 피해 !D! 를 !M! 번 줍니다."
   },
   "KiyohimeMod:JeweledSword": {
-    "NAME": "Jeweled Sword",
-    "DESCRIPTION": "Deal !D! damage. NL For each 10 NP you have,add !M! damage."
+    "NAME": "보석검 젤리치",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 부여된 10 NP 마다, 피해를 !M! 씩 추가합니다."
   },
   "KiyohimeMod:CelestialInvertedMoon": {
-    "NAME": "Celestial Inverted Moon",
-    "DESCRIPTION": "Gain !B! Block. NL For each Crit Star you have,Gain !M! Block."
+    "NAME": "하늘의 역월",
+    "DESCRIPTION": "방어를 !B! 얻습니다. NL 부여된 매 스타마다, 방어를 !M! 얻습니다."
   },
   "KiyohimeMod:HydraDagger": {
-    "NAME": "Hydra Dagger",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak ."
+    "NAME": "히드라 대거",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 약화를 !M! 줍니다."
   },
   "KiyohimeMod:RealityMarble": {
-    "NAME": "Reality Marble",
-    "DESCRIPTION": "Deal !D! damage. NL For each Strength the enemy has,add !M! damage."
+    "NAME": "고유결계",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 적이 가진 힘만큼 피해를 !M! 추가합니다."
   },
   "KiyohimeMod:Destruction": {
-    "NAME": "Destruction",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy has Block,double the damage."
+    "NAME": "파괴",
+    "DESCRIPTION": "피해를!D! 줍니다. NL 적이 방어가 있으면, 피해를 2배로 줍니다."
   },
   "KiyohimeMod:CommandCard_Buster": {
-    "NAME": "Command Card:Buster",
-    "DESCRIPTION": "command_card , buster .Base damage: !B! .(Deal !D! damage !M! times.)"
+    "NAME": "커맨드 카드:버스터",
+    "DESCRIPTION": "커맨드 카드, Buster. 기본 피해량: !B! .(피해 !D! 를 !M! 번 줍니다.)"
   },
   "KiyohimeMod:CommandCard_Quick": {
-    "NAME": "Command Card:Quick",
-    "DESCRIPTION": "command_card , quick .Base damage: !B! .(Deal !D! damage !M! times.)"
+    "NAME": "커맨드 카드:퀵",
+    "DESCRIPTION": "커맨드 카드, Quick. 기본 피해량: !B! .(피해 !D! 를 !M! 번 줍니다.)"
   },
   "KiyohimeMod:CommandCard_Arts": {
-    "NAME": "Command Card:Arts",
-    "DESCRIPTION": "command_card , arts .Base damage: !B! .(Deal !D! damage !M! times.)"
+    "NAME": "커맨드 카드:아츠",
+    "DESCRIPTION": "커맨드 카드, Arts. 기본 : !B! .(피해 !D! 를 !M! 번 줍니다.)"
   },
   "KiyohimeMod:DoujyoujikaneHyakuhachishikikaryuunagi": {
-    "NAME": "Dojoji Bell,Method 108 - Fire Dragon Mower",
-    "DESCRIPTION": "Deal !D! damage !M! times.Apply it skill seal 1 turn. NL np_card , Exhaust , Ethereal ."
+    "NAME": "도성사 종 백팔식 화룡치",
+    "DESCRIPTION": "피해 !D! 를 !M! 번 줍니다.Apply it skill seal 1 turn. NL 보구 , 소멸 , 휘발성."
   },
   "KiyohimeMod:Shapeshift": {
-    "NAME": "Shapeshift",
-    "DESCRIPTION": "Switch spirit_origin . NL Exhaust .",
-    "UPGRADE_DESCRIPTION": "Switch spirit_origin ."
+    "NAME": "변화",
+    "DESCRIPTION": "영기를 바꿉니다. NL 소멸 .",
+    "UPGRADE_DESCRIPTION": "영기를 바꿉니다."
   },
   "KiyohimeMod:AndSoTheShipConquers": {
-    "NAME": "And So The Ship Conquers",
-    "DESCRIPTION": "Gain !B! Block. NL Next turn, gain !B! Block."
+    "NAME": "그리고 배는 떠난다",
+    "DESCRIPTION": "방어를 !B! 얻습니다. NL 다음 턴에, 방어를 !B! 얻습니다."
   },
   "KiyohimeMod:GoldenCarpFigure": {
-    "NAME": "Golden Carp Figure",
-    "DESCRIPTION": "Gain !B! Crit Star. NL Put !M! card from your discard pile into your hand. NL Exhaust ."
+    "NAME": "골든 포리어도",
+    "DESCRIPTION": "스타를 !B! 얻습니다. NL 버린 카드 더미에서 !M! 장을 선택에 패에 넣습니다. NL 소멸 ."
   },
   "KiyohimeMod:CastleOfTheSun": {
-    "NAME": "Castle of the Sun",
-    "DESCRIPTION": "Crit Damage Up !D! %. NL Crit Star generation rate Up !B! %. NL Gain !M! NP."
+    "NAME": "일륜의 성",
+    "DESCRIPTION": "크리티컬 피해 업 !D! %을 부여합니다. NL 스타 발생률 업 !B! %을 부여합니다. NL NP를 !M! 얻습니다."
   },
   "KiyohimeMod:Servant_TamamoNoMae": {
-    "NAME": "Tamamo no Mae",
-    "DESCRIPTION": "summon . NL Summoning Tamamo_no_Mae. NL If exists,Gain !M! NP.",
+    "NAME": "타마모노마에",
+    "DESCRIPTION": "소환. NL 타마모노마에를 소환합니다. NL 이미 존재한다면, NP를 !M! 얻습니다.",
     "EXTENDED_DESCRIPTION":[
-      "There are already two servants in the combat."
+      "전투에 이미 2명의 서번트가 있습니다."
     ]
   },
   "KiyohimeMod:Servant_Osakabehime": {
-    "NAME": "Osakabehime",
-    "DESCRIPTION": "summon . NL Summoning Osakabehime. NL If exists,Gain !M! Temp HP.",
+    "NAME": "오사카베히메",
+    "DESCRIPTION": "소환. NL 오사카베히메를 소환합니다. NL 이미 존재한다면, 임시 HP를 !M! 얻습니다.",
     "EXTENDED_DESCRIPTION":[
-      "There are already two servants in the combat."
+      "전투에 이미 2명의 서번트가 있습니다."
     ]
   },
   "KiyohimeMod:FacelessMoon": {
-    "NAME": "Faceless Moon",
-    "DESCRIPTION": "In the next !M! turns,lock the card color of all attack cards to the selected card color.",
+    "NAME": "얼굴없는 달",
+    "DESCRIPTION": "다음 !M! 턴간 모든 공격 카드를 선택한 색으로 고정합니다.",
     "EXTENDED_DESCRIPTION":[
-      "This BUFF is currently owned and cannot be overlaid.",
-      "Choose a card color to lock",
+      "이 이로운 효과는 중첩될 수 없습니다.",
+      "고정할 색을 선택하십시오",
       "Buster",
       "Arts",
       "Quick"
