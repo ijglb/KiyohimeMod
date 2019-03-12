@@ -197,7 +197,7 @@
   },
   "KiyohimeMod:DoujyoujikaneHyakuhachishikikaryuunagi": {
     "NAME": "도성사 종 백팔식 화룡치",
-    "DESCRIPTION": "피해 !D! 를 !M! 번 줍니다.Apply it skill seal 1 turn. NL 보구 , 소멸 , 휘발성."
+    "DESCRIPTION": "피해 !D! 를 !M! 번 줍니다. 1턴간 스킬 봉인을 부여합니다. NL 보구 , 소멸 , 휘발성."
   },
   "KiyohimeMod:Shapeshift": {
     "NAME": "변화",
