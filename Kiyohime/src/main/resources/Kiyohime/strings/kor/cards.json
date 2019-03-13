@@ -8,7 +8,7 @@
   },
   "KiyohimeMod:ExtraAttack": {
     "NAME": "추가 공격",
-    "DESCRIPTION": "사용불가. NL 피해 !D! 를 !M! 번 줍니다. 피해량과 타격 횟수는 영기에 따라 달라집니다. 카드의 색은 첫 공격의 색을 따릅니다."
+    "DESCRIPTION": "사용불가. NL 피해 !D! 를 !M! 번 줍니다. 피해량과 공격 횟수는 영기에 따라 달라집니다. 카드의 색은 첫 공격의 색을 따릅니다."
   },
   "KiyohimeMod:Strike": {
     "NAME": "타격",
@@ -181,7 +181,7 @@
   },
   "KiyohimeMod:Destruction": {
     "NAME": "파괴",
-    "DESCRIPTION": "피해를!D! 줍니다. NL 적이 방어가 있으면, 피해를 2배로 줍니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 적이 방어가 있으면, 피해를 2배로 줍니다."
   },
   "KiyohimeMod:CommandCard_Buster": {
     "NAME": "커맨드 카드:버스터",
@@ -193,7 +193,7 @@
   },
   "KiyohimeMod:CommandCard_Arts": {
     "NAME": "커맨드 카드:아츠",
-    "DESCRIPTION": "커맨드 카드, Arts. 기본 : !B! .(피해 !D! 를 !M! 번 줍니다.)"
+    "DESCRIPTION": "커맨드 카드, Arts. 기본 피해량: !B! .(피해 !D! 를 !M! 번 줍니다.)"
   },
   "KiyohimeMod:DoujyoujikaneHyakuhachishikikaryuunagi": {
     "NAME": "도성사 종 백팔식 화룡치",
