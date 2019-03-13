@@ -240,5 +240,17 @@
       "Arts",
       "Quick"
     ]
+  },
+  "KiyohimeMod:BeElegant": {
+    "NAME": "秉持优雅",
+    "DESCRIPTION": "使用 !M! 暴击星，获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "使用 !M! 暴击星，获得 [E] [E] 。",
+    "EXTENDED_DESCRIPTION": [
+      "暴击星不足。"
+    ]
+  },
+  "KiyohimeMod:FirstPremonition": {
+    "NAME": "开始的预感",
+    "DESCRIPTION": "抽 !M! 张牌。丢弃 1 张牌。 NL 如果丢弃的牌是攻击牌，再抽 !B! 张牌。"
   }
 }

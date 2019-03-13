@@ -1,7 +1,7 @@
 <factorypath>
-    <factorypathentry kind="EXTJAR" id="D:\Git\KiyohimeMod\Kiyohime\lib\desktop-1.0.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="EXTJAR" id="D:\Git\KiyohimeMod\Kiyohime\lib\ModTheSpire.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="EXTJAR" id="D:\Git\KiyohimeMod\Kiyohime\lib\BaseMod.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="EXTJAR" id="D:\Git\KiyohimeMod\Kiyohime\lib\StSLib.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="EXTJAR" id="D:\Git\KiyohimeMod\Kiyohime\lib\FriendlyMinions.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="EXTJAR" id="D:\ZSQ\Git\KiyohimeMod\Kiyohime\lib\desktop-1.0.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="EXTJAR" id="D:\ZSQ\Git\KiyohimeMod\Kiyohime\lib\ModTheSpire.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="EXTJAR" id="D:\ZSQ\Git\KiyohimeMod\Kiyohime\lib\BaseMod.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="EXTJAR" id="D:\ZSQ\Git\KiyohimeMod\Kiyohime\lib\StSLib.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="EXTJAR" id="D:\ZSQ\Git\KiyohimeMod\Kiyohime\lib\FriendlyMinions.jar" enabled="true" runInBatchMode="false"/>
 </factorypath>

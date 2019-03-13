@@ -107,7 +107,7 @@ public abstract class AbstractAttackCard extends CustomCard {
         initializeDescription();
     }
 
-    private int GetBaseCost() {
+    protected int GetBaseCost() {
         switch (rarity) {
         case BASIC:
         case COMMON:

@@ -240,5 +240,17 @@
       "Arts",
       "Quick"
     ]
+  },
+  "KiyohimeMod:BeElegant": {
+    "NAME": "Be Elegant",
+    "DESCRIPTION": "Use !M! Crit star,Gain [E] .",
+    "UPGRADE_DESCRIPTION": "Use !M! Crit star,Gain [E] [E] .",
+    "EXTENDED_DESCRIPTION": [
+      "Crit star is not enough."
+    ]
+  },
+  "KiyohimeMod:FirstPremonition": {
+    "NAME": "First Premonition",
+    "DESCRIPTION": "Draw !M! cards.Discard 1 card. NL If the discarded card is attack card,draw !B! cards."
   }
 }
