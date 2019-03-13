@@ -39,6 +39,16 @@ public class FirstPremonition extends CustomCard {
         AbstractDungeon.actionManager.addToBottom(new FirstPremonitionAction(p, p, this.block));
     }
 
+    @Override
+    public void applyPowers() {
+        this.block = this.baseBlock;
+    }
+
+    @Override
+    public void calculateCardDamage(AbstractMonster m) {
+        applyPowers();
+    }
+
     public AbstractCard makeCopy() {
         return new FirstPremonition();
     }
