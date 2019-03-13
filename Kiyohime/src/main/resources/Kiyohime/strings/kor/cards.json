@@ -252,5 +252,9 @@
   "KiyohimeMod:FirstPremonition": {
     "NAME": "First Premonition",
     "DESCRIPTION": "Draw !M! cards.Discard 1 card. NL If the discarded card is attack card,draw !B! cards."
+  },
+  "KiyohimeMod:FiringTheFirstArrow": {
+    "NAME": "Firing The First Arrow",
+    "DESCRIPTION": "Deal !D! damage.Gain !M! Strength. NL At the end of this turn, lose !M! Strength."
   }
 }

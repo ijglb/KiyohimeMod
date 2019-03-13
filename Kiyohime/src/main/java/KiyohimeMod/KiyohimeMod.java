@@ -173,6 +173,7 @@ public class KiyohimeMod implements EditCharactersSubscriber, EditStringsSubscri
         // RARE
         BaseMod.addCard(new Destruction());
         BaseMod.addCard(new JeweledSword());
+        BaseMod.addCard(new FiringTheFirstArrow());
         // SPECIAL
         BaseMod.addCard(new TenshinKashoZanmaii());
         BaseMod.addCard(new ExtraAttack(0, 0));
@@ -192,6 +193,8 @@ public class KiyohimeMod implements EditCharactersSubscriber, EditStringsSubscri
         BaseMod.addCard(new DivineConstruct());
         BaseMod.addCard(new Projection());
         BaseMod.addCard(new CelestialInvertedMoon());
+        BaseMod.addCard(new BeElegant());
+        BaseMod.addCard(new FirstPremonition());
         // RARE
         BaseMod.addCard(new ImaginaryNumberMagecraft());
         BaseMod.addCard(new HeroCreation());

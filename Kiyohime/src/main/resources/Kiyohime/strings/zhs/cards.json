@@ -252,5 +252,9 @@
   "KiyohimeMod:FirstPremonition": {
     "NAME": "开始的预感",
     "DESCRIPTION": "抽 !M! 张牌。丢弃 1 张牌。 NL 如果丢弃的牌是攻击牌，再抽 !B! 张牌。"
+  },
+  "KiyohimeMod:FiringTheFirstArrow": {
+    "NAME": "射初一矢",
+    "DESCRIPTION": "造成 !D! 点伤害。获得 !M! 点 力量 。 NL 你的回合结束时，失去 !M! 点 力量 。"
   }
 }
