@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.monsters.MonsterGroup;
 
 import kobting.friendlyminions.helpers.BasePlayerMinionHelper;
 import kobting.friendlyminions.monsters.AbstractFriendlyMonster;
@@ -27,8 +28,17 @@ public abstract class AbstractFriendlyServant extends AbstractFriendlyMonster {
         }
         this.baseMoves = new ArrayList<ServantMove>();
         this.moves.setxStart(200 * Settings.scale);
-        int size = BasePlayerMinionHelper.getMinions(AbstractDungeon.player).monsters.size();
-        float yStart = (930 - size * 85) * Settings.scale;
+        //930 845
+        float yStart = 930;
+        MonsterGroup monsterGroup = BasePlayerMinionHelper.getMinions(AbstractDungeon.player);
+        int size = monsterGroup.monsters.size();
+        if (size == 1) {
+            AbstractFriendlyServant other = (AbstractFriendlyServant) monsterGroup.monsters.get(0);
+            if (other.getMoves().getyStart() == yStart * Settings.scale) {
+                yStart = 845;
+            }
+        }
+        yStart = yStart * Settings.scale;
         this.moves.setyStart(yStart);
     }
 

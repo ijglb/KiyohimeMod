@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -65,7 +66,10 @@ public class Servant_TamamoNoMae extends CustomCard {
             int size = playerServents.monsters.size();
             int x = -680;
             if (size == 1) {
-                x = -1240;
+                AbstractFriendlyServant other = (AbstractFriendlyServant) playerServents.monsters.get(0);
+                if (other.drawX == (Settings.WIDTH * 0.75f + -680 * Settings.scale)) {
+                    x = -1240;
+                }
             }
             AbstractDungeon.actionManager.addToBottom(new SummonServantAction(new TamamoNoMae(x)));
         }
