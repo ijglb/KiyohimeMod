@@ -40,7 +40,7 @@ public abstract class AbstractAttackCard extends CustomCard {
     private static int MaxStarRoom = 15;
 
     private int starCount = 0;
-    private boolean critical = false;
+    protected boolean critical = false;
     private boolean isSetTag = false;
     private int ampDamage = -1;
     private String origDescription;
