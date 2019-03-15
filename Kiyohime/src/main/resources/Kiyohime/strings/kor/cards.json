@@ -242,19 +242,19 @@
     ]
   },
   "KiyohimeMod:BeElegant": {
-    "NAME": "Be Elegant",
-    "DESCRIPTION": "Use !M! Crit star,Gain [E] .",
-    "UPGRADE_DESCRIPTION": "Use !M! Crit star,Gain [E] [E] .",
+    "NAME": "우아하라",
+    "DESCRIPTION": "스타를 !M! 사용하고,  [E] 를 얻습니다.",
+    "UPGRADE_DESCRIPTION": "스타를 !M! 사용하고, [E] [E] 를 얻습니다.",
     "EXTENDED_DESCRIPTION": [
-      "Crit star is not enough."
+      "스타가 부족해."
     ]
   },
   "KiyohimeMod:FirstPremonition": {
-    "NAME": "First Premonition",
-    "DESCRIPTION": "Draw !M! cards.Discard 1 card. NL If the discarded card is attack card,draw !B! cards."
+    "NAME": "시작의 예감",
+    "DESCRIPTION": "카드를 !M! 장 뽑습니다. 카드를 1장 버립니다. NL 버린 카드가 공격 카드인 경우, 카드를 !B! 장 뽑습니다."
   },
   "KiyohimeMod:FiringTheFirstArrow": {
-    "NAME": "Firing The First Arrow",
-    "DESCRIPTION": "Deal !D! damage.Gain !M! Strength. NL At the end of this turn, lose !M! Strength."
+    "NAME": "신년의 첫 화살",
+    "DESCRIPTION": "피해를 !D! 줍니다. 힘을 !M! 얻습니다. NL 턴 끝에, 힘을 !M! 잃습니다."
   }
 }
