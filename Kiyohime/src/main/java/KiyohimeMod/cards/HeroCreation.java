@@ -83,6 +83,54 @@ public class HeroCreation extends CustomCard {
     }
 
     @Override
+    public void updateCost(int amt) {
+        int tmp = this.costForTurn;
+        super.updateCost(amt);
+        int diff = tmp - this.costForTurn;
+        if (diff > 0) {
+            costChange -= diff;
+            if (costChange < 0)
+                costChange = 0;
+        }
+    }
+
+    @Override
+    public void setCostForTurn(int amt) {
+        int tmp = this.costForTurn;
+        super.setCostForTurn(amt);
+        int diff = tmp - this.costForTurn;
+        if (diff > 0) {
+            costChange -= diff;
+            if (costChange < 0)
+                costChange = 0;
+        }
+    }
+
+    @Override
+    public void modifyCostForTurn(int amt) {
+        int tmp = this.costForTurn;
+        super.modifyCostForTurn(amt);
+        int diff = tmp - this.costForTurn;
+        if (diff > 0) {
+            costChange -= diff;
+            if (costChange < 0)
+                costChange = 0;
+        }
+    }
+
+    @Override
+    public void modifyCostForCombat(int amt) {
+        int tmp = this.costForTurn;
+        super.modifyCostForCombat(amt);
+        int diff = tmp - this.costForTurn;
+        if (diff > 0) {
+            costChange -= diff;
+            if (costChange < 0)
+                costChange = 0;
+        }
+    }
+
+    @Override
     public void calculateCardDamage(AbstractMonster arg0) {
         this.damage = this.baseDamage;
         this.block = this.baseBlock;
