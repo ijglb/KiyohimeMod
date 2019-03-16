@@ -33,8 +33,7 @@ public class HeroCreation extends CustomCard {
     private static final int BASE_TURN = 3;
     private static final int BASE_MAGIC = 50;//crit up
     private static final int UPGRADE_PLUS_MAGIC = 50;
-    private int lastCost = -1;
-    private int otherSetTurnCost = -1;
+    private int costChange = 0;
 
     public HeroCreation() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL, AbstractCardEnum.Kiyohime_Color,
@@ -64,31 +63,23 @@ public class HeroCreation extends CustomCard {
         this.damage = this.baseDamage;
         this.block = this.baseBlock;
         this.magicNumber = this.baseMagicNumber;
-        int busterCard = 0;
+        this.costForTurn += costChange;
+        costChange = 0;
         for (AbstractCard c : AbstractDungeon.player.hand.group) {
-            if (c.hasTag(KiyohimeTags.ATTACK_Buster)) {
-                busterCard++;
+            if (c.hasTag(KiyohimeTags.ATTACK_Buster) && this.costForTurn > 0) {
+                this.costForTurn--;
+                costChange++;
             }
         }
-        int nowCost = this.cost - busterCard;
-        if (nowCost < 0)
-            nowCost = 0;
-        if (nowCost != this.costForTurn) {
-            if (this.isCostModifiedForTurn && this.lastCost != -1 && this.costForTurn != this.lastCost) {
-                this.otherSetTurnCost = this.costForTurn;
-            }
-            if (this.otherSetTurnCost != -1 && nowCost > this.otherSetTurnCost) {
-                nowCost = this.otherSetTurnCost;
-            }
-
-            this.lastCost = nowCost;
-            setCostForTurn(nowCost);
+        if (this.costForTurn != this.cost) {
+            this.isCostModifiedForTurn = true;
         }
     }
-    
+
     @Override
     public void atTurnStart() {
-        this.otherSetTurnCost = -1;
+        costChange = 0;
+        super.atTurnStart();
     }
 
     @Override
