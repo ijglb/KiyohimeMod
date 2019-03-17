@@ -256,5 +256,10 @@
   "KiyohimeMod:FiringTheFirstArrow": {
     "NAME": "신년의 첫 화살",
     "DESCRIPTION": "피해를 !D! 줍니다. 힘을 !M! 얻습니다. NL 턴 끝에, 힘을 !M! 잃습니다."
+  },
+  "KiyohimeMod:MagicCrystal": {
+    "NAME": "Magic Crystal",
+    "DESCRIPTION": "Gain !M! NP X times. NL Next turn,draw X cards.",
+    "UPGRADE_DESCRIPTION": "Gain !M! NP X+1 times. NL Next turn,draw X+1 cards."
   }
 }

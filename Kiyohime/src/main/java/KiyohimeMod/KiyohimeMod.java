@@ -201,6 +201,7 @@ public class KiyohimeMod implements EditCharactersSubscriber, EditStringsSubscri
         BaseMod.addCard(new Barrier());
         BaseMod.addCard(new GoldenCarpFigure());
         BaseMod.addCard(new FacelessMoon());
+        BaseMod.addCard(new MagicCrystal());
         // Servant
         BaseMod.addCard(new Servant_TamamoNoMae());
         BaseMod.addCard(new Servant_Osakabehime());
