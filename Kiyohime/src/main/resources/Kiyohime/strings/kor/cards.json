@@ -16,7 +16,7 @@
   },
   "KiyohimeMod:Defend": {
     "NAME": "방어",
-    "DESCRIPTION": "방어를 !B! 획득합니다."
+    "DESCRIPTION": "방어도를 !B! 획득합니다."
   },
   "KiyohimeMod:Track": {
     "NAME": "스토킹",
@@ -49,7 +49,7 @@
   },
   "KiyohimeMod:Fragarach": {
     "NAME": "프라가라흐",
-    "DESCRIPTION": "피해를 !D! 줍니다. 매 턴 끝에, 피해를 !B! 줍니다.",
+    "DESCRIPTION": "피해를 !D! 줍니다. 턴 끝에, 피해를 !B! 줍니다.",
     "EXTENDED_DESCRIPTION": [
       "피해를 ",
       " 받습니다."
@@ -81,7 +81,7 @@
   },
   "KiyohimeMod:SteelTraining": {
     "NAME": "강철의 단련",
-    "DESCRIPTION": "방어를 !B! 얻습니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다."
   },
   "KiyohimeMod:AgainstMagic": {
     "NAME": "문 셀 오토마톤",
@@ -169,7 +169,7 @@
   },
   "KiyohimeMod:CelestialInvertedMoon": {
     "NAME": "하늘의 역월",
-    "DESCRIPTION": "방어를 !B! 얻습니다. NL 부여된 매 스타마다, 방어를 !M! 얻습니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 부여된 매 스타마다, 방어도를 !M! 얻습니다."
   },
   "KiyohimeMod:HydraDagger": {
     "NAME": "히드라 대거",
@@ -181,7 +181,7 @@
   },
   "KiyohimeMod:Destruction": {
     "NAME": "파괴",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 적이 방어가 있으면, 피해를 2배로 줍니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 적이 방어도가 있으면, 피해를 2배로 줍니다."
   },
   "KiyohimeMod:CommandCard_Buster": {
     "NAME": "커맨드 카드:버스터",
@@ -206,7 +206,7 @@
   },
   "KiyohimeMod:AndSoTheShipConquers": {
     "NAME": "그리고 배는 떠난다",
-    "DESCRIPTION": "방어를 !B! 얻습니다. NL 다음 턴에, 방어를 !B! 얻습니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 다음 턴에, 방어도를 !B! 얻습니다."
   },
   "KiyohimeMod:GoldenCarpFigure": {
     "NAME": "골든 포리어도",
@@ -258,8 +258,8 @@
     "DESCRIPTION": "피해를 !D! 줍니다. 힘을 !M! 얻습니다. NL 턴 끝에, 힘을 !M! 잃습니다."
   },
   "KiyohimeMod:MagicCrystal": {
-    "NAME": "Magic Crystal",
-    "DESCRIPTION": "Gain !M! NP X times. NL Next turn,draw X cards.",
-    "UPGRADE_DESCRIPTION": "Gain !M! NP X+1 times. NL Next turn,draw X+1 cards."
+    "NAME": "마술광석",
+  "DESCRIPTION": "NP !M! 를 X 번 얻습니다. NL 다음 턴에, 카드를 X 장 더 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "NP !M! 를 X 번 얻습니다. NL 다음 턴에, 카드를 X 장 더 뽑습니다."
   }
 }
