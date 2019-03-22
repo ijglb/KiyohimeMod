@@ -49,11 +49,7 @@
   },
   "KiyohimeMod:Fragarach": {
     "NAME": "프라가라흐",
-    "DESCRIPTION": "피해를 !D! 줍니다. 턴 끝에, 피해를 !B! 줍니다.",
-    "EXTENDED_DESCRIPTION": [
-      "피해를 ",
-      " 받습니다."
-    ]
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Increase this card's attack times by 1 this combat."
   },
   "KiyohimeMod:RedBlackKey": {
     "NAME": "붉은 흑건",
@@ -146,18 +142,13 @@
   },
   "KiyohimeMod:Barrier": {
     "NAME": "삼중결계",
-    "DESCRIPTION": "NP !D! 를 사용합니다. 무적을 !M! 턴간 부여합니다. NL 소멸 .",
-    "EXTENDED_DESCRIPTION": [
-      "NP가 부족해."
-    ]
+    "DESCRIPTION": "Gain !M! Buffer. NL Exhaust .",
+    "UPGRADE_DESCRIPTION": "Gain !M! Buffer."
   },
   "KiyohimeMod:Projection": {
     "NAME": "투영마술",
-    "DESCRIPTION": "NP !D! 를 사용합니다. 힘을 !M! 얻습니다. NL 소멸 .",
-    "UPGRADE_DESCRIPTION": "NP !D! 를 사용합니다. 힘을 !M! 얻습니다.",
-    "EXTENDED_DESCRIPTION": [
-      "NP가 부족해."
-    ]
+    "DESCRIPTION": "Add 1 random Colorless attack card into your hand. NL If it with Exhaust ,Gain !M! Strength.",
+    "UPGRADE_DESCRIPTION": "Add 1 random Colorless attack card into your hand,it cost 0 this turn. NL If it with Exhaust ,Gain !M! Strength."
   },
   "KiyohimeMod:BeastOfBillows": {
     "NAME": "파도의 짐승",
@@ -165,7 +156,8 @@
   },
   "KiyohimeMod:JeweledSword": {
     "NAME": "보석검 젤리치",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 부여된 10 NP 마다, 피해를 !M! 씩 추가합니다."
+    "DESCRIPTION": "Deal !D! damage.Gain !D! NP. NL Exhaust .",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage.Gain !D! NP."
   },
   "KiyohimeMod:CelestialInvertedMoon": {
     "NAME": "하늘의 역월",
@@ -177,11 +169,11 @@
   },
   "KiyohimeMod:RealityMarble": {
     "NAME": "고유결계",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 적이 가진 힘만큼 피해를 !M! 추가합니다."
+    "DESCRIPTION": "Deal !D! damage.Gain !B! Block."
   },
   "KiyohimeMod:Destruction": {
     "NAME": "파괴",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 적이 방어도가 있으면, 피해를 2배로 줍니다."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Each enemy with Block make you draw 1 card."
   },
   "KiyohimeMod:CommandCard_Buster": {
     "NAME": "커맨드 카드:버스터",
@@ -201,8 +193,8 @@
   },
   "KiyohimeMod:Shapeshift": {
     "NAME": "변화",
-    "DESCRIPTION": "영기를 바꿉니다. NL 소멸 .",
-    "UPGRADE_DESCRIPTION": "영기를 바꿉니다."
+    "DESCRIPTION": "영기를 바꿉니다.Gain !B! Block. NL 소멸 .",
+    "UPGRADE_DESCRIPTION": "영기를 바꿉니다.Gain !B! Block."
   },
   "KiyohimeMod:AndSoTheShipConquers": {
     "NAME": "그리고 배는 떠난다",
@@ -243,8 +235,8 @@
   },
   "KiyohimeMod:BeElegant": {
     "NAME": "우아하라",
-    "DESCRIPTION": "스타를 !M! 사용하고,  [E] 를 얻습니다.",
-    "UPGRADE_DESCRIPTION": "스타를 !M! 사용하고, [E] [E] 를 얻습니다.",
+    "DESCRIPTION": "스타를 !M! 사용하고,  [E] [E] 를 얻습니다.",
+    "UPGRADE_DESCRIPTION": "스타를 !M! 사용하고, [E] [E] [E] 를 얻습니다.",
     "EXTENDED_DESCRIPTION": [
       "스타가 부족해."
     ]

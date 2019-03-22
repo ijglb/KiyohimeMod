@@ -13,7 +13,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import KiyohimeMod.actions.ExtraAttackAction;
-import KiyohimeMod.cards.AbstractAttackCard;
 import KiyohimeMod.character.Kiyohime;
 import KiyohimeMod.patches.KiyohimeTags;
 
@@ -61,51 +60,48 @@ public class ChaldeaPower extends AbstractPower {
 
     @Override
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
-        if (card instanceof AbstractAttackCard) {
-            this.amount++;
-            if (card.hasTag(KiyohimeTags.ATTACK_Buster))
-                this.CardList.add(Buster);
-            if (card.hasTag(KiyohimeTags.ATTACK_Arts))
-                this.CardList.add(Arts);
-            if (card.hasTag(KiyohimeTags.ATTACK_Quick))
-                this.CardList.add(Quick);
+        if (card.hasTag(KiyohimeTags.ATTACK_Buster))
+            this.CardList.add(Buster);
+        else if (card.hasTag(KiyohimeTags.ATTACK_Arts))
+            this.CardList.add(Arts);
+        else if (card.hasTag(KiyohimeTags.ATTACK_Quick))
+            this.CardList.add(Quick);
+        else
+            return;
+        this.amount++;
 
-            int size = this.CardList.size();
-            if (size == 1) {
-                String c = this.CardList.get(size - 1);
-                if (c == Buster) {
-                    AbstractDungeon.actionManager
-                            .addToTop(new ApplyPowerAction(owner, owner, new BusterFirstPower(owner)));
-                } else if (c == Arts) {
-                    AbstractDungeon.actionManager
-                            .addToTop(new ApplyPowerAction(owner, owner, new ArtsFirstPower(owner)));
-                } else if (c == Quick) {
-                    AbstractDungeon.actionManager
-                            .addToTop(new ApplyPowerAction(owner, owner, new QuickFirstPower(owner)));
-                }
+        int size = this.CardList.size();
+        if (size == 1) {
+            String c = this.CardList.get(size - 1);
+            if (c == Buster) {
+                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(owner, owner, new BusterFirstPower(owner)));
+            } else if (c == Arts) {
+                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(owner, owner, new ArtsFirstPower(owner)));
+            } else if (c == Quick) {
+                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(owner, owner, new QuickFirstPower(owner)));
             }
-            if (size >= 3 && !isChain) {
-                String last1Card = this.CardList.get(size - 1);
-                String last2Card = this.CardList.get(size - 2);
-                String last3Card = this.CardList.get(size - 3);
-                if (last1Card == last2Card && last2Card == last3Card) {
-                    flash();
-                    if (last1Card == Buster) {
-                        AbstractDungeon.actionManager.addToBottom(new ExtraAttackAction(m));
-                    } else if (last1Card == Arts) {
-                        AbstractDungeon.actionManager
-                                .addToBottom(new ApplyPowerAction(owner, owner, new NPPower(owner), 20));
-                    } else if (last1Card == Quick) {
-                        // AbstractDungeon.actionManager
-                        //         .addToBottom(new ApplyPowerAction(owner, owner, new CritStarPower(owner), 25));
-                        if (AbstractDungeon.player instanceof Kiyohime) {
-                            ((Kiyohime) AbstractDungeon.player).StarCounter.addStarCount(25);
-                        }
-                    }
-                    isChain = true;
-                }
-            }
-            updateDescription();
         }
+        if (size >= 3 && !isChain) {
+            String last1Card = this.CardList.get(size - 1);
+            String last2Card = this.CardList.get(size - 2);
+            String last3Card = this.CardList.get(size - 3);
+            if (last1Card == last2Card && last2Card == last3Card) {
+                flash();
+                if (last1Card == Buster) {
+                    AbstractDungeon.actionManager.addToBottom(new ExtraAttackAction(m));
+                } else if (last1Card == Arts) {
+                    AbstractDungeon.actionManager
+                            .addToBottom(new ApplyPowerAction(owner, owner, new NPPower(owner), 20));
+                } else if (last1Card == Quick) {
+                    // AbstractDungeon.actionManager
+                    //         .addToBottom(new ApplyPowerAction(owner, owner, new CritStarPower(owner), 25));
+                    if (AbstractDungeon.player instanceof Kiyohime) {
+                        ((Kiyohime) AbstractDungeon.player).StarCounter.addStarCount(25);
+                    }
+                }
+                isChain = true;
+            }
+        }
+        updateDescription();
     }
 }

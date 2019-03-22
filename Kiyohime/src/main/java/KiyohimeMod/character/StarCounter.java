@@ -17,8 +17,8 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 import KiyohimeMod.actions.CardApplyStarAction;
-import KiyohimeMod.cards.AbstractAttackCard;
 import KiyohimeMod.cards.ExtraAttack;
+import KiyohimeMod.helpers.CardHelper;
 import KiyohimeMod.patches.KiyohimeTags;
 import KiyohimeMod.powers.AbstractStackablePower;
 import KiyohimeMod.powers.ChaldeaPower;
@@ -61,43 +61,41 @@ public class StarCounter extends ClickableUIElement {
 
     public void onUseCard(AbstractCard usedCard) {
         if (usedCard.type == AbstractCard.CardType.ATTACK) {
-            if (usedCard instanceof AbstractAttackCard) {
-                float starRate = 0;
-                if (AbstractDungeon.player instanceof Kiyohime) {
-                    AbstractServant servant = ((Kiyohime) AbstractDungeon.player).Servant;
-                    starRate = servant.starRate;
-                }
-                float first = 0f;//首位加成
-                if (AbstractDungeon.player.hasPower(QuickFirstPower.POWER_ID))
-                    first = 1f;
-                int position = 0;
-                if (AbstractDungeon.player.hasPower(ChaldeaPower.POWER_ID))
-                    position = AbstractDungeon.player.getPower(ChaldeaPower.POWER_ID).amount;
-                if (position > 2)
-                    position = 2;
-                float card = 0f;//指令卡掉星率
-                float cardbuff = ((AbstractAttackCard) usedCard).getCardUpBuffRate();
-                if (usedCard.hasTag(KiyohimeTags.ATTACK_Buster)) {
-                    card = Star_Buster[position];
-                } else if (usedCard.hasTag(KiyohimeTags.ATTACK_Quick)) {
-                    card = Star_Quick[position];
-                }
-                if (usedCard instanceof ExtraAttack) {
-                    card = 1f;
-                }
-                float starGenerationRate = 0f;
-                if (AbstractDungeon.player.hasPower(CritStarGenerationRatePower.POWER_ID)) {
-                    starGenerationRate = AbstractDungeon.player.getPower(CritStarGenerationRatePower.POWER_ID).amount
-                            / 100.0f;
-                }
-                int hits = ((AbstractAttackCard) usedCard).Hits;
-                float critical = ((AbstractAttackCard) usedCard).isCritical() ? 0.15f : 0f;//暴击补正
-                //从者掉星率 + 指令卡掉星率 * (1 ± 指令卡性能BUFF ∓ 指令卡耐性) + 首位加成 + 敌补正 ± 掉星率BUFF ± 敌人掉星率BUFF + 暴击补正 + Overkill补正
-                int getStar = MathUtils
-                        .round(hits * (starRate + card * (1 + cardbuff) + first + starGenerationRate + critical));
-                if (getStar > 0)
-                    this.starCount += getStar;
+            float starRate = 0;
+            if (AbstractDungeon.player instanceof Kiyohime) {
+                AbstractServant servant = ((Kiyohime) AbstractDungeon.player).Servant;
+                starRate = servant.starRate;
             }
+            float first = 0f;//首位加成
+            if (AbstractDungeon.player.hasPower(QuickFirstPower.POWER_ID))
+                first = 1f;
+            int position = 0;
+            if (AbstractDungeon.player.hasPower(ChaldeaPower.POWER_ID))
+                position = AbstractDungeon.player.getPower(ChaldeaPower.POWER_ID).amount;
+            if (position > 2)
+                position = 2;
+            float card = 0f;//指令卡掉星率
+            float cardbuff = CardHelper.getCardUpBuffRate(usedCard);
+            if (usedCard.hasTag(KiyohimeTags.ATTACK_Buster)) {
+                card = Star_Buster[position];
+            } else if (usedCard.hasTag(KiyohimeTags.ATTACK_Quick)) {
+                card = Star_Quick[position];
+            }
+            if (usedCard instanceof ExtraAttack) {
+                card = 1f;
+            }
+            float starGenerationRate = 0f;
+            if (AbstractDungeon.player.hasPower(CritStarGenerationRatePower.POWER_ID)) {
+                starGenerationRate = AbstractDungeon.player.getPower(CritStarGenerationRatePower.POWER_ID).amount
+                        / 100.0f;
+            }
+            int hits = CardHelper.getHits(usedCard);
+            float critical = CardHelper.isCritical(usedCard) ? 0.15f : 0f;//暴击补正
+            //从者掉星率 + 指令卡掉星率 * (1 ± 指令卡性能BUFF ∓ 指令卡耐性) + 首位加成 + 敌补正 ± 掉星率BUFF ± 敌人掉星率BUFF + 暴击补正 + Overkill补正
+            int getStar = MathUtils
+                    .round(hits * (starRate + card * (1 + cardbuff) + first + starGenerationRate + critical));
+            if (getStar > 0)
+                this.starCount += getStar;
         }
     }
     

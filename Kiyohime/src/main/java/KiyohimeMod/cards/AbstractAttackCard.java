@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import KiyohimeMod.actions.LoadCardBGAction;
 import KiyohimeMod.character.StarCounter;
+import KiyohimeMod.helpers.CardHelper;
 import KiyohimeMod.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 import basemod.abstracts.DynamicVariable;
@@ -222,7 +223,7 @@ public abstract class AbstractAttackCard extends CustomCard {
             }
         }
         //卡性能 Final之前
-        temp = MathUtils.round(temp * (1 + getCardUpBuffRate()));
+        temp = MathUtils.round(temp * (1 + CardHelper.getCardUpBuffRate(this)));
         for (AbstractPower p : player.powers) {
             temp = p.atDamageFinalGive(temp, this.damageTypeForTurn);
         }
@@ -242,11 +243,6 @@ public abstract class AbstractAttackCard extends CustomCard {
             temp = 0;
         }
         return temp;
-    }
-
-    @Override
-    public void triggerWhenDrawn() {
-        setRandomTag();
     }
 
     @Override
@@ -348,11 +344,7 @@ public abstract class AbstractAttackCard extends CustomCard {
 
         @Override
         public int baseValue(AbstractCard card) {
-            if (card instanceof AbstractAttackCard) {
-                return ((AbstractAttackCard) card).getStarCount();
-            } else {
-                return -1;
-            }
+            return CardHelper.getStarCount(card);
         }
 
         @Override
@@ -377,20 +369,12 @@ public abstract class AbstractAttackCard extends CustomCard {
 
         @Override
         public boolean upgraded(AbstractCard card) {
-            if (card instanceof AbstractAttackCard) {
-                return ((AbstractAttackCard) card).isCritical();
-            } else {
-                return false;
-            }
+            return CardHelper.isCritical(card);
         }
 
         @Override
         public int value(AbstractCard card) {
-            if (card instanceof AbstractAttackCard) {
-                return ((AbstractAttackCard) card).getStarCount();
-            } else {
-                return -1;
-            }
+            return CardHelper.getStarCount(card);
         }
     }
 }

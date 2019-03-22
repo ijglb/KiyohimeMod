@@ -49,11 +49,7 @@
   },
   "KiyohimeMod:Fragarach": {
     "NAME": "佛拉格拉克",
-    "DESCRIPTION": "造成 !D! 点伤害，并在本轮回合结束后再次造成 !B! 点伤害",
-    "EXTENDED_DESCRIPTION": [
-      "受到",
-      "点伤害"
-    ]
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 这张牌每被打出一次，在本场战斗中其打击次数增加1。"
   },
   "KiyohimeMod:RedBlackKey": {
     "NAME": "赤之黑键",
@@ -146,18 +142,13 @@
   },
   "KiyohimeMod:Barrier": {
     "NAME": "结界",
-    "DESCRIPTION": "使用 !D! NP，获得无敌状态 !M! 回合。 NL 消耗",
-    "EXTENDED_DESCRIPTION": [
-      "NP不足，无法使用。"
-    ]
+    "DESCRIPTION": "获得 !M! 层 缓冲。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "获得 !M! 层 缓冲。"
   },
   "KiyohimeMod:Projection": {
     "NAME": "投影魔术",
-    "DESCRIPTION": "使用 !D! NP，获得 !M! 点 力量 。 NL 消耗",
-    "UPGRADE_DESCRIPTION": "使用 !D! NP，获得 !M! 点 力量 。",
-    "EXTENDED_DESCRIPTION": [
-      "NP不足，无法使用。"
-    ]
+    "DESCRIPTION": "在你的手牌中加入 1 张随机无色攻击牌。 NL 如果它带有 消耗 ，获得 !M! 力量。",
+    "UPGRADE_DESCRIPTION": "在你的手牌中加入 1 张随机无色攻击牌，它在本回合的耗能变为0。 NL 如果它带有 消耗 ，获得 !M! 力量。"
   },
   "KiyohimeMod:BeastOfBillows": {
     "NAME": "波涛之兽",
@@ -165,7 +156,8 @@
   },
   "KiyohimeMod:JeweledSword": {
     "NAME": "宝石剑",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 每有10点NP，伤害提高 !M!"
+    "DESCRIPTION": "造成 !D! 点伤害，获得 !D! NP。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害，获得 !D! NP。"
   },
   "KiyohimeMod:CelestialInvertedMoon": {
     "NAME": "天之逆月",
@@ -177,11 +169,11 @@
   },
   "KiyohimeMod:RealityMarble": {
     "NAME": "固有结界",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 目标身上每有1点 力量 ，伤害增加 !M! 。"
+    "DESCRIPTION": "造成 !D! 点伤害。获得 !B! 点格挡。"
   },
   "KiyohimeMod:Destruction": {
     "NAME": "破坏",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 目标身上有 格挡 时伤害翻倍。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 每个带有 格挡 的敌人使你抽 1 张牌。"
   },
   "KiyohimeMod:CommandCard_Buster": {
     "NAME": "指令卡：Buster",
@@ -201,8 +193,8 @@
   },
   "KiyohimeMod:Shapeshift": {
     "NAME": "变化",
-    "DESCRIPTION": "切换 灵基 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "切换 灵基 。"
+    "DESCRIPTION": "切换 灵基 。获得 !B! 点格挡。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "切换 灵基 。获得 !B! 点格挡。"
   },
   "KiyohimeMod:AndSoTheShipConquers": {
     "NAME": "扬帆远航",
@@ -243,8 +235,8 @@
   },
   "KiyohimeMod:BeElegant": {
     "NAME": "秉持优雅",
-    "DESCRIPTION": "使用 !M! 暴击星，获得 [E] 。",
-    "UPGRADE_DESCRIPTION": "使用 !M! 暴击星，获得 [E] [E] 。",
+    "DESCRIPTION": "使用 !M! 暴击星，获得 [E] [E] 。",
+    "UPGRADE_DESCRIPTION": "使用 !M! 暴击星，获得 [E] [E] [E] 。",
     "EXTENDED_DESCRIPTION": [
       "暴击星不足。"
     ]

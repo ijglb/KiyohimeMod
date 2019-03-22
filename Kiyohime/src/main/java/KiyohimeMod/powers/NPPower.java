@@ -12,10 +12,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
-import KiyohimeMod.cards.AbstractAttackCard;
 import KiyohimeMod.cards.ExtraAttack;
 import KiyohimeMod.character.AbstractServant;
 import KiyohimeMod.character.Kiyohime;
+import KiyohimeMod.helpers.CardHelper;
 import KiyohimeMod.patches.KiyohimeTags;
 
 public class NPPower extends AbstractPower {
@@ -76,7 +76,7 @@ public class NPPower extends AbstractPower {
 
     @Override
     public void onAfterUseCard(AbstractCard usedCard, UseCardAction action) {
-        if (usedCard.type == AbstractCard.CardType.ATTACK && usedCard instanceof AbstractAttackCard) {
+        if (usedCard.type == AbstractCard.CardType.ATTACK) {
             float npRate = 0;
             if(AbstractDungeon.player instanceof Kiyohime){
                 AbstractServant servant = ((Kiyohime)AbstractDungeon.player).Servant;
@@ -91,7 +91,7 @@ public class NPPower extends AbstractPower {
             if (position > 2)
                 position = 2;
             float card = 0f;//指令卡补正
-            float cardbuff = ((AbstractAttackCard) usedCard).getCardUpBuffRate();
+            float cardbuff = CardHelper.getCardUpBuffRate(usedCard);
             if (usedCard.hasTag(KiyohimeTags.ATTACK_Arts)) {
                 card = NP_Arts[position];
             } else if (usedCard.hasTag(KiyohimeTags.ATTACK_Quick)) {
@@ -104,8 +104,8 @@ public class NPPower extends AbstractPower {
             if (owner.hasPower(NPGenerationRatePower.POWER_ID)) {
                 npGenerationRate = owner.getPower(NPGenerationRatePower.POWER_ID).amount / 100.0f;
             }
-            int hits = ((AbstractAttackCard) usedCard).Hits;
-            float critical = ((AbstractAttackCard) usedCard).isCritical() ? 1.5f : 1f;//暴击补正
+            int hits = CardHelper.getHits(usedCard);
+            float critical = CardHelper.isCritical(usedCard) ? 1.5f : 1f;//暴击补正
             //NP率 * (指令卡补正 * (1 ± 指令卡性能BUFF ∓ 指令卡耐性) + 首位加成) * 敌补正 * (1 ± NP获得量BUFF) * 暴击补正 * Overkill补正
             float getNP = hits * ((npRate * (card * (1 + cardbuff) + first)) * (1 + npGenerationRate) * critical);
             if((int) getNP > 0)

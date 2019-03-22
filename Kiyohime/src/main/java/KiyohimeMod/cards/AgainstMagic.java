@@ -19,9 +19,9 @@ public class AgainstMagic extends CustomCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    private static final int COST = 2;
+    private static final int COST = 1;
     private static final int BASE_MAGIC = 1;
-    private static final int UPGRADE_COST = 1;
+    private static final int UPGRADE_COST = 0;
 
     public AgainstMagic() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL, AbstractCardEnum.Kiyohime_Color,

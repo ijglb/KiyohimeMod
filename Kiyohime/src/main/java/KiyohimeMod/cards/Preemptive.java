@@ -18,7 +18,7 @@ public class Preemptive extends AbstractAttackCard {
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String IMG_PATH = "Kiyohime/images/cards/Preemptive.png";
     private static final int ATTACK_DMG = 4;
-    private static final int UPGRADE_PLUS_DMG = 4;
+    private static final int UPGRADE_PLUS_DMG = 2;
     private static final int BASE_MAGIC = 2;//hits
 
     public Preemptive() {
@@ -34,7 +34,7 @@ public class Preemptive extends AbstractAttackCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
-          }
+        }
     }
 
     @Override

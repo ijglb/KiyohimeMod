@@ -1,9 +1,9 @@
 package KiyohimeMod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -17,17 +17,17 @@ public class Destruction extends AbstractAttackCard {
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String IMG_PATH = "Kiyohime/images/cards/Destruction.png";
-    private static final int ATTACK_DMG = 12;
-    private static final int UPGRADE_PLUS_DMG = 8;
+    private static final int ATTACK_DMG = 18;
+    private static final int UPGRADE_PLUS_DMG = 7;
 
     public Destruction() {
-        super(ID, NAME, IMG_PATH, DESCRIPTION, 1, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.ENEMY);
+        super(ID, NAME, IMG_PATH, DESCRIPTION, 1, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.ALL_ENEMY);
         damage = baseDamage = ATTACK_DMG;
     }
 
     @Override
     public void upgrade() {
-        super.upgrade();
+        //super.upgrade();
         if (!this.upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
@@ -36,18 +36,19 @@ public class Destruction extends AbstractAttackCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
-                new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-    }
-
-    @Override
-    protected float calculate(float base, AbstractMonster target) {
-        float temp = base;
-        if (target != null && target.currentBlock > 0) {
-            temp = temp * 2;
+        AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage,
+                this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HEAVY));
+        int drawCard = 0;
+        int temp = AbstractDungeon.getCurrRoom().monsters.monsters.size();
+        for (int i = 0; i < temp; i++) {
+            AbstractMonster mo = AbstractDungeon.getCurrRoom().monsters.monsters.get(i);
+            if (!mo.isDead && mo.currentHealth > 0 && mo.currentBlock > 0) {
+                drawCard++;
+            }
         }
-
-        return super.calculate(temp, target);
+        if (drawCard > 0) {
+            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, drawCard));
+        }
     }
 
     @Override

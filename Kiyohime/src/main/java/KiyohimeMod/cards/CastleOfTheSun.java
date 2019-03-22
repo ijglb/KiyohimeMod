@@ -29,7 +29,7 @@ public class CastleOfTheSun extends CustomCard {
     private static final int UPGRADE_PLUS_DAMAGE = 5;
     private static final int BASE_BLOCK = 60;
     private static final int UPGRADE_PLUS_BLOCK = 20;
-    private static final int BASE_MAGIC = 25;
+    private static final int BASE_MAGIC = 15;
     private static final int UPGRADE_PLUS_MAGIC = 15;
 
     public CastleOfTheSun() {

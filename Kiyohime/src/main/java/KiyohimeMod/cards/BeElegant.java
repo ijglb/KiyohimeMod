@@ -24,7 +24,7 @@ public class BeElegant extends CustomCard {
     public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
     private static final int COST = 0;
     private static final int BASE_MAGIC = 20;
-    private static final int UPGRADE_PLUS_MAGIC = -5;
+    //private static final int UPGRADE_PLUS_MAGIC = -5;
 
     public BeElegant() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL, AbstractCardEnum.Kiyohime_Color,
@@ -38,9 +38,9 @@ public class BeElegant extends CustomCard {
             int star = starCounter.getStarCount();
             if (star >= this.magicNumber) {
                 starCounter.addStarCount(-this.magicNumber);
-                int e = 1;
+                int e = 2;
                 if (this.upgraded)
-                    e = 2;
+                    e = 3;
                 AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(e));
             }
         }
@@ -72,7 +72,7 @@ public class BeElegant extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_PLUS_MAGIC);
+            //upgradeMagicNumber(UPGRADE_PLUS_MAGIC);
             this.rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

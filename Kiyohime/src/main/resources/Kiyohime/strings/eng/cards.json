@@ -49,11 +49,7 @@
   },
   "KiyohimeMod:Fragarach": {
     "NAME": "Fragarach",
-    "DESCRIPTION": "Deal !D! damage.At end of round,Deal !B! damage.",
-    "EXTENDED_DESCRIPTION": [
-      "Receive ",
-      " damage."
-    ]
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Increase this card's attack times by 1 this combat."
   },
   "KiyohimeMod:RedBlackKey": {
     "NAME": "Red Black Key",
@@ -146,18 +142,13 @@
   },
   "KiyohimeMod:Barrier": {
     "NAME": "Barrier",
-    "DESCRIPTION": "Use !D! NP.Gain Invincible buff for !M! turn. NL Exhaust .",
-    "EXTENDED_DESCRIPTION": [
-      "NP is not enough."
-    ]
+    "DESCRIPTION": "Gain !M! Buffer. NL Exhaust .",
+    "UPGRADE_DESCRIPTION": "Gain !M! Buffer."
   },
   "KiyohimeMod:Projection": {
     "NAME": "Projection",
-    "DESCRIPTION": "Use !D! NP.Gain !M! Strength . NL Exhaust .",
-    "UPGRADE_DESCRIPTION": "Use !D! NP.Gain !M! Strength .",
-    "EXTENDED_DESCRIPTION": [
-      "NP is not enough."
-    ]
+    "DESCRIPTION": "Add 1 random Colorless attack card into your hand. NL If it with Exhaust ,Gain !M! Strength.",
+    "UPGRADE_DESCRIPTION": "Add 1 random Colorless attack card into your hand,it cost 0 this turn. NL If it with Exhaust ,Gain !M! Strength."
   },
   "KiyohimeMod:BeastOfBillows": {
     "NAME": "Beast of Billows",
@@ -165,7 +156,8 @@
   },
   "KiyohimeMod:JeweledSword": {
     "NAME": "Jeweled Sword",
-    "DESCRIPTION": "Deal !D! damage. NL For each 10 NP you have,add !M! damage."
+    "DESCRIPTION": "Deal !D! damage.Gain !D! NP. NL Exhaust .",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage.Gain !D! NP."
   },
   "KiyohimeMod:CelestialInvertedMoon": {
     "NAME": "Celestial Inverted Moon",
@@ -177,11 +169,11 @@
   },
   "KiyohimeMod:RealityMarble": {
     "NAME": "Reality Marble",
-    "DESCRIPTION": "Deal !D! damage. NL For each Strength the enemy has,add !M! damage."
+    "DESCRIPTION": "Deal !D! damage.Gain !B! Block."
   },
   "KiyohimeMod:Destruction": {
     "NAME": "Destruction",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy has Block,double the damage."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Each enemy with Block make you draw 1 card."
   },
   "KiyohimeMod:CommandCard_Buster": {
     "NAME": "Command Card:Buster",
@@ -201,8 +193,8 @@
   },
   "KiyohimeMod:Shapeshift": {
     "NAME": "Shapeshift",
-    "DESCRIPTION": "Switch spirit_origin . NL Exhaust .",
-    "UPGRADE_DESCRIPTION": "Switch spirit_origin ."
+    "DESCRIPTION": "Switch spirit_origin .Gain !B! Block. NL Exhaust .",
+    "UPGRADE_DESCRIPTION": "Switch spirit_origin .Gain !B! Block."
   },
   "KiyohimeMod:AndSoTheShipConquers": {
     "NAME": "And So The Ship Conquers",
@@ -243,8 +235,8 @@
   },
   "KiyohimeMod:BeElegant": {
     "NAME": "Be Elegant",
-    "DESCRIPTION": "Use !M! Crit star,Gain [E] .",
-    "UPGRADE_DESCRIPTION": "Use !M! Crit star,Gain [E] [E] .",
+    "DESCRIPTION": "Use !M! Crit star,Gain [E] [E] .",
+    "UPGRADE_DESCRIPTION": "Use !M! Crit star,Gain [E] [E] [E] .",
     "EXTENDED_DESCRIPTION": [
       "Crit star is not enough."
     ]

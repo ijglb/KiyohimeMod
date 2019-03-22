@@ -1,5 +1,6 @@
 package KiyohimeMod.cards;
 
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -20,16 +21,19 @@ public class Shapeshift extends CustomCard {
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
-    private static final int COST = 1;
+    private static final int COST = 0;
+    private static final int BLOCK = 4;
 
     public Shapeshift() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL, AbstractCardEnum.Kiyohime_Color,
                 AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.SELF);
         this.exhaust = true;
+        this.block = this.baseBlock = BLOCK;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ChangeServantAction());
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
     }
 
     public AbstractCard makeCopy() {
