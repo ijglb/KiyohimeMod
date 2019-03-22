@@ -20,6 +20,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.evacipated.cardcrawl.modthespire.patcher.PatchingException;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -70,7 +71,9 @@ public class AbstractCardPatch {
     @SpirePatch(clz = AbstractCard.class, method = "teleportToDiscardPile")
     public static class TeleportToDiscardPilePatch {
         public static void Postfix(AbstractCard __instance) {
-            if (AbstractDungeon.player instanceof Kiyohime && !(__instance instanceof AbstractAttackCard)) {
+            if (AbstractDungeon.player instanceof Kiyohime && __instance.type == CardType.ATTACK
+                    && !(__instance instanceof AbstractAttackCard)
+                    && __instance.color == AbstractCard.CardColor.COLORLESS) {
                 CardHelper.setDefultTag(__instance);
             }
         }
@@ -79,7 +82,8 @@ public class AbstractCardPatch {
     @SpirePatch(clz = CardGroup.class, method = "moveToExhaustPile")
     public static class MoveToExhaustPilePatch {
         public static void Prefix(CardGroup __instance, AbstractCard c) {
-            if (AbstractDungeon.player instanceof Kiyohime && !(c instanceof AbstractAttackCard)) {
+            if (AbstractDungeon.player instanceof Kiyohime && c.type == CardType.ATTACK
+                    && !(c instanceof AbstractAttackCard) && c.color == AbstractCard.CardColor.COLORLESS) {
                 CardHelper.setDefultTag(c);
             }
         }
@@ -102,7 +106,9 @@ public class AbstractCardPatch {
     @SpirePatch(clz = AbstractCard.class, method = "applyPowers")
     public static class ApplyPowersPatch {
         public static void Prefix(AbstractCard __instance) {
-            if (AbstractDungeon.player instanceof Kiyohime && !(__instance instanceof AbstractAttackCard)) {
+            if (AbstractDungeon.player instanceof Kiyohime && __instance.type == CardType.ATTACK
+                    && !(__instance instanceof AbstractAttackCard)
+                    && __instance.color == AbstractCard.CardColor.COLORLESS) {
                 CardHelper.setRandomTag(__instance);
             }
         }
@@ -124,14 +130,16 @@ public class AbstractCardPatch {
         public static HashMap<String, Texture> imgMap;
         static {
             imgMap = new HashMap<>();
-            imgMap.put("BG_Buster", ImageMaster.loadImage("Kiyohime/images/512/bg_attack_buster.png"));
-            imgMap.put("BG_Arts", ImageMaster.loadImage("Kiyohime/images/512/bg_attack_arts.png"));
-            imgMap.put("BG_Quick", ImageMaster.loadImage("Kiyohime/images/512/bg_attack_quick.png"));
-            imgMap.put("BG_Defult", ImageMaster.loadImage("Kiyohime/images/512/bg_attack.png"));
+            imgMap.put("BG_Buster", ImageMaster.loadImage("Kiyohime/images/512/colorless_attack_buster.png"));
+            imgMap.put("BG_Arts", ImageMaster.loadImage("Kiyohime/images/512/colorless_attack_arts.png"));
+            imgMap.put("BG_Quick", ImageMaster.loadImage("Kiyohime/images/512/colorless_attack_quick.png"));
+            //imgMap.put("BG_Defult", ImageMaster.CARD_ATTACK_BG_GRAY);
         }
 
         public static SpireReturn<?> Prefix(AbstractCard __instance, SpriteBatch sb, float x, float y) {
-            if (AbstractDungeon.player instanceof Kiyohime && __instance.color == AbstractCard.CardColor.COLORLESS) {
+            if (AbstractDungeon.player instanceof Kiyohime && __instance.type == CardType.ATTACK
+                    && !(__instance instanceof AbstractAttackCard)
+                    && __instance.color == AbstractCard.CardColor.COLORLESS) {
                 Texture texture;
                 if (__instance.hasTag(KiyohimeTags.ATTACK_Buster))
                     texture = imgMap.get("BG_Buster");

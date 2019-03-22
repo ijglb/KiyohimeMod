@@ -35,8 +35,7 @@ public class JeweledSword extends AbstractAttackCard {
         if (!this.upgraded) {
             upgradeName();
             this.exhaust = false;
-            this.rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeDescription(UPGRADE_DESCRIPTION);
         }
     }
 
