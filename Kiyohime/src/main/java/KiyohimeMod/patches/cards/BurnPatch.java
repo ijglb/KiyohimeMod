@@ -16,7 +16,9 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.status.Burn;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import KiyohimeMod.relics.FireDragon;
@@ -28,10 +30,10 @@ public class BurnPatch {
     @SpirePatch(clz = Burn.class, method = "use")
     public static class UsePatch {
         @SpireInsertPatch(locator = Locator.class)
-        public static SpireReturn<?> Insert(AbstractCard __instance) {
+        public static SpireReturn<?> Insert(AbstractCard __instance, AbstractPlayer p, AbstractMonster m) {
             AbstractRelic fireDragon = AbstractDungeon.player.getRelic(FireDragon.ID);
             if (fireDragon != null) {
-                fireDragon.flash();
+                //fireDragon.flash();
                 AbstractDungeon.actionManager
                         .addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, fireDragon));
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player,
