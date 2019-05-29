@@ -1,4 +1,11 @@
 {
+  "KiyohimeMod:FireDragon": {
+    "NAME": "火龙",
+    "FLAVOR": "历史上并不存在她拥有龙种之血的记录。存在的，只有她对爱慕对象的执着。",
+    "DESCRIPTIONS": [
+      "免疫 #y灼伤 造成的伤害。"
+    ]
+  },
   "KiyohimeMod:Stone": {
     "NAME": "圣晶石",
     "FLAVOR": "来自迦勒底的圣晶石...",

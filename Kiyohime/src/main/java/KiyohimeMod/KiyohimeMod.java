@@ -131,7 +131,8 @@ public class KiyohimeMod implements EditCharactersSubscriber, EditStringsSubscri
     @Override
     public void receiveEditRelics() {
         // start
-        BaseMod.addRelicToCustomPool(new Stone(), Kiyohime_Color);
+        //BaseMod.addRelicToCustomPool(new Stone(), Kiyohime_Color);
+        BaseMod.addRelicToCustomPool(new FireDragon(), Kiyohime_Color);
 
         // UNCOMMON
         BaseMod.addRelicToCustomPool(new TerritoryCreation(), Kiyohime_Color);

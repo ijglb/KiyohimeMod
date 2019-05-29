@@ -20,7 +20,7 @@ public class Projection extends CustomCard {
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
-    private static final int COST = 2;
+    private static final int COST = 1;
     private static final int BASE_MAGIC = 2;
 
     public Projection() {

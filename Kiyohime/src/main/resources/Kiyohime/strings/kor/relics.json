@@ -1,4 +1,11 @@
 {
+  "KiyohimeMod:FireDragon": {
+    "NAME": "Fire Dragon",
+    "FLAVOR": "There are no records of her having the blood of the Dragon Kind mixed in. There was only a persistent deep-rooted delusion towards the human she was deeply in love with.",
+    "DESCRIPTIONS": [
+      "Avoid the damage caused by #yBurn ."
+    ]
+  },
   "KiyohimeMod:Stone": {
     "NAME": "성정석",
     "FLAVOR": "칼데아의 성정석.",

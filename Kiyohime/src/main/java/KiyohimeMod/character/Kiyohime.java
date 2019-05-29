@@ -32,7 +32,7 @@ import KiyohimeMod.powers.NPPower;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
 import kobting.friendlyminions.helpers.BasePlayerMinionHelper;
-import KiyohimeMod.relics.Stone;
+import KiyohimeMod.relics.FireDragon;
 
 public class Kiyohime extends CustomPlayer {
     public static final String MY_CHARACTER_SHOULDER_2 = "Kiyohime/images/char/shoulder2.png";
@@ -207,8 +207,8 @@ public class Kiyohime extends CustomPlayer {
     @Override
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
-        retVal.add(Stone.ID);
-        UnlockTracker.markRelicAsSeen(Stone.ID);
+        retVal.add(FireDragon.ID);
+        UnlockTracker.markRelicAsSeen(FireDragon.ID);
         return retVal;
     }
 
