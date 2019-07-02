@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import KiyohimeMod.character.Kiyohime;
-import KiyohimeMod.relics.Stone;
+import KiyohimeMod.relics.FireDragon;
 import javassist.CannotCompileException;
 import javassist.CtBehavior;
 
@@ -28,8 +28,8 @@ public class AbstractMonsterPatch {
                 @ByRef(type = "com.megacrit.cardcrawl.relics.AbstractRelic") AbstractRelic[] r) {
             //Monster attack Monster = Monster attack Servant
             if (info.owner instanceof AbstractMonster) {
-                if (AbstractDungeon.player instanceof Kiyohime && AbstractDungeon.player.hasRelic(Stone.ID)) {
-                    r[0] = AbstractDungeon.player.getRelic(Stone.ID);//use Stone replace it
+                if (AbstractDungeon.player instanceof Kiyohime && AbstractDungeon.player.hasRelic(FireDragon.ID)) {
+                    r[0] = AbstractDungeon.player.getRelic(FireDragon.ID);//use Stone replace it
                 }
             }
         }
@@ -43,8 +43,8 @@ public class AbstractMonsterPatch {
                 // of matcher that matches a method call based on the type of the calling
                 // object and the name of the method being called. Here you can see that
                 // we're expecting the `end` method to be called on a `SpireBatch`
-                Matcher finalMatcher = new Matcher.MethodCallMatcher("com.megacrit.cardcrawl.relics.AbstractRelic",
-                        "onAttackedMonster");
+                Matcher finalMatcher = new Matcher.MethodCallMatcher(com.megacrit.cardcrawl.relics.AbstractRelic.class,
+                        "onAttackToChangeDamage");
 
                 // the `new ArrayList<Matcher>()` specifies the prerequisites before the line can be matched -
                 // the LineFinder will search for all the prerequisites in order before it will match the finalMatcher -

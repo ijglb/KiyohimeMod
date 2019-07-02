@@ -30,7 +30,7 @@ public class Divinity extends CustomRelic {
     }
 
     @Override
-    public int onAttackedMonster(DamageInfo info, int damageAmount) {
+    public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {
         if ((info.owner != null) && (info.type != DamageInfo.DamageType.HP_LOSS)
                 && (info.type != DamageInfo.DamageType.THORNS) && damageAmount > 0) {
             flash();

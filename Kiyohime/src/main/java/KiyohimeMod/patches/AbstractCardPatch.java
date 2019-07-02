@@ -9,6 +9,7 @@ import java.util.HashMap;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.lib.ByRef;
 import com.evacipated.cardcrawl.modthespire.lib.LineFinder;
@@ -48,11 +49,11 @@ public class AbstractCardPatch {
                 }
             }
         }
-        @SpireInsertPatch(locator = Locator.class, localvars = { "lastChar", "word" })
-        public static void Insert(AbstractCard __instance, @ByRef StringBuilder[] lastChar, @ByRef String[] word) {
+        @SpireInsertPatch(locator = Locator.class, localvars = { "word" })
+        public static void Insert(AbstractCard __instance, @ByRef String[] word) {
             if (__instance instanceof AbstractAttackCard) {
                 if (word[0].equals("☆") || word[0].equals("★")) {
-                    lastChar[0] = new StringBuilder(" ");
+                    //lastChar[0] = new StringBuilder(" ");
                     word[0] = word[0] + " ";
                 }
             }
@@ -140,7 +141,8 @@ public class AbstractCardPatch {
             if (AbstractDungeon.player instanceof Kiyohime && __instance.type == CardType.ATTACK
                     && !(__instance instanceof AbstractAttackCard)
                     && __instance.color == AbstractCard.CardColor.COLORLESS) {
-                Texture texture;
+                Texture texture = null;
+                TextureAtlas.AtlasRegion region = null;
                 if (__instance.hasTag(KiyohimeTags.ATTACK_Buster))
                     texture = imgMap.get("BG_Buster");
                 else if (__instance.hasTag(KiyohimeTags.ATTACK_Arts))
@@ -148,25 +150,13 @@ public class AbstractCardPatch {
                 else if (__instance.hasTag(KiyohimeTags.ATTACK_Quick))
                     texture = imgMap.get("BG_Quick");
                 else
-                    texture = ImageMaster.CARD_ATTACK_BG_GRAY;
+                    region = ImageMaster.CARD_ATTACK_BG_GRAY;
 
-                try {
-                    // use reflection hacks to invoke renderHelper (without float scale)
-                    Method renderHelperMethod;
-                    Field renderColorField;
-
-                    renderHelperMethod = SuperclassFinder.getSuperClassMethod(__instance.getClass(), "renderHelper",
-                            SpriteBatch.class, Color.class, Texture.class, float.class, float.class);
-                    renderHelperMethod.setAccessible(true);
-                    renderColorField = SuperclassFinder.getSuperclassField(__instance.getClass(), "renderColor");
-                    renderColorField.setAccessible(true);
-
-                    Color renderColor = (Color) renderColorField.get(__instance);
-                    renderHelperMethod.invoke(__instance, sb, renderColor, texture, x, y);
-                } catch (IllegalAccessException | IllegalArgumentException | NoSuchFieldException
-                        | NoSuchMethodException | InvocationTargetException | SecurityException e) {
-                    e.printStackTrace();
+                if (texture != null) {
+                    region = new TextureAtlas.AtlasRegion(texture, 0, 0, texture.getWidth(), texture.getHeight());
                 }
+
+                renderHelper(__instance, sb, Color.WHITE, region, x, y);
                 SpireReturn.Return(null);
             }
             return SpireReturn.Continue();
@@ -186,4 +176,25 @@ public class AbstractCardPatch {
         }
         return MathUtils.floor(temp);
     }
+
+    private static void renderHelper(AbstractCard card, SpriteBatch sb, Color color, TextureAtlas.AtlasRegion region, float xPos, float yPos)
+	{
+		try {
+			// use reflection hacks to invoke renderHelper (without float scale)
+			Method renderHelperMethod;
+			Field renderColorField; 
+			
+			
+			renderHelperMethod = SuperclassFinder.getSuperClassMethod(card.getClass(), "renderHelper", SpriteBatch.class, Color.class, TextureAtlas.AtlasRegion.class, float.class, float.class);
+			renderHelperMethod.setAccessible(true);
+			renderColorField = SuperclassFinder.getSuperclassField(card.getClass(), "renderColor");
+			renderColorField.setAccessible(true);
+			
+				
+			Color renderColor = (Color) renderColorField.get(card);
+			renderHelperMethod.invoke(card, sb, renderColor, region, xPos, yPos);
+		} catch (IllegalAccessException | IllegalArgumentException | NoSuchFieldException | NoSuchMethodException | InvocationTargetException | SecurityException e) {
+			e.printStackTrace();
+		}
+	}
 }
