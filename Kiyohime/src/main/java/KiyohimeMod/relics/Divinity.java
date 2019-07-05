@@ -30,8 +30,8 @@ public class Divinity extends CustomRelic {
     }
 
     @Override
-    public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {
-        if ((info.owner != null) && (info.type != DamageInfo.DamageType.HP_LOSS)
+    public int onAttackToChangeDamage(DamageInfo info, int damageAmount) {
+        if ((info.owner != null) && (info.owner == AbstractDungeon.player) && (info.type != DamageInfo.DamageType.HP_LOSS)
                 && (info.type != DamageInfo.DamageType.THORNS) && damageAmount > 0) {
             flash();
             AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
