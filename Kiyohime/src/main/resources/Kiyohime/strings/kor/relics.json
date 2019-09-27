@@ -1,9 +1,8 @@
 {
   "KiyohimeMod:FireDragon": {
-    "NAME": "Fire Dragon",
-    "FLAVOR": "There are no records of her having the blood of the Dragon Kind mixed in. There was only a persistent deep-rooted delusion towards the human she was deeply in love with.",
-    "DESCRIPTIONS": [
-      "Avoid the damage caused by #yBurn ."
+    "NAME": "화룡",
+    "FLAVOR": "그녀에게 용종의 피가 섞였다는 기록은 없다. 있는 것은 그저 애타게 사랑하는 사람을 향한 끝없는 망집뿐이었다.": [
+      "#y화상 카드 데미지 무시."
     ]
   },
   "KiyohimeMod:Stone": {
