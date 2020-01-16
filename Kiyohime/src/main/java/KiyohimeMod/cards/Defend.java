@@ -26,6 +26,7 @@ public class Defend extends CustomCard {
     public Defend() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL, AbstractCardEnum.Kiyohime_Color,
                 AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.SELF);
+        this.tags.add(AbstractCard.CardTags.STARTER_DEFEND);
         this.tags.add(BaseModCardTags.BASIC_DEFEND);
         this.block = this.baseBlock = BLOCK;
     }

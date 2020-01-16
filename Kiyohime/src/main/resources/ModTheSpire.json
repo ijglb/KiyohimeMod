@@ -3,6 +3,6 @@
     "name": "Kiyohime（清姬）",
     "author_list": ["jglb"],
     "description": "Kiyohime（清姬） Mod",
-    "version": "0.1.6",
+    "version": "0.1.7",
     "dependencies": ["basemod","stslib","Friendly_Minions_0987678"]
 }

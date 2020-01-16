@@ -6,7 +6,7 @@
 
   <groupId>Kiyohime</groupId>
   <artifactId>Kiyohime</artifactId>
-  <version>0.1.6</version>
+  <version>0.1.7</version>
 
   <name>Kiyohime</name>
   <!-- FIXME change it to the project's website -->
@@ -29,21 +29,21 @@
     <dependency>
         <groupId>com.evacipated.cardcrawl</groupId>
         <artifactId>ModTheSpire</artifactId>
-        <version>3.1.0</version>
+        <version>3.15.0</version>
         <scope>system</scope>
         <systemPath>${basedir}/lib/ModTheSpire.jar</systemPath>
     </dependency>
     <dependency>
         <groupId>com.evacipated.cardcrawl</groupId>
         <artifactId>BaseMod</artifactId>
-        <version>5.5.0</version>
+        <version>5.17.0</version>
         <scope>system</scope>
         <systemPath>${basedir}/lib/BaseMod.jar</systemPath>
     </dependency>
     <dependency>
         <groupId>com.evacipated.cardcrawl</groupId>
         <artifactId>StSLib</artifactId>
-        <version>1.10.0</version>
+        <version>1.17.2</version>
         <scope>system</scope>
         <systemPath>${basedir}/lib/StSLib.jar</systemPath>
     </dependency>

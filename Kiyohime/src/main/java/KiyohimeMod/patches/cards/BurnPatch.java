@@ -10,7 +10,6 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.evacipated.cardcrawl.modthespire.patcher.PatchingException;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -46,7 +45,7 @@ public class BurnPatch {
 
         private static class Locator extends SpireInsertLocator {
             public int[] Locate(CtBehavior ctMethodToPatch) throws CannotCompileException, PatchingException {
-                Matcher finalMatcher = new Matcher.MethodCallMatcher(GameActionManager.class, "addToBottom");
+                Matcher finalMatcher = new Matcher.MethodCallMatcher(Burn.class, "addToBot");
                 ArrayList<Matcher> prevMatchers = new ArrayList<Matcher>();
 
                 return LineFinder.findInOrder(ctMethodToPatch, prevMatchers, finalMatcher);

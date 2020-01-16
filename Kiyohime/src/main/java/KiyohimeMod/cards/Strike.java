@@ -26,6 +26,7 @@ public class Strike extends AbstractAttackCard {
         super(ID, NAME, IMG_PATH, DESCRIPTION, 1, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.ENEMY);
         damage = baseDamage = ATTACK_DMG;
         tags.add(CardTags.STRIKE);
+        this.tags.add(AbstractCard.CardTags.STARTER_STRIKE);
         tags.add(BaseModCardTags.BASIC_STRIKE);
     }
 

@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 import com.megacrit.cardcrawl.vfx.combat.RipAndTearEffect;
 
 public class RandomAttackAction extends AbstractGameAction {
@@ -46,10 +47,12 @@ public class RandomAttackAction extends AbstractGameAction {
         this.duration -= Gdx.graphics.getDeltaTime();
         if (this.duration < 0.0F) {
             if (this.target.currentHealth > 0) {
-                this.target.damageFlash = true;
-                this.target.damageFlashFrames = 4;
+                //this.target.damageFlash = true;
+                //this.target.damageFlashFrames = 4;
                 //this.info.applyPowers(this.info.owner, this.target);
                 //applypower start
+                AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY,
+                        AttackEffect.SLASH_DIAGONAL, false));
                 this.info.output = this.info.base;
                 this.info.isModified = false;
                 float tmp = this.info.output;
@@ -71,7 +74,11 @@ public class RandomAttackAction extends AbstractGameAction {
                 }
                 //applypower end
                 this.target.damage(this.info);
-                if ((this.numTimes > 1) && (!AbstractDungeon.getMonsters().areMonstersBasicallyDead())) {
+                boolean isAllDead = AbstractDungeon.getMonsters().areMonstersBasicallyDead();
+                if (isAllDead) {
+                    AbstractDungeon.actionManager.clearPostCombatActions();
+                }
+                if ((this.numTimes > 1) && !isAllDead) {
                     this.numTimes -= 1;
                     AbstractDungeon.actionManager.addToTop(new RandomAttackAction(
 

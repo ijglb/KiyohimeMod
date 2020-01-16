@@ -106,7 +106,7 @@ public class HeroCreation extends CustomCard {
         }
     }
 
-    @Override
+/*     @Override
     public void modifyCostForTurn(int amt) {
         int tmp = this.costForTurn;
         super.modifyCostForTurn(amt);
@@ -116,7 +116,7 @@ public class HeroCreation extends CustomCard {
             if (costChange < 0)
                 costChange = 0;
         }
-    }
+    } */
 
     @Override
     public void modifyCostForCombat(int amt) {
