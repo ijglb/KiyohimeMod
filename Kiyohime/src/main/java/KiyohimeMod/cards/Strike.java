@@ -10,8 +10,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import basemod.helpers.BaseModCardTags;
-
 public class Strike extends AbstractAttackCard {
 
     public static final String ID = "KiyohimeMod:Strike";
@@ -26,8 +24,7 @@ public class Strike extends AbstractAttackCard {
         super(ID, NAME, IMG_PATH, DESCRIPTION, 1, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.ENEMY);
         damage = baseDamage = ATTACK_DMG;
         tags.add(CardTags.STRIKE);
-        this.tags.add(AbstractCard.CardTags.STARTER_STRIKE);
-        tags.add(BaseModCardTags.BASIC_STRIKE);
+        tags.add(AbstractCard.CardTags.STARTER_STRIKE);
     }
 
     @Override

@@ -24,12 +24,10 @@ public class ExtraAttack extends AbstractAttackCard {
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
     public static final String IMG_PATH = "Kiyohime/images/cards/ExtraAttack.png";
-    public static final String BannerSmallImg = "images/cardui/512/banner_rare.png";
-    public static final String BannerLargeImg = "images/cardui/1024/banner_rare.png";
 
     public ExtraAttack(int damage,int hits) {
         super(ID, NAME, IMG_PATH, DESCRIPTION, hits, AbstractCard.CardRarity.SPECIAL, AbstractCard.CardTarget.ENEMY);
-        this.setBannerTexture(BannerSmallImg, BannerLargeImg);
+        this.setDisplayRarity(CardRarity.RARE);
         isSpecialTag = true;
         this.exhaust = true;
         this.isEthereal = true;

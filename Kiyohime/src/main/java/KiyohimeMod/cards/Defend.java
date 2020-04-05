@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import KiyohimeMod.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
-import basemod.helpers.BaseModCardTags;
 
 public class Defend extends CustomCard {
 
@@ -27,7 +26,6 @@ public class Defend extends CustomCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, AbstractCard.CardType.SKILL, AbstractCardEnum.Kiyohime_Color,
                 AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.SELF);
         this.tags.add(AbstractCard.CardTags.STARTER_DEFEND);
-        this.tags.add(BaseModCardTags.BASIC_DEFEND);
         this.block = this.baseBlock = BLOCK;
     }
 

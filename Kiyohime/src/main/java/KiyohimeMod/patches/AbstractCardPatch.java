@@ -29,7 +29,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import KiyohimeMod.cards.AbstractAttackCard;
 import KiyohimeMod.character.Kiyohime;
 import KiyohimeMod.helpers.CardHelper;
-import KiyohimeMod.patches.CardAddFieldsPatch;
 import KiyohimeMod.powers.CritUPPower;
 import basemod.helpers.SuperclassFinder;
 import KiyohimeMod.powers.AbstractStackablePower;

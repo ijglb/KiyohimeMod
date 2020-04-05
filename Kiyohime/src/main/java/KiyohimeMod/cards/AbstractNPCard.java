@@ -14,14 +14,12 @@ import KiyohimeMod.powers.NPPower;
 
 public abstract class AbstractNPCard extends AbstractAttackCard {
 
-    public static final String BannerSmallImg = "images/cardui/512/banner_rare.png";
-    public static final String BannerLargeImg = "images/cardui/1024/banner_rare.png";
     public static final CardStrings npCardStrings = CardCrawlGame.languagePack.getCardStrings("KiyohimeMod:NPCard");
 
     public AbstractNPCard(String id, String name, String img, String rawDescription,int hits, AbstractCard.CardRarity rarity,
     AbstractCard.CardTarget target) {
         super(id, name, img, rawDescription, hits, rarity, target);
-        this.setBannerTexture(BannerSmallImg, BannerLargeImg);
+        this.setDisplayRarity(CardRarity.RARE);
         isSpecialTag = true;
         this.exhaust = true;
         this.isEthereal = true;
